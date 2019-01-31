@@ -1,0 +1,33 @@
+header{
+    height:100vh;
+    background-image:url('../../planted-final-assets/home-image-1.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    .mainTitle{
+        padding-top:15%;
+        width:20%;
+        @include fontSize(2rem);
+        color:$colorWhite;
+        margin:0 auto;
+        @include displayFlex(column, center, center);
+        
+        h1{
+            z-index:10;  
+        }
+
+        &::after{
+            content:url('/planted-final-assets/header-box.jpg');
+            position:absolute;
+            top:250px;
+            right:0;
+        }
+        
+
+        .lowerTitle{
+            color:$colorYellow;
+            font-family:$primaryFont;
+        }
+    }
+
+}

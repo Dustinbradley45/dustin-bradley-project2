@@ -1,0 +1,18 @@
+.whatIsPlant{
+    text-align:center;
+    margin:0 auto;
+    background-color:$colorWhite;
+    @include displayFlex(column, flex-start, center);
+    color:$colorBlack;
+    padding:100px 0 40px 0;
+    
+    .whatIsPlantContent{
+        width:60%;
+
+        a{
+            color:$colorBlack;
+            text-decoration:none;
+        }
+
+    }
+}

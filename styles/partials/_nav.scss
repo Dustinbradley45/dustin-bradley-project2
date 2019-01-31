@@ -1,0 +1,24 @@
+.headerNav{
+    color:$colorWhite;
+    @include displayFlex(row, flex-start, space-evenly);
+
+    ul{
+        @include displayFlex(row, flex-start, center);
+
+        li{
+            list-style:none;
+            padding:10px;
+
+            a{
+                color:$colorWhite;
+                text-decoration:none;
+
+                &.active{
+                    color: $colorYellow;
+
+                }
+            }
+        }
+
+    }
+}
