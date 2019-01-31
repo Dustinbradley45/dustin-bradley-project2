@@ -1,0 +1,7 @@
+.squareGalleryTop{
+    @include displayFlex(row, flex-start, center)
+}
+
+.squareGalleryBottom{
+    @include displayFlex(row, flex-start, center)
+}

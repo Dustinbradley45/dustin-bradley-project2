@@ -1,7 +1,21 @@
-@import 'setup';
-@import 'global';
-@import 'variables';
-@import 'nav';
-@import 'header';
-@import 'whatIsPlant';
-@import 'squareGallery';
+// BASE AND REUSABLE COMPONENTS
+@import 'baseStyles/setup';
+@import 'baseStyles/global';
+@import 'baseStyles/variables';
+@import 'baseStyles/nav';
+@import 'baseStyles/footer';
+
+// INDEX RELATED COMPONENTS
+@import 'indexStyles/header';
+@import 'indexStyles/whatIsPlant';
+@import 'indexStyles/squareGallery';
+@import 'indexStyles/iconLinks';
+@import 'indexStyles/banner';
+@import 'indexStyles/founder';
+
+// BLOG RELATED COMPONENTS
+@import 'blogStyles/blogHeader';
+@import 'blogStyles/blogMission';
+@import 'blogStyles/blogAside';
+@import 'blogStyles/blogComments';
+@import 'blogStyles/blogForm';

@@ -1,4 +1,4 @@
-header{
+.mainHeader{
     height:100vh;
     background-image:url('../../planted-final-assets/home-image-1.jpg');
     background-size:cover;
@@ -9,8 +9,8 @@ header{
         width:20%;
         @include fontSize(2rem);
         color:$colorWhite;
-        margin:0 auto;
         @include displayFlex(column, center, center);
+        margin:0 auto;
         
         h1{
             z-index:10;  

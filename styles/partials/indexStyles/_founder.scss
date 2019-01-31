@@ -1,0 +1,11 @@
+.founder{
+    @include displayFlex(row, flex-start, center);
+
+
+    img {
+        width:30%;
+    }
+    .founderContent{
+        width:70%;
+    }
+}

@@ -1,4 +1,6 @@
-.headerNav{
+.headerNav,
+.blogNav,
+.contactNav{
     color:$colorWhite;
     @include displayFlex(row, flex-start, space-evenly);
 
@@ -21,4 +23,8 @@
         }
 
     }
+}
+
+.blogNav{
+    background-color: $colorBlack;
 }

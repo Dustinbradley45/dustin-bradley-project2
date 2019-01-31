@@ -1,0 +1,58 @@
+.iconLinks{
+
+    @include displayFlex(row, flex-start, center);
+    flex-wrap:wrap;
+
+    .greenHouses{
+        width:50%;
+
+        h3{
+
+            &:before{
+                // <i class="fas fa-leaf"></i>
+                content:'\f06c';
+                font-family:'Font Awesome 5 Free';
+               
+            }
+        }
+    }
+    
+    .community {
+        width:50%;
+
+        h3 {
+
+
+            &:before{
+                // <i class="fas fa-users"></i>
+                content:'\f0c0';
+               font-family:'Font Awesome 5 Free';
+
+            }
+        }
+    }
+    .blog{
+        width:50%;
+
+        h3{
+
+            &:before {
+                // <i class="fas fa-file"></i>
+                content:'\f15b';
+                font-family:'Font Awesome 5 Free';
+            }
+        }
+    }
+    .getInTouch{
+        width: 50%;
+
+        h3{
+
+
+            &:before {
+                content:'\f095';
+                font-family:'Font Awesome 5 Free'
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.blogAside{
+    width: 40%;
+    outline:blue solid 2px;
+    position:relative;
+
+    .blogAsideInfo{
+        height:90vh;
+        width: 65%;
+        background-color:$colorDarkGreen;
+        position: absolute;
+        right:50px;
+        
+        &::before {
+            display:block;
+            content:url('./../../planted-final-assets/side-bar-image.jpg');
+            width:100%;
+            position: relative;
+            right: 154px;
+            bottom: 12px;
+        }  
+    }
+}
