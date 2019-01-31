@@ -1,10 +1,12 @@
 .blogHeader{
-    height: 60vh;
+    height: 65vh;
     background-image:url('./../../planted-final-assets/blog-header-1.jpg');
+    background-size:cover;
 
     .blogHeaderTitle{
         color:$colorYellow;
         font-family:$primaryFont;
+        margin-top:20%;
     }
 
 }

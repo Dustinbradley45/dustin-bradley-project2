@@ -2,7 +2,9 @@
 .blogNav,
 .contactNav{
     color:$colorWhite;
-    @include displayFlex(row, flex-start, space-evenly);
+    
+    .navContent{
+        @include displayFlex(row, flex-start, space-evenly);
 
     ul{
         @include displayFlex(row, flex-start, center);
@@ -24,7 +26,9 @@
 
     }
 }
+}
 
-.blogNav{
+.blogNav,
+.contactNav,{
     background-color: $colorBlack;
 }

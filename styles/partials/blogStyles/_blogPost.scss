@@ -1,0 +1,44 @@
+.blogMain {
+    @include displayFlex(row, flex-start, flex-start);
+    background-color:$colorWhite;
+
+}
+
+.blogMainRight{
+        width:65%;
+        position:relative;
+        
+        
+        .blogMission {
+            width:100%;
+            @include displayFlex(column, flex-start, flex-start);
+            padding-left:20px;
+            position:relative;
+            
+            
+            img{
+            position:relative;
+            width:99%;
+            left:calc(100% - 99%);
+            -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
+            -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
+            box-shadow: -10px 10px 0px 0px $colorYellow;
+            bottom:200px;
+            
+        }
+        
+        .blogPost{
+            border-bottom: 2px solid $colorYellow;
+            border-left:2px solid $colorYellow;
+            margin-right:5rem;
+            padding-left:3rem;
+            padding-bottom:2.5rem;
+            padding-top:200px;
+            position:relative;
+            bottom:300px;   
+            font-family:$primaryFont;
+
+
+        }
+    }
+}

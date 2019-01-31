@@ -17,9 +17,12 @@
         }
 
         &::after{
-            content:url('/planted-final-assets/header-box.jpg');
+            content:'';
             position:absolute;
             top:250px;
+            background-image:url('./../../planted-final-assets/header-box.jpg');
+            height:75vh;
+            width:40%;
             right:0;
         }
         

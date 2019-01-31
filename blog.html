@@ -13,22 +13,28 @@
 <body>
 <header class='blogHeader'>
     <div class="blogNav">
-        <h2>Planted</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="active">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navContent wrapper">
+                <h2>Planted</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="active">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="blogHeaderTitle">
+    <div class="blogHeaderTitle wrapper">
         <h1>Blog</h1>
     </div>
 </header>
+
 <main class='blogMain'>
+
+    <!-- ASIDE SECTION START -->
     <aside class='blogAside'>
+        <img src="./planted-final-assets/side-bar-image.jpg" alt="">
         <div class="blogAsideInfo">
             <div class="blogAsideInfoTop">
                 <h4>About Planted</h4>
@@ -45,23 +51,70 @@
             </div> 
         </div>
     </aside>
-    <section class='blogMission'>
-        <div class="blogTitle">
-            <h3>Our mission at Planted</h3>
-            <p>Monday January 21st, 2019 by <span class="bold">Yousra</span></p>
+    <!-- ASIDE END -->
+
+    <section class='blogMainRight'>
+
+        <!-- BLOG POST SECTION START -->
+        <div class='blogMission'>
+            <img src="./planted-final-assets/post-image.jpg" alt="">
+            <div class="blogPost">
+                <div class="blogTitle">
+                    <h3>Our mission at Planted</h3>
+                    <p>Monday January 21st, 2019 by <span class="bold">Yousra</span></p>
+                </div>
+
+                <div class="blogInfo">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, eius numquam nam dolorem temporibus, dicta ad ut id velit sed cumque repellendus accusamus nobis totam, iure quidem quia non rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, tempora aperiam fugiat voluptatem illo ipsa impedit repellat officia maiores error incidunt natus, est neque, delectus rerum saepe! Sequi, non quis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, repudiandae aut! Aperiam distinctio vitae blanditiis corporis exercitationem libero voluptas accusantium, eligendi saepe quaerat quod facere et, quo alias cum beatae!</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati enim laudantium quasi voluptas dolorem consequatur. Sequi consequuntur exercitationem ipsa quia assumenda. Beatae quasi nesciunt officiis eaque. Aperiam animi culpa voluptates? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi quibusdam enim perspiciatis ut unde voluptatibus, cumque necessitatibus ex labore hic laudantium fuga asperiores possimus eligendi eaque voluptas, veniam eius similique. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero tempore ipsam eos, quibusdam explicabo voluptatem veritatis impedit eveniet voluptatum aliquid ea laboriosam iure qui enim quam provident officia similique? Saepe.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit quia natus non, nobis at ea quidem provident illo repellendus, impedit rerum tenetur modi ullam dignissimos, debitis molestias repellat aliquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eos consectetur officia, deleniti aliquam totam dignissimos reprehenderit corrupti, quae, asperiores debitis repellendus provident animi excepturi nobis exercitationem ullam sapiente tempora!</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quaerat vitae accusamus saepe eum, officia nulla laudantium laborum eligendi, sed libero autem similique veniam veritatis esse consequuntur, dicta delectus commodi!</p>
+                </div>
+            </div>
         </div>
+        <!-- BLOG POST END -->
 
-        <div class="blogInfo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, eius numquam nam dolorem temporibus, dicta ad ut id velit sed cumque repellendus accusamus nobis totam, iure quidem quia non rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, tempora aperiam fugiat voluptatem illo ipsa impedit repellat officia maiores error incidunt natus, est neque, delectus rerum saepe! Sequi, non quis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, repudiandae aut! Aperiam distinctio vitae blanditiis corporis exercitationem libero voluptas accusantium, eligendi saepe quaerat quod facere et, quo alias cum beatae!</p>
+        <!-- COMMENTS SECTION START -->
+            <div class="commentsSection wrapper">
+                <h5>Comments:</h5>
+                <div class="comment1">
+                    <img src="./planted-final-assets/profile-image.jpg" alt="">
+                    <div class="comment1Info">
+                        <p class="bold">Tuesday October 0th 2018 by Jeremy</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas autem impedit quod aut unde. Itaque repellat omnis, sed doloremque veritatis, quaerat corrupti saepe error tempore est sequi! Dolor, sapiente.</p>
+                    </div>
+                </div>
+                <div class="comment2">
+                    <img src="./planted-final-assets/profile-image-2.jpg" alt="">
+                    <div class="comment2Info">
+                        <p class='bold'>Wednesday October 10th 2018 by Julia</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui illo saepe ratione adipisci doloribus! Labore reprehenderit facere omnis dolor ullam, provident tempora odio nihil repellat iste minima eaque, veniam perferendis. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- COMMENTS SECTION END -->
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati enim laudantium quasi voluptas dolorem consequatur. Sequi consequuntur exercitationem ipsa quia assumenda. Beatae quasi nesciunt officiis eaque. Aperiam animi culpa voluptates? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi quibusdam enim perspiciatis ut unde voluptatibus, cumque necessitatibus ex labore hic laudantium fuga asperiores possimus eligendi eaque voluptas, veniam eius similique. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero tempore ipsam eos, quibusdam explicabo voluptatem veritatis impedit eveniet voluptatum aliquid ea laboriosam iure qui enim quam provident officia similique? Saepe.</p>
+            <form action="#" class="blogForm wrapper">
+                <div class="blogFormInput">
+                    <label for="blogUserName" class='visuallyHidden'></label>
+                    <input type="name" name='name' placeholder='Name' id='blogUserName'>
+                
+                    <label for="blogEmail" class='visuallyHidden'></label>
+                    <input type="email" name="email" id="blogEmail" placeholder='Email Address'>
+                </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit quia natus non, nobis at ea quidem provident illo repellendus, impedit rerum tenetur modi ullam dignissimos, debitis molestias repellat aliquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eos consectetur officia, deleniti aliquam totam dignissimos reprehenderit corrupti, quae, asperiores debitis repellendus provident animi excepturi nobis exercitationem ullam sapiente tempora!</p>
+                <textarea name="userComments" id="userComments" cols="100" rows="10"placeholder='Comment'></textarea> 
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quaerat vitae accusamus saepe eum, officia nulla laudantium laborum eligendi, sed libero autem similique veniam veritatis esse consequuntur, dicta delectus commodi!</p>
-        </div>
+                <button type='submit' class="postComment">PostComment</button>
+            </form>
     </section>
 </main>
+<footer>
+    <p>Copyright &copy; 2018 HackerYou</p>
+</footer>
     
 </body>
 </html>

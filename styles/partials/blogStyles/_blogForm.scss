@@ -1,0 +1,46 @@
+// <form action="#"class="blogForm">
+//<label for="blogUserName"class='visuallyHidden'></label>
+    //<input type="name"name='name'placeholder='Name'id='blogUserName'>
+    //<label for="blogEmail"class='visuallyHidden'></label>
+    //<input type="email"name="email"id="blogEmail">
+    //<textarea name="userComments"id="userComments"cols="100"rows="10"placeholder='Comment'></textarea>
+//</form>
+
+.blogForm{
+    @include displayFlex(column, flex-start, center);
+    margin-right:5rem;
+    margin-bottom:20px;
+    position:relative;
+    bottom:100px;
+   
+    .blogFormInput{
+        @include displayFlex(row, flex-start,center);
+        width:100%;
+        
+        input{
+            width:45%;
+            margin:20px;
+            border:none;
+            background-color:$colorWhite;
+            border-bottom:1px solid $colorLightGreen;
+       }
+       
+    }
+    textarea{
+    width:100%;
+    border:1px solid $colorLightGreen;
+    background-color:$colorWhite;
+    padding:10px;
+    margin: 20px 0 20px 0;
+    
+    }
+
+    button{
+        width:100%;
+        border: none;
+        margin-top:20px;
+        background-color:$colorLightGreen;
+        color:white;
+        padding:10px;
+    }
+}
