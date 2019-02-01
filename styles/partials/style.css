@@ -1092,6 +1092,8 @@ footer {
 
 .contactHeader {
   background-image: url("./../../planted-final-assets/contact-header-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 65vh;
 }
 
@@ -1256,5 +1258,107 @@ body {
   letter-spacing: 1px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .contactHeader .contactHeaderTitle {
+    margin-top: 7rem;
+    width: 30%;
+  }
+  .contactUsForm {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contactHeader .contactHeaderTitle {
+    margin-top: 5rem;
+    width: 30%;
+  }
+  .contactUsForm {
+    left: 1rem;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contactHeader .contactHeaderTitle {
+    color: black;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .contactMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  .contactMain .contactInfo {
+    text-align: center;
+  }
+  .contactMain .contactInfo ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: .7rem;
+  }
+  .contactUsForm {
+    bottom: 5rem;
+    left: 0;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .contactUsForm {
+    width: 100%;
+    margin: 0;
+    -webkit-box-shadow: 0 0 0 0;
+            box-shadow: 0 0 0 0;
+    border-top: 10px solid #f8e71c;
+    border-bottom: 10px solid #f8e71c;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contactUsForm {
+    -webkit-box-shadow: 0 0 0 0;
+            box-shadow: 0 0 0 0;
+    border-top: 10px solid #f8e71c;
+    border-bottom: 10px solid #f8e71c;
+  }
+  .contactUsForm .contactForm .contactFormInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactUsForm .contactForm .contactFormInput input[type='name'],
+  .contactUsForm .contactForm .contactFormInput input[type='email'] {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

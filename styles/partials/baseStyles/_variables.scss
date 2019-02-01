@@ -42,5 +42,55 @@ $secondaryFont: 'Roboto', sans-serif;
     font-weight:$fontWeight;
 }
 
+//MEDIA QUERIES
+
+$largeDesktop: 'only screen and (max-width: 1600px)';
+
+$medDesktop: 'only screen and (max-width:1440px)';
+
+$smallDesktop: 'only screen and (max-width:1200px)';
+
+$largeTablet: 'only screen and (max-width: 1000px)';
+
+$medTablet: 'only screen and (max-width: 850px)';
+
+$smallTablet: 'only screen and (max-width:750px)';
+
+$largePhone: 'only screen and (max-width:650px)';
+
+$medPhone: 'only screen and (max-width:500px)';
+
+$smallPhone: "only screen and (max-width:400px)";
+
+//QUERIES
+
+//1600px
+// @media #{$largeDesktop} {}
+
+// //1440px
+// @media #{$medDesktop} {}
+
+// //1200px
+// @media #{$smallDesktop} {}
+
+// //1000px
+// @media #{$largeTablet} {}
+
+// //850px
+// @media #{$medTablet} {}
+
+// //750px
+// @media #{smallTablet} {}
+
+// //650px
+// @media #{largePhone} {}
+
+// //500px
+// @media #{$medPhone} {}
+
+// //400px
+// @media #{$smallPhone} {}
+
+
 
 

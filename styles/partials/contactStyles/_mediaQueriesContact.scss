@@ -1,0 +1,123 @@
+//QUERIES
+
+//1600px
+@media #{$largeDesktop} {}
+
+//1440px
+@media #{$medDesktop} {
+    .contactHeader {
+
+        .contactHeaderTitle {
+            margin-top: 7rem;
+            width: 30%;
+        }
+    }
+
+    .contactUsForm{
+
+        margin-right: 2rem;
+
+    }
+}
+
+//1200px
+@media #{$smallDesktop} {
+
+    .contactHeader{
+
+        .contactHeaderTitle {
+            margin-top:5rem;
+            width:30%;
+        }
+    }
+    .contactUsForm{
+        left: 1rem;
+        margin-right:2rem;
+    }
+}
+
+//1000px
+@media #{$largeTablet} {
+
+    .contactHeader{
+
+        .contactHeaderTitle {
+        color:black;
+        display:block;
+        width:100%;
+        margin:0 auto;
+        margin-top:8rem;
+        text-align:center;
+        }
+
+    }
+
+    .contactMain{
+        @include displayFlex (column-reverse, flex-start, center);
+        margin:0 auto;
+        margin-bottom:3rem;
+
+        .contactInfo {
+            text-align:center;
+
+            ul {
+                justify-content: center;
+                padding-left:.7rem;
+            }
+        }
+    }
+
+    .contactUsForm {
+        bottom: 5rem;
+        left:0;
+        width: 70%;
+    }
+
+    
+}
+
+//850px
+@media #{$medTablet} {}
+
+//750px
+@media #{$smallTablet} {}
+
+//650px
+@media #{$largePhone} {
+
+    .contactUsForm {
+        width: 100%;
+        margin:0;
+        box-shadow: 0 0 0 0;
+        border-top:10px solid $colorYellow;
+        border-bottom:10px solid $colorYellow;
+    }
+}
+
+//500px
+@media #{$medPhone} {
+    .contactUsForm {
+        box-shadow: 0 0 0 0;
+        border-top:10px solid $colorYellow;
+        border-bottom:10px solid $colorYellow;
+        
+
+        .contactForm{
+
+            .contactFormInput{
+                @include displayFlex (column, flex-start, center);
+
+                input[type='name'],
+                input[type='email'] {
+                    width:100%;
+                   
+                }
+            }
+        }
+    }
+}
+
+//400px
+@media #{$smallPhone} {
+
+}
