@@ -13,6 +13,7 @@
 @import 'indexStyles/banner';
 @import 'indexStyles/founder';
 @import 'indexStyles/endGallery';
+@import 'indexStyles/indexMediaQueries';
 
 // BLOG RELATED COMPONENTS
 @import 'blogStyles/blogHeader';
@@ -20,9 +21,10 @@
 @import 'blogStyles/blogAside';
 @import 'blogStyles/blogComments';
 @import 'blogStyles/blogForm';
+@import 'blogStyles/blogMediaQueries';
 
 //CONTACT RELATED COMPONENTS
 @import 'contactStyles/contactHeader';
 @import 'contactStyles/contactForm';
 @import 'contactStyles/contactMain';
-@import 'contactStyles/mediaQueriesContact';
+@import 'contactStyles/contactMediaQueries';

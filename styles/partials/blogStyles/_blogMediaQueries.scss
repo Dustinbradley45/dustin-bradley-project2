@@ -1,0 +1,204 @@
+//1600px
+@media #{$largeDesktop} {
+
+    .blogHeader {
+
+        .blogHeaderTitle {
+            margin-left: 10rem;
+        }
+    }
+}
+
+//1440px
+@media #{$medDesktop} {
+
+}
+
+//1250px
+@media #{$smallDesktop} {
+
+    .blogHeader {
+
+        .blogHeaderTitle {
+            margin-left:8rem;
+        }
+    }
+    .blogAside {
+        margin-left:2rem;
+
+        img {
+            width:100%;
+        }
+
+        .blogAsideInfo {
+            margin-left:0;
+            width:100%;
+            right:0;
+
+            .blogAsideInfoTop {
+                padding-top:6rem;
+            }
+        }
+    }
+}
+
+//1000px
+@media #{$largeTablet} {
+
+    .blogMainRight {
+        
+        .blogMission{ 
+            
+            .blogPost{
+                padding-top: 7rem;
+                margin-right:3rem;
+
+            }
+        }
+    }
+}
+
+
+//850px
+@media #{$medTablet} {
+
+    .blogHeader {
+
+        .blogHeaderTitle {
+            text-align:center;
+            margin: 0;
+            margin-top:5rem;
+        }
+    }
+}
+
+//750px
+@media #{$smallTablet} {
+
+    .blogMain {
+        @include displayFlex (column, flex-start, flex-start);
+
+        .blogAside {
+            @include displayFlex (column, flex-start, center);
+            position: static;
+            width: 100%;
+            background-color: white;
+            margin: 0 auto;
+            margin-left: 0;
+            padding: 3rem 0 3rem 0;
+
+            img {
+                width: 80%;
+
+            }
+
+            .blogAsideInfo {
+                position: static;
+                padding-top: 0;
+                width: 80%;
+                height: auto;
+                margin-left: 0;
+                @include displayFlex (column, flex-start, flex-start);
+
+                .blogAsideInfoTop {
+                    padding-top: 0rem;
+                }
+            }
+        }
+
+        .blogMainRight {
+            width: 100%;
+
+            .blogMission {
+                padding-left: 0;
+
+
+                img {
+                    position: static;
+                    width: 100%;
+                    border-bottom: 10px solid $colorYellow;
+                    box-shadow: 0 0 0 0;
+                }
+
+                .blogPost {
+                    position: static;
+                    padding-top: 0;
+
+                }
+            }
+        }
+    }
+
+    .commentsSection {
+        position: static;
+        margin: 2rem;
+    }
+
+    .blogForm {
+        position: static;
+        margin: 2rem;
+        
+        .blogFormInput {
+           @include displayFlex(column, center, center);
+
+            input[type='name'],
+            input[type='email'] {
+                width: 100%;
+                margin:1rem 0;
+                padding:1rem 0;
+            }
+        }
+    }
+
+}
+
+//650px
+@media #{$largePhone} {
+    .blogMain {
+
+        .blogMainRight {
+
+            .commentsSection {
+
+                .comment1 {
+                    @include displayFlex (column, flex-start, center);
+
+                    img{
+                        width: 50%;
+                        margin: 1rem 0;
+                    }
+
+                    .comment1Info {
+                        width: 90%;
+                    }
+                }
+
+                .comment2 {
+                    @include displayFlex (column, flex-start, center);
+
+                    img{
+                        width:50%;
+                        margin: 1rem 0;
+
+                    }
+
+                    .comment2Info {
+                        width:90%;
+                    }
+                }
+
+            }
+
+        }
+        
+    }
+}
+//500px
+@media #{$medPhone} {
+
+}
+
+//400px
+@media #{$smallPhone} {
+
+}

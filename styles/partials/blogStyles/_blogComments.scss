@@ -20,6 +20,18 @@
 
         .comment1Info{
             width:80%;
+
+            .bold {
+                font-family:$primaryFont;
+                font-weight:600;
+            }
+
+            p{
+                font-family:$secondaryFont;
+                @include fontWeight(400);
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
         }
     }
     .comment2{
@@ -34,6 +46,18 @@
         .comment2Info{
             text-align:left;
             width:80%;
+
+            .bold {
+                font-family: $primaryFont;
+                font-weight: 600;
+            }
+
+            p {
+                font-family: $secondaryFont;
+                @include fontWeight(400);
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
         }
     }
 }
