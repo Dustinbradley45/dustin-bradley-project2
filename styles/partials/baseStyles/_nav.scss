@@ -5,17 +5,20 @@
     
     .navContent{
         @include displayFlex(row, flex-start, space-evenly);
+        margin-left:7rem;
 
     ul{
         @include displayFlex(row, flex-start, center);
 
         li{
             list-style:none;
-            padding:10px;
+            padding:10px 1rem;
 
             a{
                 color:$colorWhite;
                 text-decoration:none;
+                text-transform:uppercase;
+                font-family:$primaryFont;
 
                 &.active{
                     color: $colorYellow;

@@ -6,7 +6,13 @@
     .blogHeaderTitle{
         color:$colorYellow;
         font-family:$primaryFont;
-        margin-top:20%;
+        margin-top:14rem;
+        margin-left: 7rem;
+        
+        h1{
+            @include fontSize(3.75rem);
+            
+        }
     }
 
 }

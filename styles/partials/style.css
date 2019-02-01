@@ -245,6 +245,7 @@ html {
   -webkit-box-align: space-evenly;
       -ms-flex-align: space-evenly;
           align-items: space-evenly;
+  margin-left: 7rem;
 }
 
 .headerNav .navContent ul,
@@ -269,7 +270,7 @@ html {
 .blogNav .navContent ul li,
 .contactNav .navContent ul li {
   list-style: none;
-  padding: 10px;
+  padding: 10px 1rem;
 }
 
 .headerNav .navContent ul li a,
@@ -277,6 +278,8 @@ html {
 .contactNav .navContent ul li a {
   color: #f0efed;
   text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .headerNav .navContent ul li a.active,
@@ -502,7 +505,12 @@ footer {
 .blogHeader .blogHeaderTitle {
   color: #f8e71c;
   font-family: "Josefin Sans", sans-serif;
-  margin-top: 20%;
+  margin-top: 14rem;
+  margin-left: 7rem;
+}
+
+.blogHeader .blogHeaderTitle h1 {
+  font-size: 3.75rem;
 }
 
 .blogMain {
@@ -582,17 +590,37 @@ footer {
 
 .blogAside .blogAsideInfo {
   margin-left: 6rem;
-  height: 48.5rem;
+  height: 40rem;
   width: 75%;
   position: absolute;
-  top: 10px;
+  top: 15px;
+  right: 35px;
   padding-top: 10rem;
   z-index: -1;
   background-color: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .blogAside .blogAsideInfo .blogAsideInfoTop {
-  padding-top: 17rem;
+  padding-top: 10rem;
+}
+
+.blogAside .blogAsideInfo .blogAsideInfoTop p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5rem;
+}
+
+.blogAside .blogAsideInfo .blogAsideInfoTop a {
+  font-weight: 600;
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.blogAside .blogAsideInfo .blogAsideInfoBottom li {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5rem;
 }
 
 .commentsSection {
@@ -724,7 +752,7 @@ footer {
   display: flex;
   width: 18%;
   margin-top: 11rem;
-  margin-left: 11rem;
+  margin-left: 7rem;
 }
 
 .contactHeader .contactHeaderTitle h1 {
@@ -820,7 +848,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 11rem;
+  margin-left: 7rem;
 }
 
 .contactMain ul {

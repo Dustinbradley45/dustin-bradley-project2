@@ -12,16 +12,38 @@
 
     .blogAsideInfo{
         margin-left:6rem;
-        height:48.5rem;
+        height:40rem;
         width: 75%;
         position:absolute;
-        top:10px;
+        top:15px;
+        right:35px;
         padding-top:10rem;
         z-index:-1;
         background-color:#ffffff;
+        padding-left:1rem;
+        padding-right:1rem;
 
         .blogAsideInfoTop{
-            padding-top:17rem;
+            padding-top:10rem;
+
+            p {
+                font-family:$secondaryFont;
+                line-height:1.5rem;
+            }
+
+            a{
+                font-weight:600;
+                color:black;
+                font-style:italic;
+                text-decoration:none;
+            }
+        }
+
+        .blogAsideInfoBottom {
+            li {
+                font-family: $secondaryFont;
+                line-height:1.5rem;
+            }
         }
     }
 }
