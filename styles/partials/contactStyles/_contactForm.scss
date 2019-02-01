@@ -1,0 +1,58 @@
+.contactUsForm {
+    width: 60%;
+    background-color:white;
+    @include displayFlex(column, flex-start, center);
+    padding:20px;
+    margin:0;
+    position:relative;
+    bottom:200px;
+    left:140px;
+    -webkit-box-shadow: -11px 10px 0px 0px $colorYellow;;
+    -moz-box-shadow: -11px 10px 0px 0px $colorYellow;
+    box-shadow: -11px 10px 0px 0px $colorYellow;
+
+     .contactForm{
+         width:80%;
+
+        .contactFormInput{
+            width:100%;
+        }
+        
+
+        input[type='email'],
+        input[type='name']{
+            border:none;
+            border-bottom: 1px solid $colorLightGreen;
+            padding-bottom:1.25rem;
+            margin: 2rem 0;
+            width: calc(50% - 3%);
+        }
+
+        input[type='email'] {
+            margin-left:2%;
+        }
+
+        input[type='name'] {
+            margin-right:2%;
+        }
+
+        textarea {
+            border: 1px solid $colorLightGreen;
+            width:100%;
+            height: 200px;
+            padding:25px 0 0 15px;
+        
+        }
+
+        button{
+            width: 100%;
+            margin: 20px 0;
+            padding:10px;
+            border:none;
+            color:white;
+            background-color:$colorLightGreen;
+            font-family:$primaryFont;
+           
+        }
+    }
+}

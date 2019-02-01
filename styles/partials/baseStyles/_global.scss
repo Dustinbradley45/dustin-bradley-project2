@@ -12,11 +12,15 @@
     overflow: hidden;
 }
 
+.bold {
+    font-weight:600;
+}
+
 .wrapper{
     max-width: 1280px;
     margin: 0 auto;
 }
 
-body{
+html{
     font-size:125%;
 }

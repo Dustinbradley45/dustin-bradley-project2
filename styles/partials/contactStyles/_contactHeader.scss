@@ -1,0 +1,21 @@
+.contactHeader {
+    background-image:url('./../../planted-final-assets/contact-header-1.jpg');
+    height:65vh;
+
+
+    .contactHeaderTitle {
+        display:flex;
+        width:18%;
+        margin-top:11rem;
+        margin-left:11rem;
+        
+        h1{
+            color:$colorYellow;
+            width:100%;
+            display:inline-block;
+            @include fontSize(3.75rem);
+            font-family:$primaryFont;
+            
+        }
+    }
+}
