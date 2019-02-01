@@ -41,3 +41,56 @@
 .contactNav,{
     background-color: $colorBlack;
 }
+
+.mainHeader {
+    .navigation {
+
+        .navButton {
+            width: 4rem;
+            height:4rem;
+            display:block;
+            background-color:peru;
+            border-radius:50%;
+            position:relative;
+            top:7%;
+            left:93%;
+          
+            
+
+
+        
+        .navIcon {
+            width: 2rem;
+            height:2px;
+            margin:20px;
+            top:2rem;
+            background-color:white;
+            position:relative;
+            margin:auto;
+            
+        
+
+            &::before {
+                content:'';
+                width: 2rem;
+                height:2px;
+                background-color:white;
+                display:block;
+                position:absolute;
+                top:8px;
+            }
+
+            &::after {
+                content:'';
+                 width: 2rem;
+                 height:2px;
+                 background-color:white;
+                 
+                 display:block;
+                 position:absolute;
+                 bottom:8px;
+            }
+        }
+    }
+    }
+}
