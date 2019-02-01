@@ -1,17 +1,37 @@
 .whatIsPlant{
     text-align:center;
-    margin:0 auto;
-    background-color:$colorWhite;
     @include displayFlex(column, flex-start, center);
     color:$colorBlack;
-    padding:100px 0 40px 0;
+    margin:3.5rem 0;
+    padding:4rem 0 4rem 0;
+    background-color:$colorWhite;
     
     .whatIsPlantContent{
-        width:60%;
+        width:70%;
+
+        h3{
+            font-family:$primaryFont;
+            font-weight:600;
+            @include fontSize(3rem);
+            letter-spacing: 1.3px;
+
+        }
+
+        p{
+            font-family: $secondaryFont;
+            @include fontSize(1rem);
+            line-height:1.5rem;
+            padding-bottom:20px;
+        }
 
         a{
-            color:$colorBlack;
+            color:$colorWhite;
+            font-family:$primaryFont;
+            @include fontSize(1rem);
             text-decoration:none;
+            font-weight:600;
+            background-color:$colorLightGreen;
+            padding:.6rem 1rem;
         }
 
     }

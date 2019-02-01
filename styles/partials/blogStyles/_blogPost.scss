@@ -36,7 +36,28 @@
             padding-top:200px;
             position:relative;
             bottom:300px;   
-            font-family:$primaryFont;
+            
+            .blogTitle{
+                
+                h3{
+                    font-family:$primaryFont;
+                    font-weight:600;
+                    @include fontSize(2rem);
+                    letter-spacing:1.3px;
+                    
+                }
+                
+                p{
+                    font-family:$secondaryFont;
+                    font-style:italic;
+                    line-height:1.5rem;
+
+                }
+            }
+
+            p{
+                line-height:1.5rem;
+            }
 
 
         }

@@ -6,15 +6,17 @@
     .contactHeaderTitle {
         display:flex;
         width:18%;
-        margin-top:11rem;
+        margin-top:10rem;
         margin-left:7rem;
         
         h1{
+            font-family:$primaryFont;
+            font-weight:600;
+            letter-spacing: 1.3px;
+            line-height:4.5rem;
             color:$colorYellow;
             width:100%;
-            display:inline-block;
             @include fontSize(3.75rem);
-            font-family:$primaryFont;
             
         }
     }

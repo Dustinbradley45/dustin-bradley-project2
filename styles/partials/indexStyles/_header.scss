@@ -5,32 +5,38 @@
     background-repeat:no-repeat;
 
     .mainTitle{
-        padding-top:15%;
+        padding-top:12rem;
         width:20%;
-        @include fontSize(2rem);
-        color:$colorWhite;
         @include displayFlex(column, center, center);
         margin:0 auto;
+        line-height:6rem;
         
         h1{
-            z-index:10;  
+            font-family:$primaryFont;
+            color:$colorWhite;
+            @include fontSize(8rem);
+            z-index:10;
+            font-weight:400; 
+            padding:0;
+            margin:0; 
+
+            .lowerTitle{
+                color:$colorYellow;
+            }
         }
 
         &::after{
             content:'';
             position:absolute;
-            top:250px;
+            top:235px;
             background-image:url('./../../planted-final-assets/header-box.jpg');
-            height:75vh;
-            width:40%;
+            background-size:cover;
+            height:80vh;
+            width:45.5%;
             right:0;
         }
         
 
-        .lowerTitle{
-            color:$colorYellow;
-            font-family:$primaryFont;
-        }
     }
 
 }

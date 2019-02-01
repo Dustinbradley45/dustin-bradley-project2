@@ -1,7 +1,102 @@
-.squareGalleryTop{
-    @include displayFlex(row, flex-start, center)
-}
+.squareGallery{
+    background-color:white;
 
-.squareGalleryBottom{
-    @include displayFlex(row, flex-start, center)
+    .squareGalleryTop{
+        @include displayFlex(row, flex-start, center);
+
+        .squareGalleryTopImage{
+            width:43%;
+
+            img{
+                width:100%;
+                position:relative;
+                bottom:1.2rem;
+                -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
+                -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
+                box-shadow: 10px 10px 0px 0px $colorYellow;
+            }
+
+        }
+
+        .squareGalleryTopInfo{
+            width: 43%;
+            margin-left:14.5%;
+
+            h4{
+                font-family: $primaryFont;
+                font-weight: 600;
+                @include fontSize(2rem);
+                letter-spacing: 1px;
+                padding:0;
+                margin:0;
+            }
+
+            p {
+                font-family: $secondaryFont;
+                font-weight: 400;
+                @include fontSize(1rem);
+                line-height:1.5rem;
+                padding-bottom:1rem;
+            }
+
+        }
+    }
+
+    
+    .squareGalleryBottom{
+        @include displayFlex(row, flex-start, center);
+
+        .squareGalleryBottomInfo{
+            width:43%;
+            text-align:right;
+            
+
+            h4 {
+                font-family: $primaryFont;
+                font-weight: 600;
+                @include fontSize(2rem);
+                letter-spacing: 1px;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                font-family: $secondaryFont;
+                font-weight: 400;
+                @include fontSize(1rem);
+                line-height: 1.5rem;
+                padding-bottom:1rem;
+            }
+
+        }
+
+        .squareGalleryBottomImage{
+            width:43%;
+            margin-left:10.5rem;
+
+
+            img{
+                width:100%;
+                position:relative;
+                top:1.2rem;
+                -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
+                -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
+                box-shadow: -10px 10px 0px 0px $colorYellow;
+            }
+
+        }
+    }
+
+    a{
+        font-family:$primaryFont;
+        font-weight:600;
+        @include fontSize(1rem);
+        text-align:center;
+        line-height:1.5rem;
+        letter-spacing:1px;
+        text-decoration:none;
+        color:$colorWhite;
+        background-color:$colorLightGreen;
+        padding:.6rem 1rem;
+    }
 }

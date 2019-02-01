@@ -7,6 +7,12 @@
         @include displayFlex(row, flex-start, space-evenly);
         margin-left:7rem;
 
+        h2{
+            font-weight:400;
+            font-size:1.6rem;
+            letter-spacing:1.1px;
+        }
+
     ul{
         @include displayFlex(row, flex-start, center);
 

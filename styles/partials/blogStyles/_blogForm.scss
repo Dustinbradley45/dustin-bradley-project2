@@ -18,20 +18,37 @@
         width:100%;
         
         input{
-            width:45%;
-            margin:20px;
+            width:49%;
             border:none;
+            padding-bottom:1rem;
             background-color:$colorWhite;
-            border-bottom:1px solid $colorLightGreen;
+            border-bottom:2px solid $colorLightGreen;
+       }
+
+       input[type='email'] {
+           margin-left: 2%;
+           font-family:$primaryFont;
+           font-weight:300;
+           @include fontSize(1rem);
+       }
+
+       input[type='name'] {
+            margin-right: 2%;
+            font-family:$primaryFont;
+            font-weight:300;
+            @include fontSize(1rem);
        }
        
     }
     textarea{
-    width:100%;
-    border:1px solid $colorLightGreen;
-    background-color:$colorWhite;
-    padding:10px;
-    margin: 20px 0 20px 0;
+        width:100%;
+        border:2px solid $colorLightGreen;
+        background-color:$colorWhite;
+        padding:35px;
+        margin: 20px 0 20px 0;
+        font-family:$primaryFont;
+        font-weight:300;
+        @include fontSize(1rem);
     
     }
 
@@ -42,5 +59,11 @@
         background-color:$colorLightGreen;
         color:white;
         padding:10px;
+        font-family:$primaryFont;
+        font-weight:600;
+        @include fontSize(1rem);
+        text-align:center;
+        line-height: 1.5rem;
+        letter-spacing:1px;
     }
 }
