@@ -310,50 +310,253 @@ img {
   background-color: #2c2c2c;
 }
 
-.mainHeader .navigation .navButton {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  background-color: peru;
+.mainHeader .navigation,
+.blogHeader .navigation,
+.contactHeader .navigation {
+  display: none;
+}
+
+.mainHeader .navigation .navCheckbox,
+.blogHeader .navigation .navCheckbox,
+.contactHeader .navigation .navCheckbox {
+  display: none;
+}
+
+.mainHeader .navigation .navButton,
+.blogHeader .navigation .navButton,
+.contactHeader .navigation .navButton {
+  background-color: #f8e71c;
+  color: white;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: fixed;
   border-radius: 50%;
-  position: relative;
-  top: 7%;
-  left: 93%;
+  top: .5rem;
+  right: .5rem;
+  z-index: 2000;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
+          box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
+  text-align: center;
+  cursor: pointer;
 }
 
-.mainHeader .navigation .navButton .navIcon {
-  width: 2rem;
-  height: 2px;
-  margin: 20px;
-  top: 2rem;
-  background-color: white;
-  position: relative;
-  margin: auto;
+.mainHeader .navigation .navBackground,
+.blogHeader .navigation .navBackground,
+.contactHeader .navigation .navBackground {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(7, 65, 21, 0.6);
+  z-index: 1500;
+  -webkit-transition: -webkit-transform .7s ease;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease, -webkit-transform .7s ease;
 }
 
-.mainHeader .navigation .navButton .navIcon::before {
-  content: '';
-  width: 2rem;
-  height: 2px;
-  background-color: white;
+.mainHeader .navigation .mobileNavContent,
+.blogHeader .navigation .mobileNavContent,
+.contactHeader .navigation .mobileNavContent {
+  height: 100vh;
+  position: fixed;
   display: block;
-  position: absolute;
-  top: 8px;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.68, 0, 0.265, 0.55);
+  transition: all 0.6s cubic-bezier(0.68, 0, 0.265, 0.55);
 }
 
-.mainHeader .navigation .navButton .navIcon::after {
-  content: '';
+.mainHeader .navigation .navList,
+.blogHeader .navigation .navList,
+.contactHeader .navigation .navList {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  top: 35%;
+}
+
+.mainHeader .navigation .navItem,
+.blogHeader .navigation .navItem,
+.contactHeader .navigation .navItem {
+  margin: .5rem;
+}
+
+.mainHeader .navigation .navLink:link, .mainHeader .navigation .navLink:visited,
+.blogHeader .navigation .navLink:link,
+.blogHeader .navigation .navLink:visited,
+.contactHeader .navigation .navLink:link,
+.contactHeader .navigation .navLink:visited {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem 1rem;
+  color: #f0efed;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-size: 220%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.mainHeader .navigation .navLink:hover, .mainHeader .navigation .navLink:active,
+.blogHeader .navigation .navLink:hover,
+.blogHeader .navigation .navLink:active,
+.contactHeader .navigation .navLink:hover,
+.contactHeader .navigation .navLink:active {
+  background-position: 100%;
+  color: #4f4f4f;
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+  background: rgba(240, 239, 237, 0.5);
+  font-size: 1.5rem;
+}
+
+.mainHeader .navigation .navCheckbox:checked ~ .navBackground,
+.blogHeader .navigation .navCheckbox:checked ~ .navBackground,
+.contactHeader .navigation .navCheckbox:checked ~ .navBackground {
+  -webkit-transform: scale(63);
+          transform: scale(63);
+}
+
+.mainHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
+.blogHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
+.contactHeader .navigation .navCheckbox:checked ~ .mobileNavContent {
+  opacity: 1;
+  width: 100%;
+}
+
+.mainHeader .navigation .navIcon,
+.blogHeader .navigation .navIcon,
+.contactHeader .navigation .navIcon {
+  position: relative;
+  margin-top: 1.75rem;
+}
+
+.mainHeader .navigation .navIcon, .mainHeader .navigation .navIcon::before, .mainHeader .navigation .navIcon::after,
+.blogHeader .navigation .navIcon,
+.blogHeader .navigation .navIcon::before,
+.blogHeader .navigation .navIcon::after,
+.contactHeader .navigation .navIcon,
+.contactHeader .navigation .navIcon::before,
+.contactHeader .navigation .navIcon::after {
   width: 2rem;
   height: 2px;
-  background-color: white;
-  display: block;
+  background-color: #074115;
+  display: inline-block;
+}
+
+.mainHeader .navigation .navIcon::before, .mainHeader .navigation .navIcon::after,
+.blogHeader .navigation .navIcon::before,
+.blogHeader .navigation .navIcon::after,
+.contactHeader .navigation .navIcon::before,
+.contactHeader .navigation .navIcon::after {
+  content: "";
   position: absolute;
-  bottom: 8px;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.mainHeader .navigation .navIcon::before,
+.blogHeader .navigation .navIcon::before,
+.contactHeader .navigation .navIcon::before {
+  top: -.8rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mainHeader .navigation .navIcon::after,
+.blogHeader .navigation .navIcon::after,
+.contactHeader .navigation .navIcon::after {
+  top: .8rem;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.mainHeader .navigation .navButton:hover .navIcon::before,
+.blogHeader .navigation .navButton:hover .navIcon::before,
+.contactHeader .navigation .navButton:hover .navIcon::before {
+  left: -.5rem;
+}
+
+.mainHeader .navigation .navButton:hover .navIcon::after,
+.blogHeader .navigation .navButton:hover .navIcon::after,
+.contactHeader .navigation .navButton:hover .navIcon::after {
+  left: .5rem;
+}
+
+.mainHeader .navigation .navCheckbox:checked + .navButton .navIcon,
+.blogHeader .navigation .navCheckbox:checked + .navButton .navIcon,
+.contactHeader .navigation .navCheckbox:checked + .navButton .navIcon {
+  background-color: transparent;
+}
+
+.mainHeader .navigation .navCheckbox:checked + .navButton .navIcon::before,
+.blogHeader .navigation .navCheckbox:checked + .navButton .navIcon::before,
+.contactHeader .navigation .navCheckbox:checked + .navButton .navIcon::before {
+  top: 0;
+  -webkit-transform: rotate(495deg);
+          transform: rotate(495deg);
+  display: inline-block;
+}
+
+.mainHeader .navigation .navCheckbox:checked + .navButton .navIcon::after,
+.blogHeader .navigation .navCheckbox:checked + .navButton .navIcon::after,
+.contactHeader .navigation .navCheckbox:checked + .navButton .navIcon::after {
+  top: 0;
+  -webkit-transform: rotate(-495deg);
+          transform: rotate(-495deg);
+  display: inline-block;
+}
+
+.active {
+  color: #f8e71c;
 }
 
 @media only screen and (max-width: 750px) {
-  .headerNav .navContent {
+  .headerNav .navContent,
+  .blogNav .navContent,
+  .contactNav .navContent {
     margin-left: 2rem;
+  }
+  .headerNav .navContent .navigation,
+  .blogNav .navContent .navigation,
+  .contactNav .navContent .navigation {
+    display: block;
+  }
+  .headerNav .navContent .navigation .mobileNavContent ul,
+  .blogNav .navContent .navigation .mobileNavContent ul,
+  .contactNav .navContent .navigation .mobileNavContent ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .headerNav .navContent .mainNav,
+  .blogNav .navContent .mainNav,
+  .contactNav .navContent .mainNav {
+    display: none;
   }
 }
 
@@ -850,6 +1053,21 @@ footer {
 }
 
 @media only screen and (max-width: 750px) {
+  .headerNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .headerNav .navigation {
+    display: block;
+  }
   .mainHeader .mainTitle {
     padding-top: 9rem;
     line-height: 5rem;
@@ -930,8 +1148,7 @@ footer {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 0 auto;
   }
   .iconLinks .greenHouses,
   .iconLinks .community,

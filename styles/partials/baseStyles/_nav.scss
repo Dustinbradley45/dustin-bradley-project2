@@ -42,55 +42,183 @@
     background-color: $colorBlack;
 }
 
-.mainHeader {
+.mainHeader,
+.blogHeader,
+.contactHeader{
+
     .navigation {
+        display:none;
+
+        .navCheckbox {
+            display: none;
+        }
 
         .navButton {
-            width: 4rem;
-            height:4rem;
-            display:block;
-            background-color:peru;
+            background-color: $colorYellow;
+            color: white;
+            height: 3.5rem;
+            width: 3.5rem;
+            position: fixed;
             border-radius:50%;
-            position:relative;
-            top:7%;
-            left:93%;
-          
-            
+            top: .5rem;
+            right: .5rem;
+            z-index: 2000;
+            box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
+            text-align: center;
+            cursor: pointer;
 
+            
+        }
+
+        .navBackground {
+            height: 1rem;
+            width: 1rem;
+            border-radius:100%;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba($colorDarkGreen, 0.6);
+            z-index: 1500;
+            transition: transform .7s ease;
+
+        }
+
+        .mobileNavContent {
+            height: 100vh;
+            position: fixed;
+            display:block;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            opacity: 0;
+            width: 0;
+            transition: all .6s cubic-bezier(0.68, 0, .265, 0.55);
+        }
+
+
+        .navList {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            list-style: none;
+            text-align: center;
+            width: 100%;
+            top: 35%;
+
+        }
+
+        .navItem {
+            margin: .5rem;
+        }
+
+
+        // text styles
+        .navLink {
+
+            &:link,
+            &:visited {
+                display: inline-block;
+                @include fontSize(1rem);
+                @include fontWeight(300);
+                padding: 1rem 1rem;
+                color: $colorWhite;
+                font-family: $primaryFont;
+                text-decoration: none;
+                text-transform: uppercase;
+                ;
+                background-size: 220%;
+                transition: all .3s;
+
+            }
+
+            &:hover,
+            &:active {
+                background-position: 100%;
+                color: $colorGrey;
+                transform: translateY(.5rem);
+                background:rgba($colorWhite, .5);
+                @include fontSize(1.5rem);
+            }
+        }
+
+
+        //FUNCTIONALITY
+        .navCheckbox:checked~.navBackground {
+            transform: scale(63);
 
         
+        }
+
+        .navCheckbox:checked~.mobileNavContent  {
+            opacity: 1;
+            width: 100%;
+        }
+
+
+        //ICON
         .navIcon {
-            width: 2rem;
-            height:2px;
-            margin:20px;
-            top:2rem;
-            background-color:white;
-            position:relative;
-            margin:auto;
-            
-        
+            position: relative;
+            margin-top: 1.75rem;
+
+            &,
+            &::before,
+            &::after {
+                width: 2rem;
+                height: 2px;
+                background-color: $colorDarkGreen;
+                display: inline-block;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
 
             &::before {
-                content:'';
-                width: 2rem;
-                height:2px;
-                background-color:white;
-                display:block;
-                position:absolute;
-                top:8px;
+                top: -.8rem;
+                transform: rotate(180deg)
             }
 
             &::after {
-                content:'';
-                 width: 2rem;
-                 height:2px;
-                 background-color:white;
-                 
-                 display:block;
-                 position:absolute;
-                 bottom:8px;
+                top: .8rem;
+                transform: rotate(-180deg)
             }
         }
+
+        .navButton:hover .navIcon::before {
+            left: -.5rem;
+
+        }
+
+        .navButton:hover .navIcon::after {
+            left: .5rem;
+        }
+
+        .navCheckbox:checked+.navButton .navIcon {
+            background-color: transparent;
+        }
+
+        .navCheckbox:checked+.navButton .navIcon::before {
+            top: 0;
+            transform: rotate(495deg);
+            display: inline-block;
+
+        }
+
+        .navCheckbox:checked+.navButton .navIcon::after {
+            top: 0;
+            transform: rotate(-495deg);
+            display: inline-block;
+
+
+        }
     }
-    }
+}
+
+.active {
+    color: $colorYellow;
 }

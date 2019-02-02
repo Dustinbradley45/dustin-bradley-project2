@@ -17,8 +17,19 @@
 
 //750px
 @media #{$smallTablet} {
+.headerNav{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    // align-content: flex-start;
+
+    .navigation {
+        display:block;
+    }
+}
 
     .mainHeader{
+
 
         .mainTitle{
             padding-top:9rem;
@@ -80,8 +91,8 @@
     .iconLinks {
         @include displayFlex (column, flex-start, flex-start);
         width: 100%;
-        margin-left: 2rem;
-        margin-right: 2rem;
+
+        margin:0 auto;
 
 
         .greenHouses,

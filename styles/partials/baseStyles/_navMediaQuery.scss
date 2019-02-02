@@ -17,10 +17,27 @@
 
  //750px
  @media #{$smallTablet} {
-     .headerNav {
-
+     .headerNav,
+     .blogNav,
+     .contactNav {
+         
          .navContent {
              margin-left: 2rem;
+             
+            .navigation {
+                display:block;
+
+                .mobileNavContent{
+                   
+                   ul{
+                       @include displayFlex (column, flex-start, center)
+                   }
+                }
+            }
+
+            .mainNav {
+                display:none;
+            }
         }
     }
  }
