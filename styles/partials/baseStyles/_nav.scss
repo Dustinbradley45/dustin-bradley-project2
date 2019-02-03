@@ -32,7 +32,6 @@
                 }
             }
         }
-
     }
 }
 }
@@ -59,15 +58,13 @@
             height: 6rem;
             width: 6.5rem;
             position: fixed;
-           border-radius: 0 50% 0 50%;
-           top: -35px;
-           right: -18px;
+            border-radius: 0 50% 0 50%;
+            top: -35px;
+            right: -18px;
             z-index: 2000;
             box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
             text-align: center;
-            cursor: pointer;
-
-            
+            cursor: pointer; 
         }
 
         .navBackground {
@@ -80,7 +77,6 @@
             background: rgba($colorDarkGreen, 0.6);
             z-index: 1500;
             transition: transform .7s ease;
-
         }
 
         .mobileNavContent {
@@ -95,7 +91,6 @@
             transition: all .6s cubic-bezier(0.68, 0, .265, 0.55);
         }
 
-
         .navList {
             position: absolute;
             top: 50%;
@@ -105,13 +100,11 @@
             text-align: center;
             width: 100%;
             top: 35%;
-
         }
 
         .navItem {
             margin: .5rem;
         }
-
 
         // text styles
         .navLink {
@@ -129,7 +122,6 @@
                 ;
                 background-size: 220%;
                 transition: all .3s;
-
             }
 
             &:hover,
@@ -142,14 +134,14 @@
             }
         }
 
-
         //FUNCTIONALITY
+
+        //scales out background when checked
         .navCheckbox:checked~.navBackground {
             transform: scale(70);
-
-        
         }
 
+        //Content displays within the mobile nav
         .navCheckbox:checked~.mobileNavContent  {
             opacity: 1;
             width: 100%;
@@ -190,20 +182,22 @@
                 transform: rotate(-180deg)
             }
         }
-
+            //INITIAL HOVER TRANSITION
         .navButton:hover .navIcon::before {
             left: -.5rem;
 
         }
-
+            //INITIAL HOVER TRANSITION
         .navButton:hover .navIcon::after {
             left: .5rem;
         }
+
 
         .navCheckbox:checked+.navButton .navIcon {
             background-color: transparent;
         }
 
+        //On click transition
         .navCheckbox:checked+.navButton .navIcon::before {
             top: 0;
             transform: rotate(495deg);
@@ -211,16 +205,16 @@
 
         }
 
+        //On click transition
         .navCheckbox:checked+.navButton .navIcon::after {
             top: 0;
             transform: rotate(-495deg);
             display: inline-block;
-
-
         }
     }
 }
 
+//Used for yellow header on page user is on
 .active {
     color: $colorYellow;
 }

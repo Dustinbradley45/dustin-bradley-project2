@@ -1,5 +1,4 @@
 // COLOUR VARIABLES:
-
 $colorBlack: rgba(44, 44, 44, 1); //#2C2C2C
 $colorWhite: rgba(240, 239, 237, 1); //#F0EFED
 $colorGrey: rgba(79, 79, 79, 1); //#4F4F4F
@@ -34,7 +33,6 @@ $secondaryFont: 'Roboto', sans-serif;
     @include fontWeight(600);
     line-height:4.5rem;
 }
-
 
 // p STYLES
 @mixin bodyText {

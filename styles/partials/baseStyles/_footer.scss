@@ -3,7 +3,6 @@ footer {
     color:$colorWhite;
     padding:1px;
     text-align:center;
-    font-family:$secondaryFont;
-    @include fontSize(1rem);
+    @include bodyText;
 
 }
