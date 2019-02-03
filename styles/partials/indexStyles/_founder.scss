@@ -9,44 +9,24 @@
         width:70%;
         padding-left:6rem;
 
-
-        h3{
-            font-family:$primaryFont;
-            font-weight:600; 
-            @include fontSize(2rem);
-            letter-spacing: 1px;
-            padding:0;
-            margin:0;
+        h4{
+            @include subHeadingText;
         }
     
         p {
-            font-family:$secondaryFont;
-            @include fontSize(1rem);
-            line-height:1.5rem; 
+            @include bodyText;
         }
 
         a {
-            font-family: $primaryFont;
-            font-weight: 600;
-            @include fontSize(1rem);
-            text-align: center;
-            line-height: 1.5rem;
-            letter-spacing: 1px;
-            text-decoration: none;
-            color: $colorWhite;
-            background-color: $colorLightGreen;
-            padding: .6rem 1rem;
+            @include mainButton;
         }
 
     }
 
-
     img {
         width:100%;
-        // margin-right:1rem;
         -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
         -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
         box-shadow: 10px 10px 0px 0px $colorYellow;
     }
-
 }

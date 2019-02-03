@@ -327,12 +327,12 @@ img {
 .contactHeader .navigation .navButton {
   background-color: #f8e71c;
   color: white;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 6rem;
+  width: 6.5rem;
   position: fixed;
-  border-radius: 50%;
-  top: .5rem;
-  right: .5rem;
+  border-radius: 0 50% 0 50%;
+  top: -35px;
+  right: -18px;
   z-index: 2000;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
           box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
@@ -426,8 +426,8 @@ img {
 .mainHeader .navigation .navCheckbox:checked ~ .navBackground,
 .blogHeader .navigation .navCheckbox:checked ~ .navBackground,
 .contactHeader .navigation .navCheckbox:checked ~ .navBackground {
-  -webkit-transform: scale(63);
-          transform: scale(63);
+  -webkit-transform: scale(70);
+          transform: scale(70);
 }
 
 .mainHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
@@ -441,7 +441,7 @@ img {
 .blogHeader .navigation .navIcon,
 .contactHeader .navigation .navIcon {
   position: relative;
-  margin-top: 1.75rem;
+  margin-top: 3.75rem;
 }
 
 .mainHeader .navigation .navIcon, .mainHeader .navigation .navIcon::before, .mainHeader .navigation .navIcon::after,
@@ -472,9 +472,12 @@ img {
 .mainHeader .navigation .navIcon::before,
 .blogHeader .navigation .navIcon::before,
 .contactHeader .navigation .navIcon::before {
+  content: '';
   top: -.8rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .mainHeader .navigation .navIcon::after,
@@ -663,15 +666,19 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  padding-bottom: 20px;
+  font-weight: 400;
+  padding-bottom: 1rem;
 }
 
 .whatIsPlant .whatIsPlantContent a {
-  color: #f0efed;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
   font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #f0efed;
   background-color: #0e902d;
   padding: .6rem 1rem;
 }
@@ -724,9 +731,9 @@ footer {
 
 .squareGallery .squareGalleryTop .squareGalleryTopInfo p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
   padding-bottom: 1rem;
 }
 
@@ -762,9 +769,9 @@ footer {
 
 .squareGallery .squareGalleryBottom .squareGalleryBottomInfo p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
   padding-bottom: 1rem;
 }
 
@@ -822,7 +829,7 @@ footer {
   width: 50%;
 }
 
-.iconLinks .greenHouses h4 {
+.iconLinks .greenHouses h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -832,7 +839,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.iconLinks .greenHouses h4:before {
+.iconLinks .greenHouses h5:before {
   content: '\f06c';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -847,25 +854,25 @@ footer {
   margin-left: 3.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .iconLinks .community {
   width: 50%;
 }
 
-.iconLinks .community h4 {
+.iconLinks .community h5 {
+  margin-bottom: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 0;
   margin: 0;
-  margin-bottom: 1.5rem;
 }
 
-.iconLinks .community h4:before {
+.iconLinks .community h5:before {
   content: '\f0c0';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -880,15 +887,15 @@ footer {
   margin-left: 3.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .iconLinks .blog {
   width: 50%;
 }
 
-.iconLinks .blog h4 {
+.iconLinks .blog h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -898,7 +905,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.iconLinks .blog h4:before {
+.iconLinks .blog h5:before {
   content: '\f15b';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -913,15 +920,15 @@ footer {
   margin-left: 3.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .iconLinks .getInTouch {
   width: 50%;
 }
 
-.iconLinks .getInTouch h4 {
+.iconLinks .getInTouch h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -931,7 +938,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.iconLinks .getInTouch h4:before {
+.iconLinks .getInTouch h5:before {
   content: '\f095';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -946,8 +953,8 @@ footer {
   margin-left: 3.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .banner {
@@ -984,7 +991,7 @@ footer {
   padding-left: 6rem;
 }
 
-.founder .founderContent h3 {
+.founder .founderContent h4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -997,6 +1004,7 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .founder .founderContent a {
@@ -1779,13 +1787,12 @@ footer {
 }
 
 .contactHeader .contactHeaderTitle h1 {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 1.3px;
-  line-height: 4.5rem;
   color: #f8e71c;
-  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 3.75rem;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  line-height: 4.5rem;
 }
 
 .contactUsForm {
@@ -1853,13 +1860,14 @@ footer {
 
 .contactUsForm .contactForm button {
   width: 100%;
-  margin: 20px 0;
-  padding: 10px;
   border: none;
-  color: white;
+  margin-top: 20px;
   background-color: #0e902d;
+  color: white;
+  padding: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
+  font-size: 1rem;
   text-align: center;
   line-height: 1.5rem;
   letter-spacing: 1px;

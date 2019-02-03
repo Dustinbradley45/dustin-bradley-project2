@@ -56,12 +56,12 @@
         .navButton {
             background-color: $colorYellow;
             color: white;
-            height: 3.5rem;
-            width: 3.5rem;
+            height: 6rem;
+            width: 6.5rem;
             position: fixed;
-            border-radius:50%;
-            top: .5rem;
-            right: .5rem;
+           border-radius: 0 50% 0 50%;
+           top: -35px;
+           right: -18px;
             z-index: 2000;
             box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
             text-align: center;
@@ -145,7 +145,7 @@
 
         //FUNCTIONALITY
         .navCheckbox:checked~.navBackground {
-            transform: scale(63);
+            transform: scale(70);
 
         
         }
@@ -159,7 +159,7 @@
         //ICON
         .navIcon {
             position: relative;
-            margin-top: 1.75rem;
+            margin-top: 3.75rem;
 
             &,
             &::before,
@@ -179,8 +179,10 @@
             }
 
             &::before {
+                content:'';
                 top: -.8rem;
-                transform: rotate(180deg)
+                transform: rotate(180deg);
+                transform:rotate(-180deg);
             }
 
             &::after {

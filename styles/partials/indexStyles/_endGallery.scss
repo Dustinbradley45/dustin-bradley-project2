@@ -3,13 +3,9 @@
     background-color:white;
 
     .galleryContent {
-        display:flex;
-        flex-direction:row;
-        justify-content:flex-start;
-        align-items:center;
+        @include displayFlex(row, flex-start, center);
         padding: 4rem 0;
     
-
         img{
             width:33.3%;
             margin:1rem;
@@ -21,12 +17,7 @@
             &:last-child {
                 margin-right:0;
             }
-        
         }
-
-        
-
-
     }
 }
 

@@ -1,11 +1,3 @@
-// <form action="#"class="blogForm">
-//<label for="blogUserName"class='visuallyHidden'></label>
-    //<input type="name"name='name'placeholder='Name'id='blogUserName'>
-    //<label for="blogEmail"class='visuallyHidden'></label>
-    //<input type="email"name="email"id="blogEmail">
-    //<textarea name="userComments"id="userComments"cols="100"rows="10"placeholder='Comment'></textarea>
-//</form>
-
 .blogForm{
     @include displayFlex(column, flex-start, center);
     margin-right:5rem;
@@ -53,17 +45,6 @@
     }
 
     button{
-        width:100%;
-        border: none;
-        margin-top:20px;
-        background-color:$colorLightGreen;
-        color:white;
-        padding:10px;
-        font-family:$primaryFont;
-        font-weight:600;
-        @include fontSize(1rem);
-        text-align:center;
-        line-height: 1.5rem;
-        letter-spacing:1px;
+        @include formButton;
     }
 }

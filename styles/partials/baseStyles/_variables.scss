@@ -12,15 +12,98 @@ $primaryFont: 'Josefin Sans', sans-serif;
 $secondaryFont: 'Roboto', sans-serif;
 
 //MIXIN
+@mixin mainButton {
+    font-family: $primaryFont;
+    font-weight: 600;
+    @include fontSize(1rem);
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: $colorWhite;
+    background-color: $colorLightGreen;
+    padding: .6rem 1rem;
+}
+
+//h1 BLOG, CONTACT  STYLES
+@mixin headerTitleStyle {
+    color:$colorYellow;
+    font-family:$primaryFont;
+    @include fontSize(3.75rem);
+    letter-spacing: 1.3px;
+    @include fontWeight(600);
+    line-height:4.5rem;
+}
+
+
+// p STYLES
+@mixin bodyText {
+    font-family: $secondaryFont;
+    @include fontSize(1rem);
+    line-height:1.5rem;
+    @include fontWeight(400);
+}
+
+//h3 STYLES 
+@mixin indexHeadingText {
+    font-family:$primaryFont;
+    @include fontWeight(600);
+    @include fontSize(3rem);
+    letter-spacing: 1.3px;
+}
+
+
+@mixin subHeadingText {
+     font-family: $primaryFont;
+     @include fontWeight(600);
+     @include fontSize(2rem);
+     letter-spacing: 1px;
+     padding: 0;
+     margin: 0;
+}
+
+//h5 STYLES
+@mixin sectionTitle {
+    font-family: $primaryFont;
+    @include fontWeight(600);
+    @include fontSize(1.5rem);
+    letter-spacing:1px;
+    padding:0;
+    margin:0;
+}
+
+//LINKICON STYLES
+@mixin linkIcon {
+     margin-right:1rem;
+     padding:.5rem;
+     border-radius:100px;
+     background-color:$colorYellow;
+     height: 100px;
+     width:100px;
+}
+
+
+
+//BUTTON STYLES
+@mixin formButton {
+          width:100%;
+          border: none;
+          margin-top:20px;
+          background-color:$colorLightGreen;
+          color:white;
+          padding:10px;
+          font-family:$primaryFont;
+          @include fontWeight(600);
+          @include fontSize(1rem);
+          text-align:center;
+          line-height: 1.5rem;
+          letter-spacing:1px;
+}
+
 @mixin fontSize($size) {
     font-size: $size;
 }
 
-@mixin boxShadow($h:0px, $v:0px, $b:0px, $s:0px, $c:#000000) {
-    -webkit-box-shadow: $h $v $b $s $c;
-    -moz-box-shadow: $h $v $b $s $c;
-    box-shadow: $h $v $b $s $c;
-}
 
 @mixin displayFlex($direction, $justify, $align){
     display:flex;
@@ -35,7 +118,6 @@ $secondaryFont: 'Roboto', sans-serif;
     right:$right;
     bottom:$bottom;
     left: $left;
-
 }
 
 @mixin fontWeight($fontWeight){

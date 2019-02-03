@@ -23,19 +23,11 @@
             margin-left:14.5%;
 
             h4{
-                font-family: $primaryFont;
-                font-weight: 600;
-                @include fontSize(2rem);
-                letter-spacing: 1px;
-                padding:0;
-                margin:0;
+                @include subHeadingText;
             }
 
             p {
-                font-family: $secondaryFont;
-                font-weight: 400;
-                @include fontSize(1rem);
-                line-height:1.5rem;
+               @include bodyText;
                 padding-bottom:1rem;
             }
 
@@ -52,19 +44,11 @@
             
 
             h4 {
-                font-family: $primaryFont;
-                font-weight: 600;
-                @include fontSize(2rem);
-                letter-spacing: 1px;
-                padding: 0;
-                margin: 0;
+               @include subHeadingText;
             }
 
             p {
-                font-family: $secondaryFont;
-                font-weight: 400;
-                @include fontSize(1rem);
-                line-height: 1.5rem;
+                @include bodyText;
                 padding-bottom:1rem;
             }
 
@@ -88,15 +72,6 @@
     }
 
     a{
-        font-family:$primaryFont;
-        font-weight:600;
-        @include fontSize(1rem);
-        text-align:center;
-        line-height:1.5rem;
-        letter-spacing:1px;
-        text-decoration:none;
-        color:$colorWhite;
-        background-color:$colorLightGreen;
-        padding:.6rem 1rem;
+        @include mainButton;
     }
 }
