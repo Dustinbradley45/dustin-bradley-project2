@@ -2,7 +2,6 @@
     width: 35%;
     position:relative;
     margin-top:7rem;
-    font-family:$primaryFont;
     z-index:10;
 
     img{
@@ -17,23 +16,25 @@
         position:absolute;
         top:15px;
         right:35px;
-        padding-top:10rem;
         z-index:-1;
         background-color:#ffffff;
-        padding-left:1rem;
-        padding-right:1rem;
+        padding: 10rem 1rem 0 1rem;
+
+        h4 {
+            @include sectionTitle;
+        }
 
         .blogAsideInfoTop{
             padding-top:10rem;
 
             p {
-                font-family:$secondaryFont;
-                line-height:1.5rem;
+               @include bodyText;
             }
 
             a{
-                font-weight:600;
+                @include bodyText;
                 color:black;
+                @include fontWeight(600);
                 font-style:italic;
                 text-decoration:none;
             }
@@ -41,8 +42,7 @@
 
         .blogAsideInfoBottom {
             li {
-                font-family: $secondaryFont;
-                line-height:1.5rem;
+                @include bodyText;
             }
         }
     }

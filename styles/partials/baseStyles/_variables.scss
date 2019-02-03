@@ -42,6 +42,7 @@ $secondaryFont: 'Roboto', sans-serif;
     @include fontSize(1rem);
     line-height:1.5rem;
     @include fontWeight(400);
+    letter-spacing:1px;
 }
 
 //h3 STYLES 
@@ -82,22 +83,42 @@ $secondaryFont: 'Roboto', sans-serif;
      width:100px;
 }
 
+//FORM STYLES
+
+//TEXTAREA STYLE
+@mixin textArea {
+    @include fontSize(1rem);
+    @include fontWeight(300);
+    font-family:$primaryFont;
+    border:2px solid $colorLightGreen;
+    width:100%;
+
+}
+
+@mixin inputFont{
+    font-family:$primaryFont;
+    @include fontWeight(300);
+    @include fontSize(1rem);
+    border:none;
+    border-bottom:2px solid $colorLightGreen;
+    padding-bottom:1rem;
+}
 
 
 //BUTTON STYLES
 @mixin formButton {
-          width:100%;
-          border: none;
-          margin-top:20px;
-          background-color:$colorLightGreen;
-          color:white;
-          padding:10px;
-          font-family:$primaryFont;
-          @include fontWeight(600);
-          @include fontSize(1rem);
-          text-align:center;
-          line-height: 1.5rem;
-          letter-spacing:1px;
+    width:100%;
+    border: none;
+    margin-top:20px;
+    background-color:$colorLightGreen;
+    color:white;
+    padding:10px;
+    font-family:$primaryFont;
+    @include fontWeight(600);
+    @include fontSize(1rem);
+    text-align:center;
+    line-height: 1.5rem;
+    letter-spacing:1px;
 }
 
 @mixin fontSize($size) {

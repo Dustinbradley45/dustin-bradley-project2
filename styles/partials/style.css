@@ -667,6 +667,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
   padding-bottom: 1rem;
 }
 
@@ -734,6 +735,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
   padding-bottom: 1rem;
 }
 
@@ -772,6 +774,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
   padding-bottom: 1rem;
 }
 
@@ -856,6 +859,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .iconLinks .community {
@@ -889,6 +893,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .iconLinks .blog {
@@ -922,6 +927,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .iconLinks .getInTouch {
@@ -955,6 +961,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .banner {
@@ -1005,6 +1012,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .founder .founderContent a {
@@ -1327,9 +1335,7 @@ footer {
   border-bottom: 2px solid #f8e71c;
   border-left: 2px solid #f8e71c;
   margin-right: 5rem;
-  padding-left: 3rem;
-  padding-bottom: 2.5rem;
-  padding-top: 200px;
+  padding: 200px 0 2.5rem 3rem;
   position: relative;
   bottom: 300px;
 }
@@ -1338,24 +1344,32 @@ footer {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 2rem;
-  letter-spacing: 1.3px;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
 }
 
 .blogMainRight .blogMission .blogPost .blogTitle p {
   font-family: "Roboto", sans-serif;
-  font-style: italic;
+  font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
 .blogMainRight .blogMission .blogPost p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .blogAside {
   width: 35%;
   position: relative;
   margin-top: 7rem;
-  font-family: "Josefin Sans", sans-serif;
   z-index: 10;
 }
 
@@ -1371,11 +1385,18 @@ footer {
   position: absolute;
   top: 15px;
   right: 35px;
-  padding-top: 10rem;
   z-index: -1;
   background-color: #ffffff;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 10rem 1rem 0 1rem;
+}
+
+.blogAside .blogAsideInfo h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
 }
 
 .blogAside .blogAsideInfo .blogAsideInfoTop {
@@ -1384,19 +1405,30 @@ footer {
 
 .blogAside .blogAsideInfo .blogAsideInfoTop p {
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .blogAside .blogAsideInfo .blogAsideInfoTop a {
-  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: black;
+  font-weight: 600;
   font-style: italic;
   text-decoration: none;
 }
 
 .blogAside .blogAsideInfo .blogAsideInfoBottom li {
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .commentsSection {
@@ -1407,7 +1439,11 @@ footer {
 
 .commentsSection h4 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.6rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
 }
 
 .commentsSection .comment1 {
@@ -1442,9 +1478,10 @@ footer {
 
 .commentsSection .comment1 .comment1Info p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .commentsSection .comment2 {
@@ -1481,9 +1518,10 @@ footer {
 
 .commentsSection .comment2 .comment2Info p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .blogForm {
@@ -1500,8 +1538,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 5rem;
-  margin-bottom: 20px;
+  margin: 0 5rem 20px 0;
   position: relative;
   bottom: 100px;
 }
@@ -1525,10 +1562,7 @@ footer {
 
 .blogForm .blogFormInput input {
   width: 49%;
-  border: none;
   padding-bottom: 1rem;
-  background-color: #f0efed;
-  border-bottom: 2px solid #0e902d;
 }
 
 .blogForm .blogFormInput input[type='email'] {
@@ -1536,6 +1570,10 @@ footer {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #0e902d;
+  padding-bottom: 1rem;
+  background-color: #f0efed;
 }
 
 .blogForm .blogFormInput input[type='name'] {
@@ -1543,17 +1581,21 @@ footer {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #0e902d;
+  padding-bottom: 1rem;
+  background-color: #f0efed;
 }
 
 .blogForm textarea {
-  width: 100%;
-  border: 2px solid #0e902d;
-  background-color: #f0efed;
-  padding: 35px;
   margin: 20px 0 20px 0;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+  padding: 35px;
   font-size: 1rem;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  border: 2px solid #0e902d;
+  width: 100%;
+  background-color: #f0efed;
 }
 
 .blogForm button {
@@ -1830,14 +1872,14 @@ footer {
 
 .contactUsForm .contactForm input[type='email'],
 .contactUsForm .contactForm input[type='name'] {
-  border: none;
-  border-bottom: 2px solid #0e902d;
-  padding-bottom: 1.25rem;
   margin: 2rem 0;
   width: calc(50% - 3%);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #0e902d;
+  padding-bottom: 1rem;
 }
 
 .contactUsForm .contactForm input[type='email'] {
@@ -1849,13 +1891,14 @@ footer {
 }
 
 .contactUsForm .contactForm textarea {
-  border: 2px solid #0e902d;
-  width: 100%;
   height: 200px;
   padding: 25px 0 0 15px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  border: 2px solid #0e902d;
+  width: 100%;
+  background-color: white;
 }
 
 .contactUsForm .contactForm button {
@@ -1877,7 +1920,7 @@ body {
   background-color: #f0efed;
 }
 
-.contactMain {
+body .contactMain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1894,7 +1937,7 @@ body {
   margin-left: 7rem;
 }
 
-.contactMain ul {
+body .contactMain ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1912,32 +1955,33 @@ body {
   padding: 0;
 }
 
-.contactMain ul li {
+body .contactMain ul li {
   list-style: none;
 }
 
-.contactMain ul li a {
+body .contactMain ul li a {
   color: #0e902d;
   padding: 20px;
   font-size: 1.2rem;
 }
 
-.contactMain ul li a:first-child {
+body .contactMain ul li a:first-child {
   padding-left: 0;
 }
 
-.contactMain .contactEmail {
+body .contactMain .contactEmail {
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 1.5px;
 }
 
-.contactMain .address p {
+body .contactMain .address p {
   padding: 0;
   margin: 0;
-  line-height: 1.5rem;
-  letter-spacing: 1px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 1440px) {

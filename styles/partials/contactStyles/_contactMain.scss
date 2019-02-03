@@ -1,48 +1,42 @@
 body{
     background-color: $colorWhite;
 
-}
+    .contactMain {
+        @include displayFlex(row, flex-start, center);
+        margin-left:7rem;
 
-.contactMain {
-
-    @include displayFlex(row, flex-start, center);
-    margin-left:7rem;
-
-
-    ul{
-        @include displayFlex(row, flex-start,center);
-        margin:0;
-        padding:0;
-        
-        li{
-            list-style:none;
+        ul{
+            @include displayFlex(row, flex-start,center);
+            margin:0;
+            padding:0;
             
-            a {
-                color:$colorLightGreen;
-                padding:20px;
-                @include fontSize(1.2rem);
+            li{
+                list-style:none;
+                
+                a {
+                    color:$colorLightGreen;
+                    padding:20px;
+                    @include fontSize(1.2rem);
 
-                &:first-child{
-                    padding-left:0;
+                    &:first-child{
+                        padding-left:0;
+                    }
                 }
             }
         }
-    }
 
-    .contactEmail {
-        font-family:$primaryFont;
-        letter-spacing:1.5px;
-    }
-
-     .address {
-
-        p{
-         padding:0;
-         margin:0;
-         line-height:1.5rem;
-         letter-spacing:1px;
-         font-family:$secondaryFont;
-         @include fontSize(1rem);
+        .contactEmail {
+            font-family:$primaryFont;
+            letter-spacing:1.5px;
         }
-     }
+
+        .address {
+
+            p{
+            padding:0;
+            margin:0;
+            @include bodyText;
+            }
+        }
+    }
 }

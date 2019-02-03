@@ -5,8 +5,7 @@
     margin-right:5rem;
 
     h4{
-        font-family: $primaryFont;
-        font-size:1.6rem;
+        @include sectionTitle;
     }
 
     .comment1{
@@ -23,17 +22,15 @@
 
             .bold {
                 font-family:$primaryFont;
-                font-weight:600;
+                @include fontWeight(600);
             }
 
             p{
-                font-family:$secondaryFont;
-                @include fontWeight(400);
-                font-size: 1rem;
-                line-height: 1.5rem;
+                @include bodyText;
             }
         }
     }
+    
     .comment2{
         @include displayFlex(row, flex-start, flex-start);
         margin-top:15%;
@@ -49,14 +46,11 @@
 
             .bold {
                 font-family: $primaryFont;
-                font-weight: 600;
+                @include fontWeight(600);
             }
 
             p {
-                font-family: $secondaryFont;
-                @include fontWeight(400);
-                font-size: 1rem;
-                line-height: 1.5rem;
+                @include bodyText;
             }
         }
     }

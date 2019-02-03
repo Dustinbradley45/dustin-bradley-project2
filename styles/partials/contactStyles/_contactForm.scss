@@ -11,24 +11,18 @@
     -moz-box-shadow: -11px 10px 0px 0px $colorYellow;
     box-shadow: -11px 10px 0px 0px $colorYellow;
 
-     .contactForm{
-         width:80%;
+    .contactForm{
+        width:80%;
 
         .contactFormInput{
             width:100%;
         }
         
-
         input[type='email'],
         input[type='name']{
-            border:none;
-            border-bottom: 2px solid $colorLightGreen;
-            padding-bottom:1.25rem;
             margin: 2rem 0;
             width: calc(50% - 3%);
-            font-family:$primaryFont;
-            @include fontWeight(300);
-            font-size:1rem;
+            @include inputFont;
         }
 
         input[type='email'] {
@@ -40,19 +34,14 @@
         }
 
         textarea {
-            border: 2px solid $colorLightGreen;
-            width:100%;
             height: 200px;
             padding:25px 0 0 15px;
-            font-family:$primaryFont;
-            @include fontWeight(300);
-            font-size:1rem;
-        
+            @include textArea;
+            background-color:white;
         }
 
         button{
            @include formButton;
-           
         }
     }
 }
