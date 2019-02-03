@@ -54,27 +54,43 @@
     }
 
     .contactMain{
-        @include displayFlex (column-reverse, flex-start, center);
+        display:flex;
+        flex-direction:column-reverse !important;
+        justify-content: flex-start;
+        align-items:center;
         margin:0 auto;
         margin-bottom:3rem;
+        margin-left:0 !important;
 
         .contactInfo {
             text-align:center;
+            padding-top: 3rem;
 
             ul {
                 justify-content: center;
-                padding-left:.7rem;
+                padding-left:0.7rem;
+            }
+        }
+
+        .contactUsForm {
+            bottom: 0;
+            left:0;
+            width: 70%;
+
+            input{
+                width: 100% !important;
+                margin-left:0 !important;
+            }
+
+            input[type='name']{
+                margin-bottom:1.5rem;
+            }
+
+            textarea {
+                margin-top:1rem;
             }
         }
     }
-
-    .contactUsForm {
-        bottom: 5rem;
-        left:0;
-        width: 70%;
-    }
-
-    
 }
 
 //850px
@@ -87,7 +103,7 @@
 @media #{$largePhone} {
 
     .contactUsForm {
-        width: 100%;
+        width: 100% !important;
         margin:0;
         box-shadow: 0 0 0 0;
         border-top:10px solid $colorYellow;

@@ -2,7 +2,7 @@
     @include displayFlex(column, flex-start, center);
     margin: 0 5rem 20px 0;
     position:relative;
-    bottom:100px;
+    bottom:6rem;
    
     .blogFormInput{
         @include displayFlex(row, flex-start,center);
@@ -10,26 +10,26 @@
         
         input{
             width:49%;
-            padding-bottom:1rem;
+            padding-bottom:.5rem;
             
        }
 
        input[type='email'] {
-           margin-left: 2%;
+           margin: 0 0 1rem 2%;
            @include inputFont;
            background-color:$colorWhite;
        }
 
        input[type='name'] {
-            margin-right: 2%;
+            margin: 0 2% 1rem 0;
             @include inputFont;
             background-color:$colorWhite;
        }
        
     }
     textarea{
-        margin: 20px 0 20px 0;
-        padding:35px;
+        margin: 1rem 0;
+        padding:1.5rem;
         @include textArea;
         background-color:$colorWhite;
     }

@@ -1,12 +1,12 @@
 .contactUsForm {
     width: 60%;
-    background-color:white;
     @include displayFlex(column, flex-start, center);
-    padding:20px;
-    margin:0;
     position:relative;
     bottom:200px;
     left:140px;
+    margin:0;
+    padding:20px;
+    background-color:white;
     -webkit-box-shadow: -11px 10px 0px 0px $colorYellow;;
     -moz-box-shadow: -11px 10px 0px 0px $colorYellow;
     box-shadow: -11px 10px 0px 0px $colorYellow;
@@ -20,9 +20,10 @@
         
         input[type='email'],
         input[type='name']{
-            margin: 2rem 0;
-            width: calc(50% - 3%);
             @include inputFont;
+            width: calc(50% - 3%);
+            margin: 2rem 0 1rem 0;
+            padding-bottom:0.5rem;
         }
 
         input[type='email'] {
@@ -34,14 +35,16 @@
         }
 
         textarea {
+            @include textArea;
             height: 200px;
             padding:25px 0 0 15px;
-            @include textArea;
             background-color:white;
         }
 
         button{
            @include formButton;
+           margin-top:2rem;
+           margin-bottom:1rem;
         }
     }
 }

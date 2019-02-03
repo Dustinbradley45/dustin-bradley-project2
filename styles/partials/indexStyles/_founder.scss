@@ -7,18 +7,21 @@
 
     .founderContent{
         width:70%;
-        padding-left:6rem;
+        padding-left:7rem;
 
         h4{
             @include subHeadingText;
+            margin-top:1.3rem;  
         }
     
         p {
             @include bodyText;
+            padding-bottom:.5rem;
         }
 
         a {
             @include mainButton;
+            margin-top:1rem;
         }
 
     }

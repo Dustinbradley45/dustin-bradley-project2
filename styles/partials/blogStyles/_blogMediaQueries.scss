@@ -34,6 +34,7 @@
             margin-left:0;
             width:100%;
             right:0;
+            margin-top: 3rem;
 
             .blogAsideInfoTop {
                 padding-top:6rem;
@@ -44,6 +45,13 @@
 
 //1000px
 @media #{$largeTablet} {
+
+    .blogAside {
+
+        .blogAsideInfo {
+            margin-top:1rem;
+        }
+    }
 
     .blogMainRight {
         
@@ -67,7 +75,18 @@
         .blogHeaderTitle {
             text-align:center;
             margin: 0;
-            margin-top:5rem;
+            margin-top:8rem;
+        }
+    }
+
+    .blogAside {
+
+        .blogAsideInfo {
+            
+            .blogAsideInfoTop {
+                padding-top:2rem;
+                
+            }
         }
     }
 }
@@ -77,6 +96,7 @@
 
     .blogMain {
         @include displayFlex (column, flex-start, flex-start);
+            margin-bottom:2rem;
 
         .blogAside {
             @include displayFlex (column, flex-start, center);
@@ -85,7 +105,7 @@
             background-color: white;
             margin: 0 auto;
             margin-left: 0;
-            padding: 3rem 0 3rem 0;
+            padding: 5rem 0 3.5rem 0;
 
             img {
                 width: 80%;
@@ -94,7 +114,7 @@
 
             .blogAsideInfo {
                 position: static;
-                padding-top: 0;
+                padding-top: 3rem;
                 width: 80%;
                 height: auto;
                 margin-left: 0;
@@ -122,7 +142,7 @@
 
                 .blogPost {
                     position: static;
-                    padding-top: 0;
+                    padding-top: 3.5rem;
 
                 }
             }
@@ -132,11 +152,25 @@
     .commentsSection {
         position: static;
         margin: 2rem;
+        padding-top:1.5rem;
+
+
+        h4{
+            padding-bottom:1rem;
+        }
+
+        .comment2 {
+            margin-top:6%;
+
+            img {
+                margin: .5rem 0;
+            }
+        }
     }
 
     .blogForm {
         position: static;
-        margin: 2rem;
+        margin: 1.5rem 2rem 2rem 2rem;
         
         .blogFormInput {
            @include displayFlex(column, center, center);
@@ -149,7 +183,6 @@
             }
         }
     }
-
 }
 
 //650px
@@ -165,7 +198,7 @@
 
                     img{
                         width: 50%;
-                        margin: 1rem 0;
+                        margin: .5rem 0;
                     }
 
                     .comment1Info {

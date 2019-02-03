@@ -16,7 +16,6 @@
 
         h5{
             @include sectionTitle;
-            margin-bottom:1.5rem;
             
             &:before{
                 content:'\f06c';
@@ -26,7 +25,7 @@
         }
 
         p {
-             margin-left: 3.5rem;
+             margin-left: 3.75rem;
              @include bodyText;
         }
     }
@@ -35,7 +34,7 @@
         width:50%;
 
         h5 {
-             margin-bottom:1.5rem;
+          
              @include sectionTitle;
             
             &:before{
@@ -43,12 +42,14 @@
                 content:'\f0c0';
                font-family:'Font Awesome 5 Free';
                @include linkIcon;
+               margin-right:19px;
 
             }
         }
 
          p {
-             margin-left: 3.5rem;
+             margin-left: 3.9rem;
+             padding-top:5px;   
             @include bodyText;
         }
     }
@@ -57,7 +58,7 @@
 
         h5{
             @include sectionTitle;
-            margin-bottom:1.5rem;
+         
 
             &:before {
                 content:'\f15b';
@@ -67,17 +68,18 @@
         }
 
          p {
-             margin-left: 3.5rem;
+             margin-left: 3.2rem;
             @include bodyText;
          }
     }
 
     .getInTouch{
         width: 50%;
+        padding-left:.5rem;
 
         h5{
             @include sectionTitle;
-            margin-bottom:1.5rem;
+     
 
             &:before {
                 content:'\f095';

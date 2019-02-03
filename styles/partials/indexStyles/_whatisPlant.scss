@@ -3,7 +3,7 @@
     @include displayFlex(column, flex-start, center);
     color:$colorBlack;
     margin:3.5rem 0;
-    padding:4rem 0 4rem 0;
+    padding:3rem 0 3rem 0;
     background-color:$colorWhite;
     
     .whatIsPlantContent{
@@ -11,6 +11,8 @@
 
         h3{
             @include indexHeadingText;
+            margin:0;
+            padding:0;
 
         }
 

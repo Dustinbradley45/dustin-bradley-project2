@@ -1,11 +1,14 @@
 
 .commentsSection{
     position:relative;
-    bottom:270px;
+    bottom:11rem;
     margin-right:5rem;
+   
 
     h4{
         @include sectionTitle;
+        padding-bottom:1.5rem;
+       
     }
 
     .comment1{
@@ -13,12 +16,12 @@
     
 
         img {
-            width: 20%;
+            width: 30%;
             margin-right:2rem;
         }
 
         .comment1Info{
-            width:80%;
+            width:70%;
 
             .bold {
                 font-family:$primaryFont;
@@ -33,16 +36,16 @@
     
     .comment2{
         @include displayFlex(row, flex-start, flex-start);
-        margin-top:15%;
+        margin-top:4rem;
 
         img {
-            width:20%;
+            width:30%;
             margin-right:2rem;
         }
 
         .comment2Info{
             text-align:left;
-            width:80%;
+            width:70%;
 
             .bold {
                 font-family: $primaryFont;

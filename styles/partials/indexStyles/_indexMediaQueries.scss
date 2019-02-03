@@ -10,7 +10,35 @@
 @media #{$smallDesktop} {}
 
 //1000px
-@media #{$largeTablet} {}
+@media #{$largeTablet} {
+.squareGallery{
+    padding: 2rem;
+
+    .squareGalleryTop {
+
+        .squareGalleryTopInfo {
+
+            margin-left:5rem; 
+
+            p {
+                margin-right:1rem;
+            }
+        }
+    }
+
+    .squareGalleryBottom {
+
+        .squareGalleryBottomInfo {
+
+            margin-right:-5rem;
+
+            p{
+                margin-left:1rem;
+            }
+        }
+    }
+}
+}
 
 //850px
 @media #{$medTablet} {}
@@ -21,7 +49,6 @@
     display:flex;
     flex-direction:row;
     justify-content: flex-start;
-    // align-content: flex-start;
 
     .navigation {
         display:block;
@@ -43,14 +70,19 @@
     }
 
     .squareGallery {
+        padding:0;
+        padding-bottom:1.3rem;
 
         .squareGalleryTop {
             @include displayFlex(column, flex-start, center);
+            margin:0;
 
             .squareGalleryTopImage {
                 width: 100%;
-
+                 margin:0 0 2rem 0;
+                
                 img {
+                    bottom:0;
                     box-shadow: 0 0 0 0;
                     border-bottom: 10px solid $colorYellow;
 
@@ -59,19 +91,21 @@
 
             .squareGalleryTopInfo {
                 width: 100%;
-                margin: 1rem 1rem;
+                margin:0;
                 padding: 1rem;
             }
         }
 
         .squareGalleryBottom {
             @include displayFlex(column-reverse, flex-start, center);
+            margin:0;
 
             .squareGalleryBottomImage {
                 width: 100%;
-                margin: 0;
+                margin:0 0 1.5rem 0;
 
                 img {
+                    bottom:0;
                     box-shadow: 0 0 0 0;
                     border-bottom: 10px solid $colorYellow;
 
@@ -80,8 +114,12 @@
 
             .squareGalleryBottomInfo {
                 width: 100%;
-                margin: 1rem 1rem;
+                margin: 2rem 2rem;
                 padding: 1rem;
+
+                h4 {
+                    padding-top:2rem;
+                }
             }
         }
     }
@@ -91,20 +129,16 @@
     .iconLinks {
         @include displayFlex (column, flex-start, flex-start);
         width: 100%;
-
-        margin:0 auto;
-
-
+        margin:2.5rem 0 2.5rem 0;
+       
         .greenHouses,
         .community,
         .blog,
         .getInTouch {
             width: 80%;
-            margin: 1.5rem 0;
+            margin: 1rem 2rem;
         }
     }
-
-
 }
 
 //650px
@@ -130,7 +164,7 @@
     }
 
     .whatIsPlant {
-        margin: 0.5rem 0;
+        margin: 2rem 0;
         padding: 1rem 0 4rem 0;
 
         .whatIsPlantContent {

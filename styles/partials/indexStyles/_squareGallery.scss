@@ -1,5 +1,6 @@
 .squareGallery{
     background-color:white;
+    padding: 2rem 0;
 
     .squareGalleryTop{
         @include displayFlex(row, flex-start, center);
@@ -10,7 +11,7 @@
             img{
                 width:100%;
                 position:relative;
-                bottom:1.2rem;
+                bottom:3.2rem;
                 -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
                 -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
                 box-shadow: 10px 10px 0px 0px $colorYellow;
@@ -21,6 +22,7 @@
         .squareGalleryTopInfo{
             width: 43%;
             margin-left:14.5%;
+            margin-bottom:1.9rem;
 
             h4{
                 @include subHeadingText;
@@ -29,6 +31,7 @@
             p {
                @include bodyText;
                 padding-bottom:1rem;
+                margin-right:4rem;
             }
 
         }
@@ -41,6 +44,7 @@
         .squareGalleryBottomInfo{
             width:43%;
             text-align:right;
+            margin-top:1rem;
             
 
             h4 {
@@ -50,6 +54,7 @@
             p {
                 @include bodyText;
                 padding-bottom:1rem;
+                margin-left:4rem;
             }
 
         }
@@ -62,7 +67,7 @@
             img{
                 width:100%;
                 position:relative;
-                top:1.2rem;
+                top:3.2rem;
                 -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
                 -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
                 box-shadow: -10px 10px 0px 0px $colorYellow;

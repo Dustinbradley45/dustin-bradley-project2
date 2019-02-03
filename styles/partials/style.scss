@@ -3,7 +3,6 @@
 @import 'baseStyles/global';
 @import 'baseStyles/variables';
 @import 'baseStyles/nav';
-@import 'baseStyles/navMediaQuery';
 @import 'baseStyles/footer';
 
 // INDEX RELATED COMPONENTS
@@ -14,7 +13,6 @@
 @import 'indexStyles/banner';
 @import 'indexStyles/founder';
 @import 'indexStyles/endGallery';
-@import 'indexStyles/indexMediaQueries';
 
 // BLOG RELATED COMPONENTS
 @import 'blogStyles/blogHeader';
@@ -22,10 +20,14 @@
 @import 'blogStyles/blogAside';
 @import 'blogStyles/blogComments';
 @import 'blogStyles/blogForm';
-@import 'blogStyles/blogMediaQueries';
 
 //CONTACT RELATED COMPONENTS
 @import 'contactStyles/contactHeader';
 @import 'contactStyles/contactForm';
 @import 'contactStyles/contactMain';
+
+//Media Queries
+@import 'baseStyles/navMediaQuery';
+@import 'indexStyles/indexMediaQueries';
+@import 'blogStyles/blogMediaQueries';
 @import 'contactStyles/contactMediaQueries';
