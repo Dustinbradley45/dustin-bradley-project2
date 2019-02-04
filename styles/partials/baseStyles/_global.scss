@@ -1,30 +1,31 @@
 //ACCESSIBILITY
-a{
-    
-    &:focus {
-         border: 3px solid $colorBlack;
-
-     }
-}
-
-button{
+a {
 
     &:focus {
-        border:3px solid $colorBlack !important;
+        border: 3px solid $colorBlack;
+
     }
 }
 
-.skip-link {
+button {
+
+    &:focus {
+        border: 3px solid $colorBlack !important;
+    }
+}
+
+.skipLink {
     position: absolute;
     left: -1000px;
     top: 5px;
     z-index: 999;
     background: white;
     color: black;
-}
 
-.skip-link:focus {
-    left: 0;
+    &:focus {
+        left: 0;
+
+    }
 }
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -39,41 +40,40 @@ button{
     clip: rect(00 0 0);
     overflow: hidden;
 }
+
 //GLOBALS
 
 .bold {
-    font-weight:600;
+    font-weight: 600;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1280px;
     margin: 0 auto;
 }
 
 .container {
-    max-width:1600px;
-    margin:0 auto;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
-html{
-    font-size:125%;
+html {
+    font-size: 125%;
 }
 
-img{
-    display:block;
+img {
+    display: block;
 }
 
-.skip-link {
+.skipLink {
     @include fontSize(2rem);
-    font-family:$primaryFont;
-    padding:.5rem;
+    font-family: $primaryFont;
+    padding: .5rem;
     text-decoration: none;
-    
+
     &:focus {
-        left:50%;
-        transform:translate(-50%);
+        left: 50%;
+        transform: translate(-50%);
         border: 2px solid $colorDarkGreen;
     }
 }
-
-

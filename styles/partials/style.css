@@ -204,7 +204,7 @@ button:focus {
   border: 3px solid #2c2c2c !important;
 }
 
-.skip-link {
+.skipLink {
   position: absolute;
   left: -1000px;
   top: 5px;
@@ -213,7 +213,7 @@ button:focus {
   color: black;
 }
 
-.skip-link:focus {
+.skipLink:focus {
   left: 0;
 }
 
@@ -253,14 +253,14 @@ img {
   display: block;
 }
 
-.skip-link {
+.skipLink {
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif;
   padding: .5rem;
   text-decoration: none;
 }
 
-.skip-link:focus {
+.skipLink:focus {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -557,11 +557,13 @@ img {
   0% {
     -webkit-transform: translate(800px, -800px) scale(2);
             transform: translate(800px, -800px) scale(2);
+    opacity: 0;
     background-image: transparent;
   }
   100% {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
+    opacity: 1;
     background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
     background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
@@ -571,11 +573,13 @@ img {
   0% {
     -webkit-transform: translate(800px, -800px) scale(2);
             transform: translate(800px, -800px) scale(2);
+    opacity: 0;
     background-image: transparent;
   }
   100% {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
+    opacity: 1;
     background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
     background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
@@ -627,7 +631,7 @@ footer {
 
 .mainHeader {
   height: 100vh;
-  background-image: url("../../planted-final-assets/home-image-1.jpg");
+  background-image: url("../../plantedFinalAssets/homeImage1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -670,7 +674,7 @@ footer {
   content: '';
   position: absolute;
   top: 235px;
-  background-image: url("./../../planted-final-assets/header-box.jpg");
+  background-image: url("./../../plantedFinalAssets/headerBox.jpg");
   background-size: cover;
   height: 80vh;
   width: 45.5%;
@@ -1022,7 +1026,7 @@ footer {
 .banner {
   width: 100%;
   height: 60vh;
-  background-image: url("../../planted-final-assets/banner-image.jpg");
+  background-image: url("../../plantedFinalAssets/bannerImage.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2199,7 +2203,7 @@ body .contactMain .address p {
 }
 
 @media only screen and (max-width: 1000px) {
-  .contactHeader .contactHeaderTitle {
+  body .contactHeader .contactHeaderTitle {
     color: black;
     display: block;
     width: 100%;
@@ -2207,14 +2211,14 @@ body .contactMain .address p {
     margin-top: 8rem;
     text-align: center;
   }
-  .contactMain {
+  body .contactMain {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -2223,37 +2227,37 @@ body .contactMain .address p {
             align-items: center;
     margin: 0 auto;
     margin-bottom: 3rem;
-    margin-left: 0 !important;
+    margin-left: 0;
   }
-  .contactMain .contactInfo {
+  body .contactMain .contactInfo {
     text-align: center;
     padding-top: 3rem;
   }
-  .contactMain .contactInfo ul {
+  body .contactMain .contactInfo ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 0.7rem;
   }
-  .contactMain .contactUsForm {
+  body .contactMain .contactUsForm {
     bottom: 0;
     left: 0;
     width: 70%;
   }
-  .contactMain .contactUsForm input {
-    width: 100% !important;
-    margin-left: 0 !important;
+  body .contactMain .contactUsForm input {
+    width: 100%;
+    margin-left: 0;
   }
-  .contactMain .contactUsForm input[type='name'] {
+  body .contactMain .contactUsForm input[type='name'] {
     margin-bottom: 1.5rem;
   }
-  .contactMain .contactUsForm textarea {
+  body .contactMain .contactUsForm textarea {
     margin-top: 1rem;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .contactMain .contactUsForm {
+  body .contactMain .contactUsForm {
     width: 100%;
     margin: 0;
     -webkit-box-shadow: 0 0 0 0;

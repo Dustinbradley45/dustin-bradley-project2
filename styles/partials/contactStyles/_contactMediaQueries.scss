@@ -1,8 +1,7 @@
 //QUERIES
 
 //1600px
-@media #{$largeDesktop} {
-}
+@media #{$largeDesktop} {}
 
 //1440px
 @media #{$medDesktop} {
@@ -14,7 +13,7 @@
         }
     }
 
-    .contactUsForm{
+    .contactUsForm {
 
         margin-right: 2rem;
 
@@ -24,70 +23,74 @@
 //1200px
 @media #{$smallDesktop} {
 
-    .contactHeader{
+    .contactHeader {
 
         .contactHeaderTitle {
-            margin-top:5rem;
-            width:30%;
+            margin-top: 5rem;
+            width: 30%;
         }
     }
-    .contactUsForm{
+
+    .contactUsForm {
         left: 1rem;
-        margin-right:2rem;
+        margin-right: 2rem;
     }
 }
 
 //1000px
 @media #{$largeTablet} {
+    body {
 
-    .contactHeader{
 
-        .contactHeaderTitle {
-        color:black;
-        display:block;
-        width:100%;
-        margin:0 auto;
-        margin-top:8rem;
-        text-align:center;
+        .contactHeader {
+
+            .contactHeaderTitle {
+                color: black;
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 8rem;
+                text-align: center;
+            }
+
         }
 
-    }
+        .contactMain {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            margin-left: 0;
 
-    .contactMain{
-        display:flex;
-        flex-direction:column-reverse !important;
-        justify-content: flex-start;
-        align-items:center;
-        margin:0 auto;
-        margin-bottom:3rem;
-        margin-left:0 !important;
+            .contactInfo {
+                text-align: center;
+                padding-top: 3rem;
 
-        .contactInfo {
-            text-align:center;
-            padding-top: 3rem;
-
-            ul {
-                justify-content: center;
-                padding-left:0.7rem;
-            }
-        }
-
-        .contactUsForm {
-            bottom: 0;
-            left:0;
-            width: 70%;
-
-            input{
-                width: 100% !important;
-                margin-left:0 !important;
+                ul {
+                    justify-content: center;
+                    padding-left: 0.7rem;
+                }
             }
 
-            input[type='name']{
-                margin-bottom:1.5rem;
-            }
+            .contactUsForm {
+                bottom: 0;
+                left: 0;
+                width: 70%;
 
-            textarea {
-                margin-top:1rem;
+                input {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                input[type='name'] {
+                    margin-bottom: 1.5rem;
+                }
+
+                textarea {
+                    margin-top: 1rem;
+                }
             }
         }
     }
@@ -101,13 +104,15 @@
 
 //650px
 @media #{$largePhone} {
-    .contactMain{
-        .contactUsForm {
-            width: 100%;
-            margin:0;
-            box-shadow: 0 0 0 0;
-            border-top:10px solid $colorYellow;
-            border-bottom:10px solid $colorYellow;
+    body {
+        .contactMain {
+            .contactUsForm {
+                width: 100%;
+                margin: 0;
+                box-shadow: 0 0 0 0;
+                border-top: 10px solid $colorYellow;
+                border-bottom: 10px solid $colorYellow;
+            }
         }
     }
 }
@@ -116,19 +121,18 @@
 @media #{$medPhone} {
     .contactUsForm {
         box-shadow: 0 0 0 0;
-        border-top:10px solid $colorYellow;
-        border-bottom:10px solid $colorYellow;
-        
+        border-top: 10px solid $colorYellow;
+        border-bottom: 10px solid $colorYellow;
 
-        .contactForm{
+        .contactForm {
 
-            .contactFormInput{
+            .contactFormInput {
                 @include displayFlex (column, flex-start, center);
 
                 input[type='name'],
                 input[type='email'] {
-                    width:100%;
-                   
+                    width: 100%;
+
                 }
             }
         }
@@ -136,6 +140,4 @@
 }
 
 //400px
-@media #{$smallPhone} {
-
-}
+@media #{$smallPhone} {}
