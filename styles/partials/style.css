@@ -253,24 +253,18 @@ img {
   display: block;
 }
 
-body.scrollUp {
-  opacity: 0;
-  -webkit-transform: translateY(600px);
-          transform: translateY(600px);
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  -webkit-transition: none;
-  transition: none;
+.skip-link {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  padding: .5rem;
+  text-decoration: none;
 }
 
-body {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 1s linear all;
-  transition: 1s linear all;
+.skip-link:focus {
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border: 2px solid #074115;
 }
 
 .headerNav,
@@ -401,14 +395,10 @@ body {
 .contactHeader .navigation .mobileNavContent {
   height: 90vh;
   position: fixed;
-  display: none;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1500;
-  opacity: 0;
   width: 0;
-  -webkit-transition: all 2s ease-in;
-  transition: all 2s ease-in;
   background: none;
 }
 
@@ -416,14 +406,10 @@ body {
 .blogHeader .navigation .navList,
 .contactHeader .navigation .navList {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
   width: 100%;
-  top: 35%;
+  top: 11%;
 }
 
 .mainHeader .navigation .navItem,
@@ -471,23 +457,9 @@ body {
   display: block;
   -webkit-animation: moveLeft ease 1s;
           animation: moveLeft ease 1s;
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(5%, rgba(248, 231, 28, 0.9)), color-stop(30%, rgba(14, 144, 45, 0.8)), to(rgba(7, 65, 21, 0.8)));
-  background: linear-gradient(to bottom left, rgba(248, 231, 28, 0.9) 5%, rgba(14, 144, 45, 0.8) 30%, rgba(7, 65, 21, 0.8) 100%);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
+  background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   border-bottom-left-radius: 100%;
-}
-
-.mainHeader .navigation .navCheckbox ~ .mobileNavContent,
-.blogHeader .navigation .navCheckbox ~ .mobileNavContent,
-.contactHeader .navigation .navCheckbox ~ .mobileNavContent {
-  -webkit-animation: moveLeft linear 1s;
-          animation: moveLeft linear 1s;
-}
-
-.mainHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent,
-.blogHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent,
-.contactHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent {
-  -webkit-animation: moveRight linear 1s;
-          animation: moveRight linear 1s;
 }
 
 .mainHeader .navigation .navIcon,
@@ -585,12 +557,13 @@ body {
   0% {
     -webkit-transform: translate(800px, -800px) scale(2);
             transform: translate(800px, -800px) scale(2);
-    opacity: 0;
+    background-image: transparent;
   }
   100% {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
-    opacity: 1;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
+    background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
 }
 
@@ -598,12 +571,13 @@ body {
   0% {
     -webkit-transform: translate(800px, -800px) scale(2);
             transform: translate(800px, -800px) scale(2);
-    opacity: 0;
+    background-image: transparent;
   }
   100% {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
-    opacity: 1;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
+    background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
 }
 
@@ -612,11 +586,14 @@ body {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
     opacity: 1;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
+    background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
   100% {
-    -webkit-transform: translate(800px, -800px) scale(1);
-            transform: translate(800px, -800px) scale(1);
+    -webkit-transform: translate(800, -800px) scale(1);
+            transform: translate(800, -800px) scale(1);
     opacity: 0;
+    background-image: transparent;
   }
 }
 
@@ -625,11 +602,14 @@ body {
     -webkit-transform: translate(0px, 0px) scale(1);
             transform: translate(0px, 0px) scale(1);
     opacity: 1;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(7, 65, 21, 0.8)), color-stop(rgba(8, 79, 26, 0.8)), color-stop(rgba(9, 93, 30, 0.8)), color-stop(rgba(10, 108, 35, 0.8)), color-stop(rgba(11, 123, 39, 0.8)), color-stop(rgba(41, 138, 40, 0.8)), color-stop(rgba(63, 153, 39, 0.8)), color-stop(rgba(85, 168, 38, 0.8)), color-stop(rgba(125, 185, 31, 0.8)), color-stop(rgba(165, 201, 25, 0.8)), color-stop(rgba(205, 217, 22, 0.8)), to(rgba(248, 231, 28, 0.8)));
+    background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
   }
   100% {
-    -webkit-transform: translate(800px, -800px) scale(1);
-            transform: translate(800px, -800px) scale(1);
+    -webkit-transform: translate(800, -800px) scale(1);
+            transform: translate(800, -800px) scale(1);
     opacity: 0;
+    background-image: transparent;
   }
 }
 
@@ -1547,6 +1527,74 @@ footer {
   line-height: 4.5rem;
 }
 
+body {
+  background-color: #f0efed;
+}
+
+body .contactMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 7rem;
+}
+
+body .contactMain ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+body .contactMain ul li {
+  list-style: none;
+}
+
+body .contactMain ul li a {
+  color: #0e902d;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+body .contactMain ul li a:first-child {
+  padding-left: 0;
+}
+
+body .contactMain .contactEmail {
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+body .contactMain .address p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .contactUsForm {
   width: 60%;
   display: -webkit-box;
@@ -1627,74 +1675,6 @@ footer {
   letter-spacing: 1px;
   margin-top: 2rem;
   margin-bottom: 1rem;
-}
-
-body {
-  background-color: #f0efed;
-}
-
-body .contactMain {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 7rem;
-}
-
-body .contactMain ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-body .contactMain ul li {
-  list-style: none;
-}
-
-body .contactMain ul li a {
-  color: #0e902d;
-  padding: 20px;
-  font-size: 1.2rem;
-}
-
-body .contactMain ul li a:first-child {
-  padding-left: 0;
-}
-
-body .contactMain .contactEmail {
-  font-family: "Josefin Sans", sans-serif;
-  letter-spacing: 1.5px;
-}
-
-body .contactMain .address p {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -2273,8 +2253,8 @@ body .contactMain .address p {
 }
 
 @media only screen and (max-width: 650px) {
-  .contactUsForm {
-    width: 100% !important;
+  .contactMain .contactUsForm {
+    width: 100%;
     margin: 0;
     -webkit-box-shadow: 0 0 0 0;
             box-shadow: 0 0 0 0;

@@ -101,13 +101,14 @@
 
 //650px
 @media #{$largePhone} {
-
-    .contactUsForm {
-        width: 100% !important;
-        margin:0;
-        box-shadow: 0 0 0 0;
-        border-top:10px solid $colorYellow;
-        border-bottom:10px solid $colorYellow;
+    .contactMain{
+        .contactUsForm {
+            width: 100%;
+            margin:0;
+            box-shadow: 0 0 0 0;
+            border-top:10px solid $colorYellow;
+            border-bottom:10px solid $colorYellow;
+        }
     }
 }
 

@@ -81,28 +81,15 @@
 
         }
 
-        // .navBackground {
-        //     height: 1rem;
-        //     width: 1rem;
-        //     border-radius:100%;
-        //     position: absolute;
-        //     top: 20px;
-        //     right: 20px;
-        //     background: radial-gradient(circle, rgba(7, 65, 21, 0.6) 40%, rgba(14, 144, 45, 0.6) 60%, rgba(240, 239, 237, 0.6) 100%);
-        //     z-index: 1500;
-        //     transition: transform .7s ease;
-        // }
 
         .mobileNavContent {
             height: 90vh;
             position: fixed;
-            display:none;
             top: 0;
-            left: 0;
+            right: 0;
             z-index: 1500;
-            opacity: 0;
+            // opacity: 0;
             width: 0;
-            transition:all 2s ease-in;
             background:none;
             
 
@@ -110,14 +97,13 @@
 
         .navList {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
             list-style: none;
             text-align: center;
             width: 100%;
-            top: 35%;
-            
+            top: 11%;
         }
 
         .navItem {
@@ -153,29 +139,21 @@
         }
 
         //FUNCTIONALITY
-
-        //scales out background when checked
-        // .navCheckbox:checked~.navBackground {
-            
-        // }
         
         //Content displays within the mobile nav
+        
         .navCheckbox:checked~.mobileNavContent  {
             opacity: 1;
             width:100%;
             display:block;
             animation: moveLeft ease 1s;
-            background: linear-gradient(to bottom left, rgba($colorYellow, .9) 5%, rgba(14, 144, 45, 0.8) 30%, rgba(7, 65, 21, 0.8) 100%);
+            background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
             border-bottom-left-radius: 100%;
         }
 
-        .navCheckbox ~.mobileNavContent {
-            animation:moveLeft linear 1s;
-        }
-        
-        .navCheckbox:not(:checked) ~.mobileNavContent {
-            animation:moveRight linear 1s;
-        }
+        // .navCheckbox~.mobileNavContent {
+        //     animation:moveRight linear 1s;
+        // }
 
 
         //ICON
@@ -236,7 +214,7 @@
         }
 
         //On click transition
-        .navCheckbox:checked+.navButton .navIcon::after {
+        .navCheckbox:checked + .navButton .navIcon::after {
             top: 0;
             transform: rotate(-495deg);
             display: inline-block;
@@ -253,13 +231,16 @@
 @keyframes moveLeft{
     0%{
        transform:translate(800px, -800px) scale(2);
-       opacity:0;
+    //    opacity:0;
+       background-image:transparent;
+       
       
     }
 
     100%{
        transform:translate(0px, 0px) scale(1);
-       opacity:1;
+    //    opacity:1;
+       background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
  
     }
 }
@@ -268,10 +249,12 @@
     0%{
         transform:translate(0px, 0px) scale(1);
         opacity:1;
+       background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
     }
 
     100% {
-        transform:translate(800px, -800px) scale(1);
+        transform:translate(800, -800px) scale(1);
         opacity:0;
+        background-image: transparent;
     }
 }
