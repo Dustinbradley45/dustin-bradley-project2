@@ -63,3 +63,18 @@ img{
     display:block;
 }
 
+body.scrollUp{
+    opacity:0;
+    transform:translateY(600px);
+    transform:scale(.3);
+    transition:none;
+}
+
+body{
+    opacity:1;
+    transform: translateY(0);
+    transform:scale(1);
+    transition: 1s linear all;
+}
+
+

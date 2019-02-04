@@ -253,6 +253,26 @@ img {
   display: block;
 }
 
+body.scrollUp {
+  opacity: 0;
+  -webkit-transform: translateY(600px);
+          transform: translateY(600px);
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-transition: none;
+  transition: none;
+}
+
+body {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+}
+
 .headerNav,
 .blogNav,
 .contactNav {
@@ -349,20 +369,26 @@ img {
 .mainHeader .navigation .navCheckbox,
 .blogHeader .navigation .navCheckbox,
 .contactHeader .navigation .navCheckbox {
-  display: none;
+  opacity: 0;
+}
+
+.mainHeader .navigation .navCheckbox:focus + .navButton,
+.blogHeader .navigation .navCheckbox:focus + .navButton,
+.contactHeader .navigation .navCheckbox:focus + .navButton {
+  border: #074115 4px solid;
 }
 
 .mainHeader .navigation .navButton,
 .blogHeader .navigation .navButton,
 .contactHeader .navigation .navButton {
+  position: fixed;
   background-color: #f8e71c;
   color: white;
   height: 6rem;
-  width: 6.5rem;
-  position: fixed;
-  border-radius: 0 50% 0 50%;
+  width: 6rem;
+  border-radius: 0 0 0 50%;
   top: -35px;
-  right: -18px;
+  right: 0;
   z-index: 2000;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
           box-shadow: 0 0.5rem 1rem rgba(79, 79, 79, 0.6);
@@ -370,36 +396,20 @@ img {
   cursor: pointer;
 }
 
-.mainHeader .navigation .navBackground,
-.blogHeader .navigation .navBackground,
-.contactHeader .navigation .navBackground {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 100%;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: radial-gradient(circle, rgba(7, 65, 21, 0.6) 40%, rgba(14, 144, 45, 0.6) 60%, rgba(240, 239, 237, 0.6) 100%);
-  z-index: 1500;
-  -webkit-transition: -webkit-transform .7s ease;
-  transition: -webkit-transform .7s ease;
-  transition: transform .7s ease;
-  transition: transform .7s ease, -webkit-transform .7s ease;
-}
-
 .mainHeader .navigation .mobileNavContent,
 .blogHeader .navigation .mobileNavContent,
 .contactHeader .navigation .mobileNavContent {
-  height: 100vh;
+  height: 90vh;
   position: fixed;
-  display: block;
+  display: none;
   top: 0;
   left: 0;
   z-index: 1500;
   opacity: 0;
   width: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.68, 0, 0.265, 0.55);
-  transition: all 0.6s cubic-bezier(0.68, 0, 0.265, 0.55);
+  -webkit-transition: all 2s ease-in;
+  transition: all 2s ease-in;
+  background: none;
 }
 
 .mainHeader .navigation .navList,
@@ -447,17 +457,10 @@ img {
 .contactHeader .navigation .navLink:active {
   background-position: 100%;
   color: #4f4f4f;
-  -webkit-transform: translateY(0.5rem);
-          transform: translateY(0.5rem);
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
   background: rgba(240, 239, 237, 0.5);
   font-size: 1.5rem;
-}
-
-.mainHeader .navigation .navCheckbox:checked ~ .navBackground,
-.blogHeader .navigation .navCheckbox:checked ~ .navBackground,
-.contactHeader .navigation .navCheckbox:checked ~ .navBackground {
-  -webkit-transform: scale(70);
-          transform: scale(70);
 }
 
 .mainHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
@@ -465,6 +468,26 @@ img {
 .contactHeader .navigation .navCheckbox:checked ~ .mobileNavContent {
   opacity: 1;
   width: 100%;
+  display: block;
+  -webkit-animation: moveLeft ease 1s;
+          animation: moveLeft ease 1s;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(5%, rgba(248, 231, 28, 0.9)), color-stop(30%, rgba(14, 144, 45, 0.8)), to(rgba(7, 65, 21, 0.8)));
+  background: linear-gradient(to bottom left, rgba(248, 231, 28, 0.9) 5%, rgba(14, 144, 45, 0.8) 30%, rgba(7, 65, 21, 0.8) 100%);
+  border-bottom-left-radius: 100%;
+}
+
+.mainHeader .navigation .navCheckbox ~ .mobileNavContent,
+.blogHeader .navigation .navCheckbox ~ .mobileNavContent,
+.contactHeader .navigation .navCheckbox ~ .mobileNavContent {
+  -webkit-animation: moveLeft linear 1s;
+          animation: moveLeft linear 1s;
+}
+
+.mainHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent,
+.blogHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent,
+.contactHeader .navigation .navCheckbox:not(:checked) ~ .mobileNavContent {
+  -webkit-animation: moveRight linear 1s;
+          animation: moveRight linear 1s;
 }
 
 .mainHeader .navigation .navIcon,
@@ -556,6 +579,58 @@ img {
 
 .active {
   color: #f8e71c;
+}
+
+@-webkit-keyframes moveLeft {
+  0% {
+    -webkit-transform: translate(800px, -800px) scale(2);
+            transform: translate(800px, -800px) scale(2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    -webkit-transform: translate(800px, -800px) scale(2);
+            transform: translate(800px, -800px) scale(2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(800px, -800px) scale(1);
+            transform: translate(800px, -800px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(800px, -800px) scale(1);
+            transform: translate(800px, -800px) scale(1);
+    opacity: 0;
+  }
 }
 
 footer {

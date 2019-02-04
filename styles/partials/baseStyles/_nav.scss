@@ -55,46 +55,57 @@
         display:none;
 
         .navCheckbox {
-            display: none;
+            opacity:0;
+
+            &:focus + .navButton {
+                border:$colorDarkGreen 4px solid ;
+            }
+
+           
+
         }
 
         .navButton {
+            position: fixed;
             background-color: $colorYellow;
             color: white;
             height: 6rem;
-            width: 6.5rem;
-            position: fixed;
-            border-radius: 0 50% 0 50%;
+            width: 6rem;
+            border-radius: 0 0 0 50%;
             top: -35px;
-            right: -18px;
+            right:0;
             z-index: 2000;
             box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
             text-align: center;
             cursor: pointer; 
+
         }
 
-        .navBackground {
-            height: 1rem;
-            width: 1rem;
-            border-radius:100%;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: radial-gradient(circle, rgba(7, 65, 21, 0.6) 40%, rgba(14, 144, 45, 0.6) 60%, rgba(240, 239, 237, 0.6) 100%);
-            z-index: 1500;
-            transition: transform .7s ease;
-        }
+        // .navBackground {
+        //     height: 1rem;
+        //     width: 1rem;
+        //     border-radius:100%;
+        //     position: absolute;
+        //     top: 20px;
+        //     right: 20px;
+        //     background: radial-gradient(circle, rgba(7, 65, 21, 0.6) 40%, rgba(14, 144, 45, 0.6) 60%, rgba(240, 239, 237, 0.6) 100%);
+        //     z-index: 1500;
+        //     transition: transform .7s ease;
+        // }
 
         .mobileNavContent {
-            height: 100vh;
+            height: 90vh;
             position: fixed;
-            display:block;
+            display:none;
             top: 0;
             left: 0;
             z-index: 1500;
             opacity: 0;
             width: 0;
-            transition: all .6s cubic-bezier(0.68, 0, .265, 0.55);
+            transition:all 2s ease-in;
+            background:none;
+            
+
         }
 
         .navList {
@@ -106,6 +117,7 @@
             text-align: center;
             width: 100%;
             top: 35%;
+            
         }
 
         .navItem {
@@ -134,7 +146,7 @@
             &:active {
                 background-position: 100%;
                 color: $colorGrey;
-                transform: translateY(.5rem);
+                transform: translateY(1rem);
                 background:rgba($colorWhite, .5);
                 @include fontSize(1.5rem);
             }
@@ -143,14 +155,26 @@
         //FUNCTIONALITY
 
         //scales out background when checked
-        .navCheckbox:checked~.navBackground {
-            transform: scale(70);
-        }
-
+        // .navCheckbox:checked~.navBackground {
+            
+        // }
+        
         //Content displays within the mobile nav
         .navCheckbox:checked~.mobileNavContent  {
             opacity: 1;
-            width: 100%;
+            width:100%;
+            display:block;
+            animation: moveLeft ease 1s;
+            background: linear-gradient(to bottom left, rgba($colorYellow, .9) 5%, rgba(14, 144, 45, 0.8) 30%, rgba(7, 65, 21, 0.8) 100%);
+            border-bottom-left-radius: 100%;
+        }
+
+        .navCheckbox ~.mobileNavContent {
+            animation:moveLeft linear 1s;
+        }
+        
+        .navCheckbox:not(:checked) ~.mobileNavContent {
+            animation:moveRight linear 1s;
         }
 
 
@@ -223,4 +247,31 @@
 //Used for yellow header on page user is on
 .active {
     color: $colorYellow;
+}
+
+
+@keyframes moveLeft{
+    0%{
+       transform:translate(800px, -800px) scale(2);
+       opacity:0;
+      
+    }
+
+    100%{
+       transform:translate(0px, 0px) scale(1);
+       opacity:1;
+ 
+    }
+}
+
+@keyframes moveRight{
+    0%{
+        transform:translate(0px, 0px) scale(1);
+        opacity:1;
+    }
+
+    100% {
+        transform:translate(800px, -800px) scale(1);
+        opacity:0;
+    }
 }
