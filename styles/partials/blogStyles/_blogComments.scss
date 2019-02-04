@@ -37,10 +37,11 @@
     .comment2{
         @include displayFlex(row, flex-start, flex-start);
         margin-top:4rem;
+       
 
         img {
             width:30%;
-            margin-right:2rem;
+            margin-right:4rem;
         }
 
         .comment2Info{

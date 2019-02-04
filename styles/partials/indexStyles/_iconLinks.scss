@@ -13,6 +13,9 @@
     //Cannot condense code due to :before elements have to be different
     .greenHouses {
         width:50%;
+        transition: .4s all ease;
+
+
 
         h5{
             @include sectionTitle;
@@ -20,7 +23,7 @@
             &:before{
                 content:'\f06c';
                 font-family:'Font Awesome 5 Free';
-               @include linkIcon;
+                @include linkIcon;
             }
         }
 

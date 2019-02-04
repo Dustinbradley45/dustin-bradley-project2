@@ -1,3 +1,31 @@
+//ACCESSIBILITY
+a{
+    
+    &:focus {
+         border: 3px solid $colorBlack;
+
+     }
+}
+
+button{
+
+    &:focus {
+        border:3px solid $colorBlack !important;
+    }
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
 
 .visuallyhidden:not(:focus):not(:active) {
     position: absolute;
@@ -11,6 +39,7 @@
     clip: rect(00 0 0);
     overflow: hidden;
 }
+//GLOBALS
 
 .bold {
     font-weight:600;
@@ -33,3 +62,4 @@ html{
 img{
     display:block;
 }
+

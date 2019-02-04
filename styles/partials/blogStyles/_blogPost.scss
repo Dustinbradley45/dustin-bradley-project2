@@ -49,5 +49,12 @@
                @include bodyText;
             }
         }
+
+        .toggleReadMore {
+            @include mainButton;
+            display:none;
+        }
+
     }
+
 }

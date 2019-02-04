@@ -196,6 +196,27 @@ input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
+a:focus {
+  border: 3px solid #2c2c2c;
+}
+
+button:focus {
+  border: 3px solid #2c2c2c !important;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -297,12 +318,21 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
 }
 
 .headerNav .navContent ul li a.active,
 .blogNav .navContent ul li a.active,
 .contactNav .navContent ul li a.active {
   color: #f8e71c;
+}
+
+.headerNav .navContent ul li a:focus,
+.blogNav .navContent ul li a:focus,
+.contactNav .navContent ul li a:focus {
+  font-size: 1.3rem;
+  border: #f0efed 2px solid;
 }
 
 .blogNav,
@@ -349,7 +379,7 @@ img {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(7, 65, 21, 0.6);
+  background: radial-gradient(circle, rgba(7, 65, 21, 0.6) 40%, rgba(14, 144, 45, 0.6) 60%, rgba(240, 239, 237, 0.6) 100%);
   z-index: 1500;
   -webkit-transition: -webkit-transform .7s ease;
   transition: -webkit-transform .7s ease;
@@ -799,6 +829,8 @@ footer {
 
 .iconLinks .greenHouses {
   width: 50%;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
 }
 
 .iconLinks .greenHouses h5 {
@@ -1029,6 +1061,8 @@ footer {
 .endGallery .galleryContent img {
   width: 33.3%;
   margin: 1rem;
+  -webkit-transition: .7s all ease;
+  transition: .7s all ease;
 }
 
 .endGallery .galleryContent img:first-child {
@@ -1037,6 +1071,13 @@ footer {
 
 .endGallery .galleryContent img:last-child {
   margin-right: 0;
+}
+
+.endGallery .galleryContent img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 10px 10px 66px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .blogHeader {
@@ -1142,6 +1183,20 @@ footer {
   line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.blogMainRight .blogMission .toggleReadMore {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #f0efed;
+  background-color: #0e902d;
+  padding: .6rem 1rem;
+  display: none;
 }
 
 .blogAside {
@@ -1282,7 +1337,7 @@ footer {
 
 .commentsSection .comment2 img {
   width: 30%;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .commentsSection .comment2 .comment2Info {
@@ -1960,6 +2015,23 @@ body .contactMain .address p {
     position: static;
     padding-top: 3.5rem;
   }
+  .blogMain .blogMainRight .blogMission .blogPost .hideTheWords {
+    display: none;
+    margin-top: .5rem;
+  }
+  .blogMain .blogMainRight .blogMission .blogPost .toggleReadMore {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #f0efed;
+    background-color: #0e902d;
+    padding: .6rem 1rem;
+    display: block;
+  }
   .commentsSection {
     position: static;
     margin: 2rem;
@@ -1972,7 +2044,9 @@ body .contactMain .address p {
     margin-top: 6%;
   }
   .commentsSection .comment2 img {
-    margin: .5rem 0;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-right: 2rem;
   }
   .blogForm {
     position: static;

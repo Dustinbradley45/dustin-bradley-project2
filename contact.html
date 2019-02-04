@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<a href="#mainContent" class="skip-link">Skip to main content.</a>
     <header class='contactHeader'>
         <div class="contactNav">
             <div class="navContent wrapper">
@@ -50,14 +51,16 @@
             <h1>Get in Touch</h1>
         </div>
     </header>
-    <main class='contactMain wrapper'>
+
+
+    <main class='contactMain wrapper' id='mainContent'>
         <div class="contactInfo ">
             <div class="socialMedia">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="#" aria-label='Facebook'><i class="fab fa-facebook-f" aria-hidden='true'></i></a></li>
+                    <li><a href="#" aria-label='instagram'><i class="fab fa-instagram" aria-hidden='true'></i></a></li>
+                    <li><a href="#" aria-label='twitter'><i class="fab fa-twitter" aria-hidden='true'></i></a></li>
+                    <li><a href="#" aria-label='whatsapp'><i class="fab fa-whatsapp" aria-hidden='true'></i></a></li>
                 </ul>
             </div>
             <div class="contactEmail">
@@ -77,19 +80,22 @@
                     <input type="name" name='name' placeholder='Name' id='contactUserName'>
 
                     <label for="contactEmail" class='visuallyHidden'></label>
-                    <input type="email" name="email" id="contactgEmail" placeholder='Email address'>
+                    <input type="email" name="email" id="contactEmail" placeholder='Email Address'>
                 </div>
 
+                <label for="userCommentsContact" class='visuallyHidden'></label>
                 <textarea name="userComments" id="userCommentsContact" cols="100" rows="10" placeholder='Message'></textarea>
 
-                <!-- <input type="text" name="messageSubmission" id="messageSubmission" placeholder="Message"> -->
-
-                <button type='submit' class="postComment">Submit</button>
+                <button type='submit' class="postComment" name='submit'>Submit</button>
             </form>
         </div>
     </main>
     <footer>
         <p>Copyright &copy; 2018 HackerYou</p>
     </footer>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+<script src="./script.js"></script>
+
 </body>
 </html> 
