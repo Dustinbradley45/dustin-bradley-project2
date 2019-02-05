@@ -30,11 +30,30 @@
             content: '';
             position: absolute;
             top: 235px;
+            right:0;
             background-image: url('./../../plantedFinalAssets/headerBox.jpg');
             background-size: cover;
             height: 80vh;
             width: 45.5%;
             right: 0;
+            animation: headerSlideInTop 2s linear;
         }
+    }
+}
+
+@keyframes headerSlideInTop {
+    0%{
+        right:-1000px;
+        opacity: 0;
+    }
+   
+    50%{
+        opacity:1;
+
+    }
+    
+    100%{
+        right:0;
+
     }
 }

@@ -29,6 +29,7 @@
             }
         }
     }
+
     .founder {
 
         .founderContent {
@@ -116,26 +117,28 @@
         }
     }
 
-    .iconLinks {
-        @include displayFlex (column, flex-start, flex-start);
-        width: 100%;
-        margin: 2.5rem 0;
+    .mainIcons {
+        .iconLinks {
+            @include displayFlex (column, flex-start, flex-start);
+            width: 100%;
+            margin: 2.5rem 0;
 
-        .greenHouses,
-        .community,
-        .blog,
-        .getInTouch {
-            width: 80%;
-            margin: 1rem 2rem;
+            .greenHouses,
+            .community,
+            .blog,
+            .getInTouch {
+                width: 80%;
+                margin: 1rem 2rem;
+            }
         }
     }
 
-     .founder {
+    .founder {
 
-         .founderContent {
-             padding-left: 2rem;
-         }
-     }
+        .founderContent {
+            padding-left: 2rem;
+        }
+    }
 }
 
 //650px
@@ -211,14 +214,18 @@
         }
     }
 
-    .iconLinks {
-        .greenHouses,
-        .community,
-        .blog,
-        .getInTouch {
+    .mainIcons {
 
-            p{
-            margin-left:0;
+        .iconLinks {
+
+            .greenHouses,
+            .community,
+            .blog,
+            .getInTouch {
+
+                p {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -232,7 +239,7 @@
 
         .mainTitle {
             line-height: 2.5rem;
-            padding-top:7rem;
+            padding-top: 7rem;
 
             h1 {
                 @include fontSize(3.5rem);
@@ -240,32 +247,35 @@
             }
 
             &:after {
-               top: 8rem;
+                top: 8rem;
             }
         }
     }
-     .iconLinks {
 
-         .greenHouses,
-         .community,
-         .blog,
-         .getInTouch {
+    .mainIcons {
+        .iconLinks {
 
-            h5{
-                text-align: center;
-              
-                &:before {
-                    height:34px;
-                    width: 34px;
-                    display:block;
-                    margin:0 auto;
-                    margin-bottom:2rem;
+            .greenHouses,
+            .community,
+            .blog,
+            .getInTouch {
+
+                h5 {
+                    text-align: center;
+
+                    &:before {
+                        height: 34px;
+                        width: 34px;
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                p {
+                    text-align: center;
                 }
             }
-
-            p {
-                text-align:center;
-            }
-         }
-     }
+        }
+    }
 }

@@ -143,3 +143,14 @@
         }
     }
 }
+
+@media #{$smallPhone} {
+    body{
+
+    .contactHeader{
+            .contactHeaderTitle {
+                margin-top:6rem;
+            }
+        }
+    }   
+}

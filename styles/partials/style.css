@@ -728,11 +728,40 @@ footer {
   content: '';
   position: absolute;
   top: 235px;
+  right: 0;
   background-image: url("./../../plantedFinalAssets/headerBox.jpg");
   background-size: cover;
   height: 80vh;
   width: 45.5%;
   right: 0;
+  -webkit-animation: headerSlideInTop 2s linear;
+          animation: headerSlideInTop 2s linear;
+}
+
+@-webkit-keyframes headerSlideInTop {
+  0% {
+    right: -1000px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes headerSlideInTop {
+  0% {
+    right: -1000px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 .whatIsPlant {
@@ -937,7 +966,18 @@ footer {
   box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
 }
 
-.iconLinks {
+.mainIcons:after {
+  content: '';
+  background-image: url("./../../plantedFinalAssets/bannerImage.jpg");
+  width: 100%;
+  height: 60vh;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.mainIcons .iconLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -954,20 +994,20 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #f0efed;
-  margin: 5rem;
+  margin: 5rem 5rem 4rem 5rem;
 }
 
-.iconLinks > div {
+.mainIcons .iconLinks > div {
   padding: .3rem;
 }
 
-.iconLinks .greenHouses {
+.mainIcons .iconLinks .greenHouses {
   width: 50%;
   -webkit-transition: .4s all ease;
   transition: .4s all ease;
 }
 
-.iconLinks .greenHouses h5 {
+.mainIcons .iconLinks .greenHouses h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -976,7 +1016,7 @@ footer {
   margin: 0;
 }
 
-.iconLinks .greenHouses h5:before {
+.mainIcons .iconLinks .greenHouses h5:before {
   content: '\f06c';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -987,7 +1027,7 @@ footer {
   width: 100px;
 }
 
-.iconLinks .greenHouses p {
+.mainIcons .iconLinks .greenHouses p {
   margin-left: 3.75rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -996,11 +1036,11 @@ footer {
   letter-spacing: 1px;
 }
 
-.iconLinks .community {
+.mainIcons .iconLinks .community {
   width: 50%;
 }
 
-.iconLinks .community h5 {
+.mainIcons .iconLinks .community h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -1009,7 +1049,7 @@ footer {
   margin: 0;
 }
 
-.iconLinks .community h5:before {
+.mainIcons .iconLinks .community h5:before {
   content: '\f0c0';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -1021,7 +1061,7 @@ footer {
   margin-right: 19px;
 }
 
-.iconLinks .community p {
+.mainIcons .iconLinks .community p {
   margin-left: 3.9rem;
   padding-top: 5px;
   font-family: "Roboto", sans-serif;
@@ -1031,11 +1071,11 @@ footer {
   letter-spacing: 1px;
 }
 
-.iconLinks .blog {
+.mainIcons .iconLinks .blog {
   width: 50%;
 }
 
-.iconLinks .blog h5 {
+.mainIcons .iconLinks .blog h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -1044,7 +1084,7 @@ footer {
   margin: 0;
 }
 
-.iconLinks .blog h5:before {
+.mainIcons .iconLinks .blog h5:before {
   content: '\f15b';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -1055,7 +1095,7 @@ footer {
   width: 100px;
 }
 
-.iconLinks .blog p {
+.mainIcons .iconLinks .blog p {
   margin-left: 3.2rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -1064,12 +1104,12 @@ footer {
   letter-spacing: 1px;
 }
 
-.iconLinks .getInTouch {
+.mainIcons .iconLinks .getInTouch {
   width: 50%;
   padding-left: .5rem;
 }
 
-.iconLinks .getInTouch h5 {
+.mainIcons .iconLinks .getInTouch h5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -1078,7 +1118,7 @@ footer {
   margin: 0;
 }
 
-.iconLinks .getInTouch h5:before {
+.mainIcons .iconLinks .getInTouch h5:before {
   content: '\f095';
   font-family: 'Font Awesome 5 Free';
   margin-right: 1rem;
@@ -1089,7 +1129,7 @@ footer {
   width: 100px;
 }
 
-.iconLinks .getInTouch p {
+.mainIcons .iconLinks .getInTouch p {
   margin-left: 3.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -1123,7 +1163,7 @@ footer {
           align-items: center;
   background-color: #f0efed;
   padding: 4rem 0;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .founder .founderContent {
@@ -2020,7 +2060,7 @@ body .contactMain .address p {
   .squareGallery .squareGalleryBottom .squareGalleryBottomInfo h4 {
     padding-top: 2rem;
   }
-  .iconLinks {
+  .mainIcons .iconLinks {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2037,10 +2077,10 @@ body .contactMain .address p {
     width: 100%;
     margin: 2.5rem 0;
   }
-  .iconLinks .greenHouses,
-  .iconLinks .community,
-  .iconLinks .blog,
-  .iconLinks .getInTouch {
+  .mainIcons .iconLinks .greenHouses,
+  .mainIcons .iconLinks .community,
+  .mainIcons .iconLinks .blog,
+  .mainIcons .iconLinks .getInTouch {
     width: 80%;
     margin: 1rem 2rem;
   }
@@ -2120,10 +2160,10 @@ body .contactMain .address p {
   .mainHeader .mainTitle h1 {
     font-size: 4.5rem;
   }
-  .iconLinks .greenHouses p,
-  .iconLinks .community p,
-  .iconLinks .blog p,
-  .iconLinks .getInTouch p {
+  .mainIcons .iconLinks .greenHouses p,
+  .mainIcons .iconLinks .community p,
+  .mainIcons .iconLinks .blog p,
+  .mainIcons .iconLinks .getInTouch p {
     margin-left: 0;
   }
 }
@@ -2142,26 +2182,26 @@ body .contactMain .address p {
   .mainHeader .mainTitle:after {
     top: 8rem;
   }
-  .iconLinks .greenHouses h5,
-  .iconLinks .community h5,
-  .iconLinks .blog h5,
-  .iconLinks .getInTouch h5 {
+  .mainIcons .iconLinks .greenHouses h5,
+  .mainIcons .iconLinks .community h5,
+  .mainIcons .iconLinks .blog h5,
+  .mainIcons .iconLinks .getInTouch h5 {
     text-align: center;
   }
-  .iconLinks .greenHouses h5:before,
-  .iconLinks .community h5:before,
-  .iconLinks .blog h5:before,
-  .iconLinks .getInTouch h5:before {
+  .mainIcons .iconLinks .greenHouses h5:before,
+  .mainIcons .iconLinks .community h5:before,
+  .mainIcons .iconLinks .blog h5:before,
+  .mainIcons .iconLinks .getInTouch h5:before {
     height: 34px;
     width: 34px;
     display: block;
     margin: 0 auto;
     margin-bottom: 2rem;
   }
-  .iconLinks .greenHouses p,
-  .iconLinks .community p,
-  .iconLinks .blog p,
-  .iconLinks .getInTouch p {
+  .mainIcons .iconLinks .greenHouses p,
+  .mainIcons .iconLinks .community p,
+  .mainIcons .iconLinks .blog p,
+  .mainIcons .iconLinks .getInTouch p {
     text-align: center;
   }
 }
@@ -2551,6 +2591,12 @@ body .contactMain .address p {
   .contactUsForm .contactForm .contactFormInput input[type='name'],
   .contactUsForm .contactForm .contactFormInput input[type='email'] {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body .contactHeader .contactHeaderTitle {
+    margin-top: 6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
