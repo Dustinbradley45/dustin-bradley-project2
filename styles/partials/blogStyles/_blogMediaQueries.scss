@@ -27,15 +27,22 @@
     }
 }
 
+
+
+//1440px
+@media #{$medDesktop} {
+    .blogHeader {
+    
+        .blogHeaderTitle {
+            margin-left: 7rem;
+        }
+    }
+    
+}
+
 //1250px
 @media #{$smallDesktop} {
 
-    .blogHeader {
-
-        .blogHeaderTitle {
-            margin-left: 8rem;
-        }
-    }
 
     .blogAside {
         margin-left: 2rem;
@@ -62,8 +69,10 @@
 
     .blogAside {
 
+
         .blogAsideInfo {
             margin-top: 1rem;
+            height:43rem;
         }
     }
 
@@ -156,6 +165,7 @@
                 .blogPost {
                     position: static;
                     padding-top: 3.5rem;
+                    margin-right:1.5rem;
 
                     .hideTheWords {
                         display: none;
@@ -235,7 +245,7 @@
                     @include displayFlex (column, flex-start, center);
 
                     img {
-                        width: 50%;
+                        width: 37%;
                         margin: 1rem 0;
 
                     }
@@ -248,7 +258,15 @@
         }
     }
 }
-//400
+
+//500px
+@media #{$medPhone} {
+    .blogForm {
+        margin: 0 2rem;
+    }
+}
+
+//400px
 @media #{$smallPhone} {
 .blogMain{
      .blogMainRight{

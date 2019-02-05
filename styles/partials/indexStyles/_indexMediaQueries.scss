@@ -148,7 +148,7 @@
             padding-top: 10rem;
 
             h1 {
-                @include fontSize(6rem);
+                @include fontSize(5.5rem);
 
             }
 
@@ -210,6 +210,18 @@
             }
         }
     }
+
+    .iconLinks {
+        .greenHouses,
+        .community,
+        .blog,
+        .getInTouch {
+
+            p{
+            margin-left:0;
+            }
+        }
+    }
 }
 
 //400px
@@ -220,11 +232,40 @@
 
         .mainTitle {
             line-height: 2.5rem;
+            padding-top:7rem;
 
             h1 {
                 @include fontSize(3.5rem);
 
             }
+
+            &:after {
+               top: 8rem;
+            }
         }
     }
+     .iconLinks {
+
+         .greenHouses,
+         .community,
+         .blog,
+         .getInTouch {
+
+            h5{
+                text-align: center;
+              
+                &:before {
+                    height:34px;
+                    width: 34px;
+                    display:block;
+                    margin:0 auto;
+                    margin-bottom:2rem;
+                }
+            }
+
+            p {
+                text-align:center;
+            }
+         }
+     }
 }

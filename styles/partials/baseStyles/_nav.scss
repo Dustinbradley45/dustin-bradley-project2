@@ -23,8 +23,21 @@
                     padding: 10px 1rem;
 
                     &:hover a::before, &:hover  a::after {
-                        width:100%;
+                        width:50%;
                     }
+                    &:hover a::before{
+                        margin-bottom:6px;
+                        opacity:1;
+                        left:0;
+
+                    }
+
+                    &:hover a::after {
+                        margin-top:6px;
+                        opacity:1;
+                        left:50%;
+                    }
+
 
                     a {
                         color: $colorWhite;
@@ -37,25 +50,30 @@
                         &::before {
                             content:'';
                             display:inline-block;
-                            width: 0%;
+                            width: 50%;
                             position:absolute;
                             background-color: $colorYellow;
                             height: 2px;
                             bottom:25px;
-                            transition:.7s linear all;
+                            left:50%;
+                            margin:0;
+                            opacity:0;
+                            transition:.2s linear all;
                             
                         }
 
                         &:after {
                             content:'';
-                            width: 0%;
+                            width: 50%;
                             display:inline-block;
                             background-color: $colorYellow;
                             height: 2px;
-                            transition: .7s linear all;
+                            transition: .2s linear all;
                             position:absolute;
                             top:20px;
-                            left:0;
+                            left:-50%;
+                            margin:0;
+                            opacity:0;
                         }
 
                         &.active {

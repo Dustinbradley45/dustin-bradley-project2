@@ -42,6 +42,7 @@
                 p {
                     @include bodyText;
                     font-style: italic;
+                    color:$colorDarkGreen;
                 }
             }
 

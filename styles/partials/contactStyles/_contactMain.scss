@@ -10,16 +10,27 @@ body {
             margin: 0;
             padding: 0;
 
+            li:first-of-type a {
+                margin-left:0;
+            }
+
             li {
                 list-style: none;
 
+
                 a {
                     color: $colorLightGreen;
-                    padding: 20px;
+                    margin: 1rem;
                     @include fontSize(1.2rem);
+                    transition:.3s all linear;
+                    transform:translateY(0);
 
-                    &:first-child {
-                        padding-left: 0;
+
+                    &:hover {
+                        @include fontSize(1.5rem);
+                        color:$colorGrey;
+                        transform:translateY(-50px);
+                        
                     }
                 }
             }

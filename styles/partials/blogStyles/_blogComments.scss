@@ -25,6 +25,7 @@
             .bold {
                 font-family: $primaryFont;
                 @include fontWeight(600);
+                color:$colorDarkGreen;
             }
 
             p {
@@ -34,7 +35,7 @@
     }
 
     .comment2 {
-        @include displayFlex(row, flex-start, flex-start);
+        @include displayFlex(row, flex-start, center);
         margin-top: 4rem;
 
 
@@ -50,6 +51,7 @@
             .bold {
                 font-family: $primaryFont;
                 @include fontWeight(600);
+                color:$colorDarkGreen;
             }
 
             p {

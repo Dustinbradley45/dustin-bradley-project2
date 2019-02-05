@@ -323,7 +323,23 @@ img {
 .blogNav .navContent .mainNav ul li:hover a::after,
 .contactNav .navContent .mainNav ul li:hover a::before,
 .contactNav .navContent .mainNav ul li:hover a::after {
-  width: 100%;
+  width: 50%;
+}
+
+.headerNav .navContent .mainNav ul li:hover a::before,
+.blogNav .navContent .mainNav ul li:hover a::before,
+.contactNav .navContent .mainNav ul li:hover a::before {
+  margin-bottom: 6px;
+  opacity: 1;
+  left: 0;
+}
+
+.headerNav .navContent .mainNav ul li:hover a::after,
+.blogNav .navContent .mainNav ul li:hover a::after,
+.contactNav .navContent .mainNav ul li:hover a::after {
+  margin-top: 6px;
+  opacity: 1;
+  left: 50%;
 }
 
 .headerNav .navContent .mainNav ul li a,
@@ -343,28 +359,33 @@ img {
 .contactNav .navContent .mainNav ul li a::before {
   content: '';
   display: inline-block;
-  width: 0%;
+  width: 50%;
   position: absolute;
   background-color: #f8e71c;
   height: 2px;
   bottom: 25px;
-  -webkit-transition: .7s linear all;
-  transition: .7s linear all;
+  left: 50%;
+  margin: 0;
+  opacity: 0;
+  -webkit-transition: .2s linear all;
+  transition: .2s linear all;
 }
 
 .headerNav .navContent .mainNav ul li a:after,
 .blogNav .navContent .mainNav ul li a:after,
 .contactNav .navContent .mainNav ul li a:after {
   content: '';
-  width: 0%;
+  width: 50%;
   display: inline-block;
   background-color: #f8e71c;
   height: 2px;
-  -webkit-transition: .7s linear all;
-  transition: .7s linear all;
+  -webkit-transition: .2s linear all;
+  transition: .2s linear all;
   position: absolute;
   top: 20px;
-  left: 0;
+  left: -50%;
+  margin: 0;
+  opacity: 0;
 }
 
 .headerNav .navContent .mainNav ul li a.active,
@@ -666,10 +687,11 @@ footer {
   background-image: url("../../plantedFinalAssets/homeImage1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 500px;
 }
 
 .mainHeader .mainTitle {
-  padding-top: 12rem;
+  padding-top: 10rem;
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1203,6 +1225,7 @@ footer {
 
 .blogHeader {
   height: 65vh;
+  min-height: 500px;
   background-image: url("./../../plantedFinalAssets/blogHeader1.jpg");
   background-size: cover;
 }
@@ -1296,6 +1319,7 @@ footer {
   font-weight: 400;
   letter-spacing: 1px;
   font-style: italic;
+  color: #074115;
 }
 
 .blogMainRight .blogMission .blogPost p {
@@ -1381,18 +1405,35 @@ footer {
   line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: black;
+  color: #074115;
   font-weight: 600;
   font-style: italic;
   text-decoration: none;
 }
 
-.blogAside .blogAsideInfo .blogAsideInfoBottom li {
+.blogAside .blogAsideInfoBottom ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.blogAside .blogAsideInfoBottom ul li {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.blogAside .blogAsideInfoBottom ul li:before {
+  content: '';
+  background-color: #0e902d;
+  border-radius: 50%;
+  font-weight: 300;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 15px;
+  margin-bottom: 5px;
 }
 
 .commentsSection {
@@ -1439,6 +1480,7 @@ footer {
 .commentsSection .comment1 .comment1Info .bold {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
+  color: #074115;
 }
 
 .commentsSection .comment1 .comment1Info p {
@@ -1460,9 +1502,9 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 4rem;
 }
 
@@ -1479,6 +1521,7 @@ footer {
 .commentsSection .comment2 .comment2Info .bold {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
+  color: #074115;
 }
 
 .commentsSection .comment2 .comment2Info p {
@@ -1593,6 +1636,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   height: 65vh;
+  min-height: 500px;
 }
 
 .contactHeader .contactHeaderTitle {
@@ -1652,18 +1696,29 @@ body .contactMain ul {
   padding: 0;
 }
 
+body .contactMain ul li:first-of-type a {
+  margin-left: 0;
+}
+
 body .contactMain ul li {
   list-style: none;
 }
 
 body .contactMain ul li a {
   color: #0e902d;
-  padding: 20px;
+  margin: 1rem;
   font-size: 1.2rem;
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
-body .contactMain ul li a:first-child {
-  padding-left: 0;
+body .contactMain ul li a:hover {
+  font-size: 1.5rem;
+  color: #4f4f4f;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 body .contactMain .contactEmail {
@@ -2000,7 +2055,7 @@ body .contactMain .address p {
     padding-top: 10rem;
   }
   .mainHeader .mainTitle h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
   .mainHeader .mainTitle::after {
     width: 100%;
@@ -2065,6 +2120,12 @@ body .contactMain .address p {
   .mainHeader .mainTitle h1 {
     font-size: 4.5rem;
   }
+  .iconLinks .greenHouses p,
+  .iconLinks .community p,
+  .iconLinks .blog p,
+  .iconLinks .getInTouch p {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -2073,9 +2134,35 @@ body .contactMain .address p {
   }
   .mainHeader .mainTitle {
     line-height: 2.5rem;
+    padding-top: 7rem;
   }
   .mainHeader .mainTitle h1 {
     font-size: 3.5rem;
+  }
+  .mainHeader .mainTitle:after {
+    top: 8rem;
+  }
+  .iconLinks .greenHouses h5,
+  .iconLinks .community h5,
+  .iconLinks .blog h5,
+  .iconLinks .getInTouch h5 {
+    text-align: center;
+  }
+  .iconLinks .greenHouses h5:before,
+  .iconLinks .community h5:before,
+  .iconLinks .blog h5:before,
+  .iconLinks .getInTouch h5:before {
+    height: 34px;
+    width: 34px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .iconLinks .greenHouses p,
+  .iconLinks .community p,
+  .iconLinks .blog p,
+  .iconLinks .getInTouch p {
+    text-align: center;
   }
 }
 
@@ -2094,10 +2181,13 @@ body .contactMain .address p {
   }
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1440px) {
   .blogHeader .blogHeaderTitle {
-    margin-left: 8rem;
+    margin-left: 7rem;
   }
+}
+
+@media only screen and (max-width: 1250px) {
   .blogAside {
     margin-left: 2rem;
   }
@@ -2118,6 +2208,7 @@ body .contactMain .address p {
 @media only screen and (max-width: 1000px) {
   .blogAside .blogAsideInfo {
     margin-top: 1rem;
+    height: 43rem;
   }
   .blogMainRight .blogMission .blogPost {
     padding-top: 7rem;
@@ -2216,6 +2307,7 @@ body .contactMain .address p {
   .blogMain .blogMainRight .blogMission .blogPost {
     position: static;
     padding-top: 3.5rem;
+    margin-right: 1.5rem;
   }
   .blogMain .blogMainRight .blogMission .blogPost .hideTheWords {
     display: none;
@@ -2316,11 +2408,17 @@ body .contactMain .address p {
             align-items: center;
   }
   .blogMain .blogMainRight .commentsSection .comment2 img {
-    width: 50%;
+    width: 37%;
     margin: 1rem 0;
   }
   .blogMain .blogMainRight .commentsSection .comment2 .comment2Info {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .blogForm {
+    margin: 0 2rem;
   }
 }
 

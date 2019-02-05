@@ -3,9 +3,10 @@
     background-image: url('../../plantedFinalAssets/homeImage1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 500px;
 
     .mainTitle {
-        padding-top: 12rem;
+        padding-top: 10rem;
         width: 20%;
         @include displayFlex(column, center, center);
         margin: 0 auto;

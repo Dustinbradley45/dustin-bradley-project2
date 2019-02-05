@@ -33,16 +33,35 @@
 
             a {
                 @include bodyText;
-                color: black;
+                color: $colorDarkGreen;
                 @include fontWeight(600);
                 font-style: italic;
                 text-decoration: none;
             }
-        }
 
-        .blogAsideInfoBottom {
+        }
+    }
+
+    .blogAsideInfoBottom {
+        ul {
+            list-style: none;
+            padding-left: 15px;
+
             li {
                 @include bodyText;
+
+
+                &:before {
+                    content: '';
+                    background-color: $colorLightGreen;
+                    border-radius: 50%;
+                    @include fontWeight(300);
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    margin-right: 15px;
+                    margin-bottom: 5px;
+                }
             }
         }
     }
