@@ -1684,8 +1684,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 18%;
-  margin-top: 10rem;
-  margin-left: 7rem;
+  margin: 10rem 0 0 7rem;
 }
 
 .contactHeader .contactHeaderTitle h1 {

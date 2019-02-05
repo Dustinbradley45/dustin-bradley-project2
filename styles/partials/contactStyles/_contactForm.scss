@@ -13,45 +13,45 @@
 
     .contactForm {
         width: 80%;
-
-        .contactFormInput {
-            width: 100%;
-        }
-
-        input[type='email'],
-        input[type='name'] {
-            @include inputFont;
-            width: calc(50% - 3%);
-            margin: 2rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-        }
-
-        input[type='email'] {
-            margin-left: 2%;
-        }
-
-        input[type='name'] {
-            margin-right: 2%;
-        }
-
-        textarea {
-            @include textArea;
-            height: 200px;
-            padding: 25px 0 0 15px;
-            background-color: white;
-        }
-
-        button {
-            @include formButton;
-            margin: 2rem 0 1rem 0;
-
-            &:hover {
-                @include buttonHover;
-            }
-
-            &:active {
-                @include buttonActive;
-            }
-        }
     }
 }
+
+.contactForm .contactFormInput {
+    width: 100%;
+
+    input[type='email'],
+    input[type='name'] {
+        @include inputFont;
+        width: calc(50% - 3%);
+        margin: 2rem 0 1rem 0;
+        padding-bottom: 0.5rem;
+    }
+
+    input[type='email'] {
+        margin-left: 2%;
+    }
+
+    input[type='name'] {
+        margin-right: 2%;
+    }
+
+    textarea {
+        @include textArea;
+        height: 200px;
+        padding: 25px 0 0 15px;
+        background-color: white;
+    }
+
+    button {
+        @include formButton;
+        margin: 2rem 0 1rem 0;
+
+        &:hover {
+            @include buttonHover;
+        }
+
+        &:active {
+            @include buttonActive;
+        }
+    }
+ }
