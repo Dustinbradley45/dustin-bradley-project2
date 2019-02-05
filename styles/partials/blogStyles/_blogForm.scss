@@ -36,5 +36,13 @@
 
     button {
         @include formButton;
+
+        &:hover {
+            @include buttonHover;
+        }
+
+        &:active {
+            @include buttonActive;
+        }
     }
 }

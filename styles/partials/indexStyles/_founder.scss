@@ -21,6 +21,14 @@
         a {
             @include mainButton;
             margin-top: 1rem;
+
+            &:hover {
+                @include buttonHover;
+            }
+
+            &:active {
+                @include buttonActive;
+            }
         }
     }
 

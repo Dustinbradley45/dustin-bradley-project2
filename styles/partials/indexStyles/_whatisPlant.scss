@@ -23,6 +23,16 @@
 
         a{
             @include mainButton;
+
+            &:hover {
+                @include buttonHover;
+            }
+
+            &:active {
+                @include buttonHover;
+                -webkit-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
+                box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
+            }
         }
 
     }

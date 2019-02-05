@@ -53,6 +53,14 @@
         .toggleReadMore {
             @include mainButton;
             display: none;
+
+            &:hover {
+                @include buttonHover;
+            }
+
+            &:active {
+                @include buttonActive;
+            }
         }
     }
 }

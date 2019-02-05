@@ -26,6 +26,37 @@
                     text-transform: uppercase;
                     font-family: $primaryFont;
                     transition: .5s all ease;
+                    position:relative;
+
+                    &::before {
+                        content:'';
+                        display:inline-block;
+                        width: 100%;
+                        position:absolute;
+                        background-color: blue;
+                        height: 2px;
+                        bottom:25px;
+                        
+                    }
+
+                    &:after {
+                        content:'';
+                        width: 50%;
+                        display:inline-block;
+                        background-color: blue;
+                        height: 2px;
+                        transition: 1s ease all;
+                        position:absolute;
+                        top:20px;
+                        left:0;
+                    }
+                    
+                    &:hover &::after{
+                        // font-size:1.3rem;
+                        // border-bottom: 2px solid $colorYellow;
+                        // padding-bottom:2px;
+                        width:100%;
+                    }
 
                     &.active {
                         color: $colorYellow;
@@ -41,6 +72,7 @@
         }
     }
 }
+
 
 .blogNav,
 .contactNav,

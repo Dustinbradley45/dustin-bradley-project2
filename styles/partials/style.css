@@ -327,6 +327,50 @@ img {
   font-family: "Josefin Sans", sans-serif;
   -webkit-transition: .5s all ease;
   transition: .5s all ease;
+  position: relative;
+}
+
+.headerNav .navContent ul li a::before,
+.blogNav .navContent ul li a::before,
+.contactNav .navContent ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  background-color: blue;
+  height: 2px;
+  bottom: 25px;
+}
+
+.headerNav .navContent ul li a:after,
+.blogNav .navContent ul li a:after,
+.contactNav .navContent ul li a:after {
+  content: '';
+  width: 50%;
+  display: inline-block;
+  background-color: blue;
+  height: 2px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.headerNav .navContent ul li a:hover .headerNav .navContent ul li a::after,
+.blogNav .navContent ul li a:hover .headerNav .navContent ul li a::after,
+.contactNav .navContent ul li a:hover .headerNav .navContent ul li a::after, .headerNav .navContent ul li a:hover
+.blogNav .navContent ul li a::after,
+.blogNav .navContent ul li a:hover
+.blogNav .navContent ul li a::after,
+.contactNav .navContent ul li a:hover
+.blogNav .navContent ul li a::after, .headerNav .navContent ul li a:hover
+.contactNav .navContent ul li a::after,
+.blogNav .navContent ul li a:hover
+.contactNav .navContent ul li a::after,
+.contactNav .navContent ul li a:hover
+.contactNav .navContent ul li a::after {
+  width: 100%;
 }
 
 .headerNav .navContent ul li a.active,
@@ -731,6 +775,18 @@ footer {
   padding: .6rem 1rem;
 }
 
+.whatIsPlant .whatIsPlantContent a:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.whatIsPlant .whatIsPlantContent a:active {
+  color: #f0efed;
+  background-color: #4f4f4f;
+  -webkit-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
+}
+
 .squareGallery {
   background-color: white;
   padding: 2rem 0;
@@ -853,6 +909,16 @@ footer {
   color: #f0efed;
   background-color: #0e902d;
   padding: .6rem 1rem;
+}
+
+.squareGallery a:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.squareGallery a:active {
+  -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
 }
 
 .iconLinks {
@@ -1082,6 +1148,16 @@ footer {
   margin-top: 1rem;
 }
 
+.founder .founderContent a:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.founder .founderContent a:active {
+  -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+}
+
 .founder img {
   width: 100%;
   -webkit-box-shadow: 10px 10px 0px 0px #f8e71c;
@@ -1248,6 +1324,16 @@ footer {
   background-color: #0e902d;
   padding: .6rem 1rem;
   display: none;
+}
+
+.blogMainRight .blogMission .toggleReadMore:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.blogMainRight .blogMission .toggleReadMore:active {
+  -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
 }
 
 .blogAside {
@@ -1498,6 +1584,16 @@ footer {
   letter-spacing: 1px;
 }
 
+.blogForm button:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.blogForm button:active {
+  -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+}
+
 .contactHeader {
   background-image: url("./../../plantedFinalAssets/contactHeader1.jpg");
   background-repeat: no-repeat;
@@ -1670,6 +1766,16 @@ body .contactMain .address p {
   line-height: 1.5rem;
   letter-spacing: 1px;
   margin: 2rem 0 1rem 0;
+}
+
+.contactUsForm .contactForm button:hover {
+  color: #f0efed;
+  background-color: #4f4f4f;
+}
+
+.contactUsForm .contactForm button:active {
+  -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
 }
 
 @media only screen and (max-width: 750px) {

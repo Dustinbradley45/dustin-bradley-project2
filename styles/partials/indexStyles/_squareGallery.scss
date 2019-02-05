@@ -72,5 +72,13 @@
 
     a {
         @include mainButton;
+
+        &:hover {
+            @include buttonHover;
+        }
+
+        &:active {
+            @include buttonActive;
+        }
     }
 }
