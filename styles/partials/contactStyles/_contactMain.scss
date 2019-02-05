@@ -1,43 +1,42 @@
-body{
+body {
     background-color: $colorWhite;
 
     .contactMain {
         @include displayFlex(row, flex-start, center);
-        margin-left:7rem;
+        margin-left: 7rem;
 
-        ul{
-            @include displayFlex(row, flex-start,center);
-            margin:0;
-            padding:0;
-            
-            li{
-                list-style:none;
-                
+        ul {
+            @include displayFlex(row, flex-start, center);
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
                 a {
-                    color:$colorLightGreen;
-                    padding:20px;
+                    color: $colorLightGreen;
+                    padding: 20px;
                     @include fontSize(1.2rem);
 
-                    &:first-child{
-                        padding-left:0;
+                    &:first-child {
+                        padding-left: 0;
                     }
                 }
             }
         }
 
         .contactEmail {
-            font-family:$primaryFont;
-            letter-spacing:1.5px;
+            font-family: $primaryFont;
+            letter-spacing: 1.5px;
         }
 
         .address {
 
-            p{
-            padding:0;
-            margin:0;
-            @include bodyText;
+            p {
+                padding: 0;
+                margin: 0;
+                @include bodyText;
             }
         }
     }
 }
-

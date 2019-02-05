@@ -1,37 +1,33 @@
-.founder{
+.founder {
     @include displayFlex(row, flex-start, center);
-    background-color:$colorWhite; 
+    background-color: $colorWhite;
     padding: 4rem 0;
-    margin-top:1rem;
-    margin-bottom:1rem;
+    margin: 1rem 0;
 
-    .founderContent{
-        width:70%;
-        padding-left:7rem;
+    .founderContent {
+        width: 70%;
+        padding-left: 7rem;
 
-        h4{
+        h4 {
             @include subHeadingText;
-            margin-top:1.3rem;  
+            margin-top: 1.3rem;
         }
-    
+
         p {
             @include bodyText;
-            padding-bottom:.5rem;
+            padding-bottom: .5rem;
         }
 
         a {
             @include mainButton;
-            margin-top:1rem;
-
+            margin-top: 1rem;
         }
-
     }
 
     img {
-        width:100%;
+        width: 100%;
         -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
         -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
         box-shadow: 10px 10px 0px 0px $colorYellow;
     }
 }
-

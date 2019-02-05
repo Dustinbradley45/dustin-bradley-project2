@@ -1,60 +1,58 @@
 .blogMain {
     @include displayFlex(row, flex-start, flex-start);
-    background-color:$colorWhite;
+    background-color: $colorWhite;
 }
 
-.blogMainRight{
-        width:65%;
-        position:relative;
-        
-        .blogMission {
-            width:100%;
-            @include displayFlex(column, flex-start, flex-start);
-            padding-left:20px;
-            position:relative;
-            
-            
-            img{
-            position:relative;
-            width:99%;
-            left:calc(100% - 99%);
+.blogMainRight {
+    width: 65%;
+    position: relative;
+
+    .blogMission {
+        width: 100%;
+        @include displayFlex(column, flex-start, flex-start);
+        padding-left: 20px;
+        position: relative;
+
+
+        img {
+            position: relative;
+            width: 99%;
+            left: calc(100% - 99%);
             -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
             -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
             box-shadow: -10px 10px 0px 0px $colorYellow;
-            bottom:200px;
-            
+            bottom: 200px;
+
         }
-        
-        .blogPost{
+
+        .blogPost {
             border-bottom: 2px solid $colorYellow;
-            border-left:2px solid $colorYellow;
-            margin-right:5rem;
+            border-left: 2px solid $colorYellow;
+            margin-right: 5rem;
             padding: 8.5rem 0 2.5rem 3rem;
-            position:relative;
-            bottom:300px;   
-            
-            .blogTitle{
-                
-                h3{
+            position: relative;
+            bottom: 300px;
+
+            .blogTitle {
+
+                h3 {
                     @include subHeadingText;
                 }
-                
-                p{
+
+                p {
                     @include bodyText;
-                    font-style:italic;
+                    font-style: italic;
                 }
             }
 
-            p{
-               @include bodyText;
+            p {
+                @include bodyText;
             }
         }
 
         .toggleReadMore {
             @include mainButton;
-            display:none;
+            display: none;
         }
-
     }
-
 }

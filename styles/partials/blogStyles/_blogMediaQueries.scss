@@ -1,3 +1,13 @@
+@media #{$xlLargeDesktop} {
+    .blogAside {
+        .blogAsideInfo {
+            .blogAsideInfoTop {
+                padding-top: 12rem;
+            }
+        }
+    }
+}
+
 //1600px
 @media #{$largeDesktop} {
 
@@ -7,11 +17,14 @@
             margin-left: 10rem;
         }
     }
-}
 
-//1440px
-@media #{$medDesktop} {
-
+    .blogAside {
+        .blogAsideInfo {
+            .blogAsideInfoTop {
+                padding-top: 11rem;
+            }
+        }
+    }
 }
 
 //1250px
@@ -20,24 +33,25 @@
     .blogHeader {
 
         .blogHeaderTitle {
-            margin-left:8rem;
+            margin-left: 8rem;
         }
     }
+
     .blogAside {
-        margin-left:2rem;
+        margin-left: 2rem;
 
         img {
-            width:100%;
+            width: 100%;
         }
 
         .blogAsideInfo {
-            margin-left:0;
-            width:100%;
-            right:0;
+            margin-left: 0;
+            width: 100%;
+            right: 0;
             margin-top: 3rem;
 
             .blogAsideInfoTop {
-                padding-top:6rem;
+                padding-top: 6rem;
             }
         }
     }
@@ -49,17 +63,17 @@
     .blogAside {
 
         .blogAsideInfo {
-            margin-top:1rem;
+            margin-top: 1rem;
         }
     }
 
     .blogMainRight {
-        
-        .blogMission{ 
-            
-            .blogPost{
+
+        .blogMission {
+
+            .blogPost {
                 padding-top: 7rem;
-                margin-right:3rem;
+                margin-right: 3rem;
 
             }
         }
@@ -73,19 +87,19 @@
     .blogHeader {
 
         .blogHeaderTitle {
-            text-align:center;
+            text-align: center;
             margin: 0;
-            margin-top:8rem;
+            margin-top: 8rem;
         }
     }
 
     .blogAside {
 
         .blogAsideInfo {
-            
+
             .blogAsideInfoTop {
-                padding-top:2rem;
-                
+                padding-top: 2rem;
+
             }
         }
     }
@@ -96,7 +110,7 @@
 
     .blogMain {
         @include displayFlex (column, flex-start, flex-start);
-            margin-bottom:2rem;
+        margin-bottom: 2rem;
 
         .blogAside {
             @include displayFlex (column, flex-start, center);
@@ -132,7 +146,6 @@
             .blogMission {
                 padding-left: 0;
 
-
                 img {
                     position: static;
                     width: 100%;
@@ -144,15 +157,15 @@
                     position: static;
                     padding-top: 3.5rem;
 
-                     .hideTheWords {
-                         display: none;
-                         margin-top:.5rem;
-                     }
+                    .hideTheWords {
+                        display: none;
+                        margin-top: .5rem;
+                    }
 
-                     .toggleReadMore {
-                         @include mainButton;
-                         display:block;
-                     }
+                    .toggleReadMore {
+                        @include mainButton;
+                        display: block;
+                    }
 
                 }
             }
@@ -162,19 +175,19 @@
     .commentsSection {
         position: static;
         margin: 2rem;
-        padding-top:1.5rem;
+        padding-top: 1.5rem;
 
 
-        h4{
-            padding-bottom:1rem;
+        h4 {
+            padding-bottom: 1rem;
         }
 
         .comment2 {
-            margin-top:6%;
+            margin-top: 6%;
 
             img {
-                margin:0 auto;
-                margin-top:2rem;
+                margin: 0 auto;
+                margin-top: 2rem;
                 margin-right: 2rem;
             }
         }
@@ -183,15 +196,15 @@
     .blogForm {
         position: static;
         margin: 1.5rem 2rem 2rem 2rem;
-        
+
         .blogFormInput {
-           @include displayFlex(column, center, center);
+            @include displayFlex(column, center, center);
 
             input[type='name'],
             input[type='email'] {
                 width: 100%;
-                margin:1rem 0;
-                padding:1rem 0;
+                margin: 1rem 0;
+                padding: 1rem 0;
             }
         }
     }
@@ -208,7 +221,7 @@
                 .comment1 {
                     @include displayFlex (column, flex-start, center);
 
-                    img{
+                    img {
                         width: 50%;
                         margin: .5rem 0;
                     }
@@ -221,29 +234,17 @@
                 .comment2 {
                     @include displayFlex (column, flex-start, center);
 
-                    img{
-                        width:50%;
+                    img {
+                        width: 50%;
                         margin: 1rem 0;
 
                     }
 
                     .comment2Info {
-                        width:90%;
+                        width: 90%;
                     }
                 }
-
             }
-
         }
-        
     }
-}
-//500px
-@media #{$medPhone} {
-
-}
-
-//400px
-@media #{$smallPhone} {
-
 }

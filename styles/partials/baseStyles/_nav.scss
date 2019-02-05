@@ -1,68 +1,66 @@
 .headerNav,
 .blogNav,
-.contactNav{
-    color:$colorWhite;
-    
-    .navContent{
-        @include displayFlex(row, flex-start, space-evenly);
-        margin-left:7rem;
+.contactNav {
+    color: $colorWhite;
 
-        h2{
-            font-weight:400;
-            font-size:1.6rem;
-            letter-spacing:1.1px;
+    .navContent {
+        @include displayFlex(row, flex-start, space-evenly);
+        margin-left: 7rem;
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.6rem;
+            letter-spacing: 1.1px;
         }
 
-    ul{
-        @include displayFlex(row, flex-start, center);
+        ul {
+            @include displayFlex(row, flex-start, center);
 
-        li{
-            list-style:none;
-            padding:10px 1rem;
+            li {
+                list-style: none;
+                padding: 10px 1rem;
 
-            a{
-                color:$colorWhite;
-                text-decoration:none;
-                text-transform:uppercase;
-                font-family:$primaryFont;
-                transition: .5s all ease;
+                a {
+                    color: $colorWhite;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: $primaryFont;
+                    transition: .5s all ease;
 
-                &.active{
-                    color: $colorYellow;
+                    &.active {
+                        color: $colorYellow;
 
-                }
+                    }
 
-                &:focus {
-                    font-size:1.3rem;
-                    border:$colorWhite 2px solid;
+                    &:focus {
+                        font-size: 1.3rem;
+                        border: $colorWhite 2px solid;
+                    }
                 }
             }
         }
     }
 }
-}
 
 .blogNav,
-.contactNav,{
+.contactNav,
+    {
     background-color: $colorBlack;
 }
 
 .mainHeader,
 .blogHeader,
-.contactHeader{
+.contactHeader {
 
     .navigation {
-        display:none;
+        display: none;
 
         .navCheckbox {
-            opacity:0;
+            opacity: 0;
 
             &:focus + .navButton {
-                border:$colorDarkGreen 4px solid ;
+                border: $colorDarkGreen 4px solid;
             }
-
-           
-
         }
 
         .navButton {
@@ -73,14 +71,13 @@
             width: 6rem;
             border-radius: 0 0 0 50%;
             top: -35px;
-            right:0;
+            right: 0;
             z-index: 2000;
             box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
             text-align: center;
-            cursor: pointer; 
+            cursor: pointer;
 
         }
-
 
         .mobileNavContent {
             height: 90vh;
@@ -88,18 +85,13 @@
             top: 0;
             right: 0;
             z-index: 1500;
-            // opacity: 0;
+            opacity: 0;
             width: 0;
-            background:none;
-            
-
+            background: none;
         }
 
         .navList {
             position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
             list-style: none;
             text-align: center;
             width: 100%;
@@ -123,29 +115,27 @@
                 font-family: $primaryFont;
                 text-decoration: none;
                 text-transform: uppercase;
-                ;
                 background-size: 220%;
                 transition: all .3s;
             }
 
-            &:hover,
-            &:active {
+                &:hover,
+                &:active {
                 background-position: 100%;
                 color: $colorGrey;
                 transform: translateY(1rem);
-                background:rgba($colorWhite, .5);
+                background: rgba($colorWhite, .5);
                 @include fontSize(1.5rem);
             }
         }
 
         //FUNCTIONALITY
-        
         //Content displays within the mobile nav
-        
-        .navCheckbox:checked~.mobileNavContent  {
+
+        .navCheckbox:checked~.mobileNavContent {
             opacity: 1;
-            width:100%;
-            display:block;
+            width: 100%;
+            display: block;
             animation: moveLeft ease 1s;
             background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
             border-bottom-left-radius: 100%;
@@ -179,10 +169,10 @@
             }
 
             &::before {
-                content:'';
+                content: '';
                 top: -.8rem;
                 transform: rotate(180deg);
-                transform:rotate(-180deg);
+                transform: rotate(-180deg);
             }
 
             &::after {
@@ -190,12 +180,14 @@
                 transform: rotate(-180deg)
             }
         }
-            //INITIAL HOVER TRANSITION
+
+        //INITIAL HOVER TRANSITION
         .navButton:hover .navIcon::before {
             left: -.5rem;
 
         }
-            //INITIAL HOVER TRANSITION
+
+        //INITIAL HOVER TRANSITION
         .navButton:hover .navIcon::after {
             left: .5rem;
         }
@@ -214,7 +206,7 @@
         }
 
         //On click transition
-        .navCheckbox:checked + .navButton .navIcon::after {
+        .navCheckbox:checked+.navButton .navIcon::after {
             top: 0;
             transform: rotate(-495deg);
             display: inline-block;
@@ -228,33 +220,31 @@
 }
 
 
-@keyframes moveLeft{
-    0%{
-       transform:translate(800px, -800px) scale(2);
-       opacity:0;
-       background-image:transparent;
-       
-      
-    }
-
-    100%{
-       transform:translate(0px, 0px) scale(1);
-       opacity:1;
-       background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
- 
-    }
-}
-
-@keyframes moveRight{
-    0%{
-        transform:translate(0px, 0px) scale(1);
-        opacity:1;
-       background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
+@keyframes moveLeft {
+    0% {
+        transform: translate(800px, -800px) scale(2);
+        opacity: 0;
+        background-image: transparent;
     }
 
     100% {
-        transform:translate(800, -800px) scale(1);
-        opacity:0;
+        transform: translate(0px, 0px) scale(1);
+        opacity: 1;
+        background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
+
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 1;
+        background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
+    }
+
+    100% {
+        transform: translate(800, -800px) scale(1);
+        opacity: 0;
         background-image: transparent;
     }
 }

@@ -196,6 +196,20 @@ input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 a:focus {
   border: 3px solid #2c2c2c;
 }
@@ -211,10 +225,17 @@ button:focus {
   z-index: 999;
   background: white;
   color: black;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  padding: .5rem;
+  text-decoration: none;
 }
 
 .skipLink:focus {
-  left: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border: 2px solid #074115;
 }
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -235,36 +256,8 @@ button:focus {
   font-weight: 600;
 }
 
-.wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-html {
-  font-size: 125%;
-}
-
 img {
   display: block;
-}
-
-.skipLink {
-  font-size: 2rem;
-  font-family: "Josefin Sans", sans-serif;
-  padding: .5rem;
-  text-decoration: none;
-}
-
-.skipLink:focus {
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  border: 2px solid #074115;
 }
 
 .headerNav,
@@ -398,6 +391,7 @@ img {
   top: 0;
   right: 0;
   z-index: 1500;
+  opacity: 0;
   width: 0;
   background: none;
 }
@@ -772,8 +766,7 @@ footer {
 
 .squareGallery .squareGalleryTop .squareGalleryTopInfo {
   width: 43%;
-  margin-left: 14.5%;
-  margin-bottom: 1.9rem;
+  margin: 0 0 1.9rem 14.5%;
 }
 
 .squareGallery .squareGalleryTop .squareGalleryTopInfo h4 {
@@ -1048,8 +1041,7 @@ footer {
           align-items: center;
   background-color: #f0efed;
   padding: 4rem 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .founder .founderContent {
@@ -1141,7 +1133,7 @@ footer {
 
 .blogHeader {
   height: 65vh;
-  background-image: url("./../../planted-final-assets/blog-header-1.jpg");
+  background-image: url("./../../plantedFinalAssets/blogHeader1.jpg");
   background-size: cover;
 }
 
@@ -1272,7 +1264,7 @@ footer {
 
 .blogAside .blogAsideInfo {
   margin-left: 6rem;
-  height: 40rem;
+  height: 41rem;
   width: 75%;
   position: absolute;
   top: 15px;
@@ -1507,7 +1499,7 @@ footer {
 }
 
 .contactHeader {
-  background-image: url("./../../planted-final-assets/contact-header-1.jpg");
+  background-image: url("./../../plantedFinalAssets/contactHeader1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 65vh;
@@ -1677,8 +1669,7 @@ body .contactMain .address p {
   text-align: center;
   line-height: 1.5rem;
   letter-spacing: 1px;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
 }
 
 @media only screen and (max-width: 750px) {
@@ -1691,6 +1682,11 @@ body .contactMain .address p {
   .blogNav .navContent .navigation,
   .contactNav .navContent .navigation {
     display: block;
+  }
+  .headerNav .navContent .navigation .mobileNavContent,
+  .blogNav .navContent .navigation .mobileNavContent,
+  .contactNav .navContent .navigation .mobileNavContent {
+    height: 100vh;
   }
   .headerNav .navContent .navigation .mobileNavContent ul,
   .blogNav .navContent .navigation .mobileNavContent ul,
@@ -1709,6 +1705,18 @@ body .contactMain .address p {
         -ms-flex-align: center;
             align-items: center;
   }
+  .headerNav .navContent .navigation .mobileNavContent ul li,
+  .blogNav .navContent .navigation .mobileNavContent ul li,
+  .contactNav .navContent .navigation .mobileNavContent ul li {
+    font-size: .7rem;
+  }
+  .headerNav .navContent .navigation .mobileNavContent ul li:hover, .headerNav .navContent .navigation .mobileNavContent ul li:active,
+  .blogNav .navContent .navigation .mobileNavContent ul li:hover,
+  .blogNav .navContent .navigation .mobileNavContent ul li:active,
+  .contactNav .navContent .navigation .mobileNavContent ul li:hover,
+  .contactNav .navContent .navigation .mobileNavContent ul li:active {
+    font-size: 1rem;
+  }
   .headerNav .navContent .mainNav,
   .blogNav .navContent .mainNav,
   .contactNav .navContent .mainNav {
@@ -1719,6 +1727,27 @@ body .contactMain .address p {
 @media only screen and (max-width: 650px) {
   .headerNav .navContent nav {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contactHeader .navigation .navList,
+  .blogHeader .navigation .navList,
+  .mainHeader .navigation .navList {
+    top: 1rem;
+    font-size: 0.8rem;
+  }
+  .contactHeader .navigation .navList:hover, .contactHeader .navigation .navList:active,
+  .blogHeader .navigation .navList:hover,
+  .blogHeader .navigation .navList:active,
+  .mainHeader .navigation .navList:hover,
+  .mainHeader .navigation .navList:active {
+    font-size: 1rem;
+  }
+  .contactHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
+  .blogHeader .navigation .navCheckbox:checked ~ .mobileNavContent,
+  .mainHeader .navigation .navCheckbox:checked ~ .mobileNavContent {
+    border-radius: 0;
   }
 }
 
@@ -1848,7 +1877,7 @@ body .contactMain .address p {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2.5rem 0;
   }
   .iconLinks .greenHouses,
   .iconLinks .community,
@@ -1919,7 +1948,6 @@ body .contactMain .address p {
   .endGallery .galleryContent img {
     width: 60%;
     margin: 0;
-    padding: 0;
     padding: 1rem;
   }
 }
@@ -1945,9 +1973,18 @@ body .contactMain .address p {
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (min-width: 1800px) {
+  .blogAside .blogAsideInfo .blogAsideInfoTop {
+    padding-top: 12rem;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
   .blogHeader .blogHeaderTitle {
     margin-left: 10rem;
+  }
+  .blogAside .blogAsideInfo .blogAsideInfoTop {
+    padding-top: 11rem;
   }
 }
 
@@ -2178,6 +2215,18 @@ body .contactMain .address p {
   }
   .blogMain .blogMainRight .commentsSection .comment2 .comment2Info {
     width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .body .contactMain {
+    margin-left: 0;
+  }
+  .body .contactMain .contactUsForm {
+    width: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

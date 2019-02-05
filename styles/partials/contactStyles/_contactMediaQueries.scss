@@ -1,7 +1,19 @@
 //QUERIES
 
-//1600px
-@media #{$largeDesktop} {}
+@media #{$xlLargeDesktop} {
+    .body{
+
+        .contactMain {
+            margin-left:0;
+
+            .contactUsForm {
+                width:80%;
+                justify-content: center;
+
+            }
+        }
+    }
+}
 
 //1440px
 @media #{$medDesktop} {
@@ -41,7 +53,6 @@
 @media #{$largeTablet} {
     body {
 
-
         .contactHeader {
 
             .contactHeaderTitle {
@@ -52,7 +63,6 @@
                 margin-top: 8rem;
                 text-align: center;
             }
-
         }
 
         .contactMain {
@@ -96,12 +106,6 @@
     }
 }
 
-//850px
-@media #{$medTablet} {}
-
-//750px
-@media #{$smallTablet} {}
-
 //650px
 @media #{$largePhone} {
     body {
@@ -119,6 +123,7 @@
 
 //500px
 @media #{$medPhone} {
+
     .contactUsForm {
         box-shadow: 0 0 0 0;
         border-top: 10px solid $colorYellow;
@@ -138,6 +143,3 @@
         }
     }
 }
-
-//400px
-@media #{$smallPhone} {}

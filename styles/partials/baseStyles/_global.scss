@@ -1,3 +1,18 @@
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
 //ACCESSIBILITY
 a {
 
@@ -21,9 +36,15 @@ button {
     z-index: 999;
     background: white;
     color: black;
+    @include fontSize(2rem);
+    font-family: $primaryFont;
+    padding: .5rem;
+    text-decoration: none;
 
     &:focus {
-        left: 0;
+        left: 50%;
+        transform: translate(-50%);
+        border: 2px solid $colorDarkGreen;
 
     }
 }
@@ -47,33 +68,6 @@ button {
     font-weight: 600;
 }
 
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-html {
-    font-size: 125%;
-}
-
 img {
     display: block;
-}
-
-.skipLink {
-    @include fontSize(2rem);
-    font-family: $primaryFont;
-    padding: .5rem;
-    text-decoration: none;
-
-    &:focus {
-        left: 50%;
-        transform: translate(-50%);
-        border: 2px solid $colorDarkGreen;
-    }
 }

@@ -1,98 +1,94 @@
-.iconLinks{
+.iconLinks {
 
     @include displayFlex(row, flex-start, center);
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     background-color: $colorWhite;
-    margin:5rem;
+    margin: 5rem;
 
-    & > div {
-        padding:.3rem;
+    &>div {
+        padding: .3rem;
     }
-
 
     //Cannot condense code due to :before elements have to be different
     .greenHouses {
-        width:50%;
+        width: 50%;
         transition: .4s all ease;
 
-
-
-        h5{
+        h5 {
             @include sectionTitle;
-            
-            &:before{
-                content:'\f06c';
-                font-family:'Font Awesome 5 Free';
+
+            &:before {
+                content: '\f06c';
+                font-family: 'Font Awesome 5 Free';
                 @include linkIcon;
             }
         }
 
         p {
-             margin-left: 3.75rem;
-             @include bodyText;
+            margin-left: 3.75rem;
+            @include bodyText;
         }
     }
-    
+
     .community {
-        width:50%;
+        width: 50%;
 
         h5 {
-          
-             @include sectionTitle;
-            
-            &:before{
-                // <i class="fas fa-users"></i>
-                content:'\f0c0';
-               font-family:'Font Awesome 5 Free';
-               @include linkIcon;
-               margin-right:19px;
 
-            }
-        }
-
-         p {
-             margin-left: 3.9rem;
-             padding-top:5px;   
-            @include bodyText;
-        }
-    }
-    .blog{
-        width:50%;
-
-        h5{
             @include sectionTitle;
-         
 
             &:before {
-                content:'\f15b';
-                font-family:'Font Awesome 5 Free';
+                content: '\f0c0';
+                font-family: 'Font Awesome 5 Free';
                 @include linkIcon;
+                margin-right: 19px;
+
             }
         }
 
-         p {
-             margin-left: 3.2rem;
+        p {
+            margin-left: 3.9rem;
+            padding-top: 5px;
             @include bodyText;
-         }
+        }
     }
 
-    .getInTouch{
+    .blog {
         width: 50%;
-        padding-left:.5rem;
 
-        h5{
+        h5 {
             @include sectionTitle;
-     
+
 
             &:before {
-                content:'\f095';
-                font-family:'Font Awesome 5 Free';
+                content: '\f15b';
+                font-family: 'Font Awesome 5 Free';
                 @include linkIcon;
             }
         }
 
-        p{
-            margin-left:3.5rem;
+        p {
+            margin-left: 3.2rem;
+            @include bodyText;
+        }
+    }
+
+    .getInTouch {
+        width: 50%;
+        padding-left: .5rem;
+
+        h5 {
+            @include sectionTitle;
+
+            &:before {
+                content: '\f095';
+                font-family: 'Font Awesome 5 Free';
+                @include linkIcon;
+            }
+        }
+
+        p {
+            margin-left: 3.5rem;
             @include bodyText;
         }
     }

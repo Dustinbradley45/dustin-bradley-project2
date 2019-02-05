@@ -1,50 +1,49 @@
 .contactUsForm {
     width: 60%;
     @include displayFlex(column, flex-start, center);
-    position:relative;
-    bottom:200px;
-    left:140px;
-    margin:0;
-    padding:20px;
-    background-color:white;
-    -webkit-box-shadow: -11px 10px 0px 0px $colorYellow;;
+    position: relative;
+    bottom: 200px;
+    left: 140px;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    -webkit-box-shadow: -11px 10px 0px 0px $colorYellow;
     -moz-box-shadow: -11px 10px 0px 0px $colorYellow;
     box-shadow: -11px 10px 0px 0px $colorYellow;
 
-    .contactForm{
-        width:80%;
+    .contactForm {
+        width: 80%;
 
-        .contactFormInput{
-            width:100%;
+        .contactFormInput {
+            width: 100%;
         }
-        
+
         input[type='email'],
-        input[type='name']{
+        input[type='name'] {
             @include inputFont;
             width: calc(50% - 3%);
             margin: 2rem 0 1rem 0;
-            padding-bottom:0.5rem;
+            padding-bottom: 0.5rem;
         }
 
         input[type='email'] {
-            margin-left:2%;
+            margin-left: 2%;
         }
 
         input[type='name'] {
-            margin-right:2%;
+            margin-right: 2%;
         }
 
         textarea {
             @include textArea;
             height: 200px;
-            padding:25px 0 0 15px;
-            background-color:white;
+            padding: 25px 0 0 15px;
+            background-color: white;
         }
 
-        button{
-           @include formButton;
-           margin-top:2rem;
-           margin-bottom:1rem;
+        button {
+            @include formButton;
+            margin: 2rem 0 1rem 0;
         }
     }
 }

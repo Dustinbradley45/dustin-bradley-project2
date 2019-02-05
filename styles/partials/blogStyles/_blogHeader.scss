@@ -1,15 +1,14 @@
-.blogHeader{
+.blogHeader {
     height: 65vh;
-    background-image:url('./../../planted-final-assets/blog-header-1.jpg');
-    background-size:cover;
+    background-image: url('./../../plantedFinalAssets/blogHeader1.jpg');
+    background-size: cover;
 
-    .blogHeaderTitle{
-        margin-top:14rem;
+    .blogHeaderTitle {
+        margin-top: 14rem;
         margin-left: 7rem;
-        
-        h1{ 
-           @include headerTitleStyle; 
+
+        h1 {
+            @include headerTitleStyle;
         }
     }
 }
-

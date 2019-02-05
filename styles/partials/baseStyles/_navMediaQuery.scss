@@ -1,61 +1,79 @@
  //QUERIES
 
- //1600px
- @media #{$largeDesktop} {}
-
- //1440px
- @media #{$medDesktop} {}
-
- //1250px
- @media #{$smallDesktop} {}
-
- //1000px
- @media #{$largeTablet} {}
-
- //850px
- @media #{$medTablet} {}
-
  //750px
  @media #{$smallTablet} {
+
      .headerNav,
      .blogNav,
      .contactNav {
-         
+
          .navContent {
              margin-left: 2rem;
-             
-            .navigation {
-                display:block;
 
-                .mobileNavContent{
-                   
-                   ul{
-                       @include displayFlex (column, flex-start, center)
-                   }
-                }
-            }
+             .navigation {
+                 display: block;
 
-            .mainNav {
-                display:none;
-            }
-        }
-    }
+                 .mobileNavContent {
+                     height: 100vh;
+
+                     ul {
+                         @include displayFlex (column, flex-start, center);
+
+                         li {
+                             font-size: .7rem;
+
+                             &:hover,
+                             &:active {
+                                 font-size: 1rem;
+                             }
+                         }
+                     }
+                 }
+             }
+
+             .mainNav {
+                 display: none;
+             }
+         }
+     }
+
  }
 
  //650px
  @media #{$largePhone} {
      .headerNav {
          .navContent {
-          
+
              nav {
                  display: none;
              }
          }
-    }
-}
+     }
+ }
 
- //500px
- @media #{$medPhone} {}
+ @media #{$smallPhone} {
 
- //400px
- @media #{$smallPhone} {}
+     .contactHeader,
+     .blogHeader,
+     .mainHeader {
+
+         .navigation {
+
+
+             .navList {
+                 top: 1rem;
+                 @include fontSize(.8rem);
+
+                 &:hover,
+                 &:active {
+                     @include fontSize(1rem);
+
+                 }
+             }
+
+             .navCheckbox:checked~.mobileNavContent {
+                 border-radius: 0;
+             }
+         }
+     }
+ }

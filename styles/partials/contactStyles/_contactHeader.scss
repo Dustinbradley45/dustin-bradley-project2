@@ -1,20 +1,19 @@
 .contactHeader {
-    background-image:url('./../../planted-final-assets/contact-header-1.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-    height:65vh;
+    background-image: url('./../../plantedFinalAssets/contactHeader1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
 
 
     .contactHeaderTitle {
-        display:flex;
-        width:18%;
-        margin-top:10rem;
-        margin-left:7rem;
-        
-        h1{
-           @include headerTitleStyle;
-            
+        display: flex;
+        width: 18%;
+        margin-top: 10rem;
+        margin-left: 7rem;
+
+        h1 {
+            @include headerTitleStyle;
+
         }
     }
 }
-

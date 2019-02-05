@@ -1,68 +1,55 @@
 //QUERIES
 
-//1600px
-@media #{$largeDesktop} {}
-
-//1440px
-@media #{$medDesktop} {}
-
-//1250px
-@media #{$smallDesktop} {}
-
 //1000px
 @media #{$largeTablet} {
-.squareGallery{
-    padding: 2rem;
+    .squareGallery {
+        padding: 2rem;
 
-    .squareGalleryTop {
+        .squareGalleryTop {
 
-        .squareGalleryTopInfo {
+            .squareGalleryTopInfo {
 
-            margin-left:5rem; 
+                margin-left: 5rem;
 
-            p {
-                margin-right:1rem;
+                p {
+                    margin-right: 1rem;
+                }
             }
         }
-    }
 
-    .squareGalleryBottom {
+        .squareGalleryBottom {
 
-        .squareGalleryBottomInfo {
+            .squareGalleryBottomInfo {
 
-            margin-right:-5rem;
+                margin-right: -5rem;
 
-            p{
-                margin-left:1rem;
+                p {
+                    margin-left: 1rem;
+                }
             }
         }
     }
 }
-}
-
-//850px
-@media #{$medTablet} {}
 
 //750px
 @media #{$smallTablet} {
-.headerNav{
-    display:flex;
-    flex-direction:row;
-    justify-content: flex-start;
+    .headerNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
 
-    .navigation {
-        display:block;
+        .navigation {
+            display: block;
+        }
     }
-}
 
-    .mainHeader{
+    .mainHeader {
 
+        .mainTitle {
+            padding-top: 9rem;
+            line-height: 5rem;
 
-        .mainTitle{
-            padding-top:9rem;
-            line-height:5rem;
-
-            h1{
+            h1 {
                 margin: 2rem 0;
                 @include fontSize(7rem);
             }
@@ -70,42 +57,41 @@
     }
 
     .squareGallery {
-        padding:0;
-        padding-bottom:1.3rem;
+        padding: 0;
+        padding-bottom: 1.3rem;
 
         .squareGalleryTop {
             @include displayFlex(column, flex-start, center);
-            margin:0;
+            margin: 0;
 
             .squareGalleryTopImage {
                 width: 100%;
-                 margin:0 0 2rem 0;
-                
+                margin: 0 0 2rem 0;
+
                 img {
-                    bottom:0;
+                    bottom: 0;
                     box-shadow: 0 0 0 0;
                     border-bottom: 10px solid $colorYellow;
-
                 }
             }
 
             .squareGalleryTopInfo {
                 width: 100%;
-                margin:0;
+                margin: 0;
                 padding: 1rem;
             }
         }
 
         .squareGalleryBottom {
             @include displayFlex(column-reverse, flex-start, center);
-            margin:0;
+            margin: 0;
 
             .squareGalleryBottomImage {
                 width: 100%;
-                margin:0 0 1.5rem 0;
+                margin: 0 0 1.5rem 0;
 
                 img {
-                    bottom:0;
+                    bottom: 0;
                     box-shadow: 0 0 0 0;
                     border-bottom: 10px solid $colorYellow;
 
@@ -118,19 +104,17 @@
                 padding: 1rem;
 
                 h4 {
-                    padding-top:2rem;
+                    padding-top: 2rem;
                 }
             }
         }
     }
 
-
-
     .iconLinks {
         @include displayFlex (column, flex-start, flex-start);
         width: 100%;
-        margin:2.5rem 0 2.5rem 0;
-       
+        margin: 2.5rem 0;
+
         .greenHouses,
         .community,
         .blog,
@@ -147,18 +131,17 @@
     .mainHeader {
 
         .mainTitle {
-            line-height:4rem;
-            padding-top:10rem;
+            line-height: 4rem;
+            padding-top: 10rem;
 
             h1 {
                 @include fontSize(6rem);
 
-                
             }
 
             &::after {
                 width: 100%;
-                height:40vh;    
+                height: 40vh;
             }
         }
     }
@@ -168,24 +151,22 @@
         padding: 1rem 0 4rem 0;
 
         .whatIsPlantContent {
-            width:85%;
+            width: 85%;
         }
     }
 
 
     .founder {
         @include displayFlex(column, flex-start, center);
-       
 
         .founderImage {
             width: 80%;
-            
         }
 
         .founderContent {
             width: 80%;
-            padding:0;
-            margin-top:2rem;
+            padding: 0;
+            margin-top: 2rem;
         }
     }
 
@@ -193,11 +174,10 @@
         .galleryContent {
             @include displayFlex (column, flex-start, center);
 
-            img{
+            img {
                 width: 60%;
-                margin:0;
-                padding:0;
-                padding:1rem;
+                margin: 0;
+                padding: 1rem;
             }
         }
     }
@@ -206,11 +186,11 @@
 
 //500px
 @media #{$medPhone} {
-   
+
     .mainHeader {
 
         .mainTitle {
-            line-height:3.5rem;
+            line-height: 3.5rem;
 
             h1 {
                 @include fontSize(4.5rem);
@@ -221,17 +201,16 @@
 
 //400px
 @media #{$smallPhone} {
-    
+
     .mainHeader {
-        height:85vh;
+        height: 85vh;
 
         .mainTitle {
-            line-height:2.5rem;
+            line-height: 2.5rem;
 
             h1 {
                 @include fontSize(3.5rem);
 
-               
             }
         }
     }

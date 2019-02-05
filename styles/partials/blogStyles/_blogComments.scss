@@ -1,52 +1,51 @@
+.commentsSection {
+    position: relative;
+    bottom: 11rem;
+    margin-right: 5rem;
 
-.commentsSection{
-    position:relative;
-    bottom:11rem;
-    margin-right:5rem;
-   
 
-    h4{
+    h4 {
         @include sectionTitle;
-        padding-bottom:1.5rem;
-       
+        padding-bottom: 1.5rem;
+
     }
 
-    .comment1{
+    .comment1 {
         @include displayFlex(row, flex-start, center);
-    
+
 
         img {
             width: 30%;
-            margin-right:2rem;
+            margin-right: 2rem;
         }
 
-        .comment1Info{
-            width:70%;
+        .comment1Info {
+            width: 70%;
 
             .bold {
-                font-family:$primaryFont;
+                font-family: $primaryFont;
                 @include fontWeight(600);
             }
 
-            p{
+            p {
                 @include bodyText;
             }
         }
     }
-    
-    .comment2{
+
+    .comment2 {
         @include displayFlex(row, flex-start, flex-start);
-        margin-top:4rem;
-       
+        margin-top: 4rem;
+
 
         img {
-            width:30%;
-            margin-right:4rem;
+            width: 30%;
+            margin-right: 4rem;
         }
 
-        .comment2Info{
-            text-align:left;
-            width:70%;
+        .comment2Info {
+            text-align: left;
+            width: 70%;
 
             .bold {
                 font-family: $primaryFont;

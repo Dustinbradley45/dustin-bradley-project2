@@ -1,42 +1,42 @@
-.blogAside{
+.blogAside {
     width: 35%;
-    position:relative;
-    margin-top:7rem;
-    z-index:10;
+    position: relative;
+    margin-top: 7rem;
+    z-index: 10;
 
-    img{
+    img {
         z-index: 20;
-        width:90%;
+        width: 90%;
     }
 
-    .blogAsideInfo{
-        margin-left:6rem;
-        height:40rem;
+    .blogAsideInfo {
+        margin-left: 6rem;
+        height: 41rem;
         width: 75%;
-        position:absolute;
-        top:15px;
-        right:35px;
-        z-index:-1;
-        background-color:#ffffff;
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        z-index: -1;
+        background-color: #ffffff;
         padding: 10rem 1rem 0 1rem;
 
         h4 {
             @include sectionTitle;
         }
 
-        .blogAsideInfoTop{
-            padding-top:10rem;
+        .blogAsideInfoTop {
+            padding-top: 10rem;
 
             p {
-               @include bodyText;
+                @include bodyText;
             }
 
-            a{
+            a {
                 @include bodyText;
-                color:black;
+                color: black;
                 @include fontWeight(600);
-                font-style:italic;
-                text-decoration:none;
+                font-style: italic;
+                text-decoration: none;
             }
         }
 

@@ -1,40 +1,40 @@
-.blogForm{
+.blogForm {
     @include displayFlex(column, flex-start, center);
     margin: 0 5rem 20px 0;
-    position:relative;
-    bottom:6rem;
-   
-    .blogFormInput{
-        @include displayFlex(row, flex-start,center);
-        width:100%;
-        
-        input{
-            width:49%;
-            padding-bottom:.5rem;
-            
-       }
+    position: relative;
+    bottom: 6rem;
 
-       input[type='email'] {
-           margin: 0 0 1rem 2%;
-           @include inputFont;
-           background-color:$colorWhite;
-       }
+    .blogFormInput {
+        @include displayFlex(row, flex-start, center);
+        width: 100%;
 
-       input[type='name'] {
+        input {
+            width: 49%;
+            padding-bottom: .5rem;
+        }
+
+        input[type='email'] {
+            margin: 0 0 1rem 2%;
+            @include inputFont;
+            background-color: $colorWhite;
+        }
+
+        input[type='name'] {
             margin: 0 2% 1rem 0;
             @include inputFont;
-            background-color:$colorWhite;
-       }
-       
-    }
-    textarea{
-        margin: 1rem 0;
-        padding:1.5rem;
-        @include textArea;
-        background-color:$colorWhite;
+            background-color: $colorWhite;
+        }
+
     }
 
-    button{
+    textarea {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        @include textArea;
+        background-color: $colorWhite;
+    }
+
+    button {
         @include formButton;
     }
 }

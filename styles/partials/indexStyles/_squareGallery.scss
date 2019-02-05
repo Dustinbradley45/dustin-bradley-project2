@@ -1,82 +1,76 @@
-.squareGallery{
-    background-color:white;
+.squareGallery {
+    background-color: white;
     padding: 2rem 0;
 
-    .squareGalleryTop{
+    .squareGalleryTop {
         @include displayFlex(row, flex-start, center);
 
-        .squareGalleryTopImage{
-            width:43%;
+        .squareGalleryTopImage {
+            width: 43%;
 
-            img{
-                width:100%;
-                position:relative;
-                bottom:3.2rem;
+            img {
+                width: 100%;
+                position: relative;
+                bottom: 3.2rem;
                 -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
                 -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
                 box-shadow: 10px 10px 0px 0px $colorYellow;
             }
-
         }
 
-        .squareGalleryTopInfo{
+        .squareGalleryTopInfo {
             width: 43%;
-            margin-left:14.5%;
-            margin-bottom:1.9rem;
+            margin: 0 0 1.9rem 14.5%;
 
-            h4{
+            h4 {
                 @include subHeadingText;
             }
 
             p {
-               @include bodyText;
-                padding-bottom:1rem;
-                margin-right:4rem;
+                @include bodyText;
+                padding-bottom: 1rem;
+                margin-right: 4rem;
             }
-
         }
     }
 
-    
-    .squareGalleryBottom{
+
+    .squareGalleryBottom {
         @include displayFlex(row, flex-start, center);
 
-        .squareGalleryBottomInfo{
-            width:43%;
-            text-align:right;
-            margin-top:1rem;
-            
+        .squareGalleryBottomInfo {
+            width: 43%;
+            text-align: right;
+            margin-top: 1rem;
 
             h4 {
-               @include subHeadingText;
+                @include subHeadingText;
             }
 
             p {
                 @include bodyText;
-                padding-bottom:1rem;
-                margin-left:4rem;
+                padding-bottom: 1rem;
+                margin-left: 4rem;
             }
-
         }
 
-        .squareGalleryBottomImage{
-            width:43%;
-            margin-left:10.5rem;
+        .squareGalleryBottomImage {
+            width: 43%;
+            margin-left: 10.5rem;
 
 
-            img{
-                width:100%;
-                position:relative;
-                top:3.2rem;
+            img {
+                width: 100%;
+                position: relative;
+                top: 3.2rem;
                 -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
                 -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
                 box-shadow: -10px 10px 0px 0px $colorYellow;
             }
-
         }
     }
 
-    a{
+    a {
         @include mainButton;
     }
 }

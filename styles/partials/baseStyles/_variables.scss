@@ -7,8 +7,10 @@ $colorLightGreen:rgba(14, 144, 45, 1); //#0E902D
 $colorDarkGreen: rgba(7, 65, 21, 1); //#074115
 
 //FONT VARIABLES:
-$primaryFont: 'Josefin Sans', sans-serif;
-$secondaryFont: 'Roboto', sans-serif;
+$primaryFont: 'Josefin Sans',
+sans-serif;
+$secondaryFont: 'Roboto',
+sans-serif;
 
 //MIXIN
 @mixin mainButton {
@@ -26,26 +28,26 @@ $secondaryFont: 'Roboto', sans-serif;
 
 //h1 BLOG, CONTACT  STYLES
 @mixin headerTitleStyle {
-    color:$colorYellow;
-    font-family:$primaryFont;
+    color: $colorYellow;
+    font-family: $primaryFont;
     @include fontSize(3.75rem);
     letter-spacing: 1.3px;
     @include fontWeight(600);
-    line-height:4.5rem;
+    line-height: 4.5rem;
 }
 
 // p STYLES
 @mixin bodyText {
     font-family: $secondaryFont;
     @include fontSize(1rem);
-    line-height:1.5rem;
+    line-height: 1.5rem;
     @include fontWeight(400);
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 //h3 STYLES 
 @mixin indexHeadingText {
-    font-family:$primaryFont;
+    font-family: $primaryFont;
     @include fontWeight(600);
     @include fontSize(3rem);
     letter-spacing: 1.3px;
@@ -53,12 +55,12 @@ $secondaryFont: 'Roboto', sans-serif;
 
 
 @mixin subHeadingText {
-     font-family: $primaryFont;
-     @include fontWeight(600);
-     @include fontSize(2rem);
-     letter-spacing: 1px;
-     padding: 0;
-     margin: 0;
+    font-family: $primaryFont;
+    @include fontWeight(600);
+    @include fontSize(2rem);
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
 }
 
 //h5 STYLES
@@ -66,19 +68,19 @@ $secondaryFont: 'Roboto', sans-serif;
     font-family: $primaryFont;
     @include fontWeight(600);
     @include fontSize(1.5rem);
-    letter-spacing:1px;
-    padding:0;
-    margin:0;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
 }
 
 //LINKICON STYLES
 @mixin linkIcon {
-     margin-right:1rem;
-     padding:.5rem;
-     border-radius:100px;
-     background-color:$colorYellow;
-     height: 100px;
-     width:100px;
+    margin-right: 1rem;
+    padding: .5rem;
+    border-radius: 100px;
+    background-color: $colorYellow;
+    height: 100px;
+    width: 100px;
 }
 
 //FORM STYLES
@@ -87,36 +89,36 @@ $secondaryFont: 'Roboto', sans-serif;
 @mixin textArea {
     @include fontSize(1rem);
     @include fontWeight(300);
-    font-family:$primaryFont;
-    border:2px solid $colorLightGreen;
-    width:100%;
+    font-family: $primaryFont;
+    border: 2px solid $colorLightGreen;
+    width: 100%;
 
 }
 
-@mixin inputFont{
-    font-family:$primaryFont;
+@mixin inputFont {
+    font-family: $primaryFont;
     @include fontWeight(300);
     @include fontSize(1rem);
-    border:none;
-    border-bottom:2px solid $colorLightGreen;
-    padding-bottom:1rem;
+    border: none;
+    border-bottom: 2px solid $colorLightGreen;
+    padding-bottom: 1rem;
 }
 
 
 //BUTTON STYLES
 @mixin formButton {
-    width:100%;
+    width: 100%;
     border: none;
-    margin-top:20px;
-    background-color:$colorLightGreen;
-    color:white;
-    padding:10px;
-    font-family:$primaryFont;
+    margin-top: 20px;
+    background-color: $colorLightGreen;
+    color: white;
+    padding: 10px;
+    font-family: $primaryFont;
     @include fontWeight(600);
     @include fontSize(1rem);
-    text-align:center;
+    text-align: center;
     line-height: 1.5rem;
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 @mixin fontSize($size) {
@@ -124,28 +126,23 @@ $secondaryFont: 'Roboto', sans-serif;
 }
 
 
-@mixin displayFlex($direction, $justify, $align){
-    display:flex;
+@mixin displayFlex($direction, $justify, $align) {
+    display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }
 
-@mixin position($position, $top, $right, $bottom, $left) {
-    position:$position;
-    top:$top;
-    right:$right;
-    bottom:$bottom;
-    left: $left;
-}
 
-@mixin fontWeight($fontWeight){
-    font-weight:$fontWeight;
+@mixin fontWeight($fontWeight) {
+    font-weight: $fontWeight;
 }
 
 //MEDIA QUERIES
 
-$largeDesktop: 'only screen and (max-width: 1600px)';
+$xlLargeDesktop: 'only screen and (min-width: 1800px)';
+
+$largeDesktop: 'only screen and (max-width: 1650px)';
 
 $medDesktop: 'only screen and (max-width:1440px)';
 
@@ -191,7 +188,3 @@ $smallPhone: "only screen and (max-width:400px)";
 
 // //400px
 // @media #{$smallPhone} {}
-
-
-
-
