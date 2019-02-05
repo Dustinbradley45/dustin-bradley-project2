@@ -222,7 +222,7 @@
                     @include displayFlex (column, flex-start, center);
 
                     img {
-                        width: 50%;
+                        width: 37%;
                         margin: .5rem 0;
                     }
 
@@ -247,4 +247,20 @@
             }
         }
     }
+}
+//400
+@media #{$smallPhone} {
+.blogMain{
+     .blogMainRight{
+         .commentsSection{
+            .comment1{
+
+                 img{
+                     width:80%;
+                 }
+
+            }
+         }
+     }  
+} 
 }

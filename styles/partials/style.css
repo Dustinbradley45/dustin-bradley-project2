@@ -293,9 +293,9 @@ img {
   letter-spacing: 1.1px;
 }
 
-.headerNav .navContent ul,
-.blogNav .navContent ul,
-.contactNav .navContent ul {
+.headerNav .navContent .mainNav ul,
+.blogNav .navContent .mainNav ul,
+.contactNav .navContent .mainNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,16 +311,24 @@ img {
           align-items: center;
 }
 
-.headerNav .navContent ul li,
-.blogNav .navContent ul li,
-.contactNav .navContent ul li {
+.headerNav .navContent .mainNav ul li,
+.blogNav .navContent .mainNav ul li,
+.contactNav .navContent .mainNav ul li {
   list-style: none;
   padding: 10px 1rem;
 }
 
-.headerNav .navContent ul li a,
-.blogNav .navContent ul li a,
-.contactNav .navContent ul li a {
+.headerNav .navContent .mainNav ul li:hover a::before, .headerNav .navContent .mainNav ul li:hover a::after,
+.blogNav .navContent .mainNav ul li:hover a::before,
+.blogNav .navContent .mainNav ul li:hover a::after,
+.contactNav .navContent .mainNav ul li:hover a::before,
+.contactNav .navContent .mainNav ul li:hover a::after {
+  width: 100%;
+}
+
+.headerNav .navContent .mainNav ul li a,
+.blogNav .navContent .mainNav ul li a,
+.contactNav .navContent .mainNav ul li a {
   color: #f0efed;
   text-decoration: none;
   text-transform: uppercase;
@@ -330,58 +338,44 @@ img {
   position: relative;
 }
 
-.headerNav .navContent ul li a::before,
-.blogNav .navContent ul li a::before,
-.contactNav .navContent ul li a::before {
+.headerNav .navContent .mainNav ul li a::before,
+.blogNav .navContent .mainNav ul li a::before,
+.contactNav .navContent .mainNav ul li a::before {
   content: '';
   display: inline-block;
-  width: 100%;
+  width: 0%;
   position: absolute;
-  background-color: blue;
+  background-color: #f8e71c;
   height: 2px;
   bottom: 25px;
+  -webkit-transition: .7s linear all;
+  transition: .7s linear all;
 }
 
-.headerNav .navContent ul li a:after,
-.blogNav .navContent ul li a:after,
-.contactNav .navContent ul li a:after {
+.headerNav .navContent .mainNav ul li a:after,
+.blogNav .navContent .mainNav ul li a:after,
+.contactNav .navContent .mainNav ul li a:after {
   content: '';
-  width: 50%;
+  width: 0%;
   display: inline-block;
-  background-color: blue;
+  background-color: #f8e71c;
   height: 2px;
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
+  -webkit-transition: .7s linear all;
+  transition: .7s linear all;
   position: absolute;
   top: 20px;
   left: 0;
 }
 
-.headerNav .navContent ul li a:hover .headerNav .navContent ul li a::after,
-.blogNav .navContent ul li a:hover .headerNav .navContent ul li a::after,
-.contactNav .navContent ul li a:hover .headerNav .navContent ul li a::after, .headerNav .navContent ul li a:hover
-.blogNav .navContent ul li a::after,
-.blogNav .navContent ul li a:hover
-.blogNav .navContent ul li a::after,
-.contactNav .navContent ul li a:hover
-.blogNav .navContent ul li a::after, .headerNav .navContent ul li a:hover
-.contactNav .navContent ul li a::after,
-.blogNav .navContent ul li a:hover
-.contactNav .navContent ul li a::after,
-.contactNav .navContent ul li a:hover
-.contactNav .navContent ul li a::after {
-  width: 100%;
-}
-
-.headerNav .navContent ul li a.active,
-.blogNav .navContent ul li a.active,
-.contactNav .navContent ul li a.active {
+.headerNav .navContent .mainNav ul li a.active,
+.blogNav .navContent .mainNav ul li a.active,
+.contactNav .navContent .mainNav ul li a.active {
   color: #f8e71c;
 }
 
-.headerNav .navContent ul li a:focus,
-.blogNav .navContent ul li a:focus,
-.contactNav .navContent ul li a:focus {
+.headerNav .navContent .mainNav ul li a:focus,
+.blogNav .navContent .mainNav ul li a:focus,
+.contactNav .navContent .mainNav ul li a:focus {
   font-size: 1.3rem;
   border: #f0efed 2px solid;
 }
@@ -1840,7 +1834,7 @@ body .contactMain .address p {
   .contactHeader .navigation .navList,
   .blogHeader .navigation .navList,
   .mainHeader .navigation .navList {
-    top: 1rem;
+    top: 5rem;
     font-size: 0.8rem;
   }
   .contactHeader .navigation .navList:hover, .contactHeader .navigation .navList:active,
@@ -1872,6 +1866,9 @@ body .contactMain .address p {
   }
   .squareGallery .squareGalleryBottom .squareGalleryBottomInfo p {
     margin-left: 1rem;
+  }
+  .founder .founderContent {
+    padding-left: 4rem;
   }
 }
 
@@ -1991,6 +1988,9 @@ body .contactMain .address p {
   .iconLinks .getInTouch {
     width: 80%;
     margin: 1rem 2rem;
+  }
+  .founder .founderContent {
+    padding-left: 2rem;
   }
 }
 
@@ -2294,7 +2294,7 @@ body .contactMain .address p {
             align-items: center;
   }
   .blogMain .blogMainRight .commentsSection .comment1 img {
-    width: 50%;
+    width: 37%;
     margin: .5rem 0;
   }
   .blogMain .blogMainRight .commentsSection .comment1 .comment1Info {
@@ -2321,6 +2321,12 @@ body .contactMain .address p {
   }
   .blogMain .blogMainRight .commentsSection .comment2 .comment2Info {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .blogMain .blogMainRight .commentsSection .comment1 img {
+    width: 80%;
   }
 }
 
