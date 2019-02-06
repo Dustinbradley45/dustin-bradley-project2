@@ -5,64 +5,61 @@
     z-index: 10;
 
     img {
-        z-index: 20;
         width: 90%;
+        z-index: 20;
+    }
+}
+
+.blogAsideInfo {
+    height: 41rem;
+    width: 75%;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    margin-left: 6rem;
+    padding: 10rem 1rem 0 1rem;
+    z-index: -1;
+    background-color: #ffffff;
+
+    h4 {
+        @include sectionTitle;
+    }
+}
+
+.blogAsideInfoTop {
+    padding-top: 10rem;
+
+    p {
+        @include bodyText;
     }
 
-    .blogAsideInfo {
-        margin-left: 6rem;
-        height: 41rem;
-        width: 75%;
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        z-index: -1;
-        background-color: #ffffff;
-        padding: 10rem 1rem 0 1rem;
-
-        h4 {
-            @include sectionTitle;
-        }
-
-        .blogAsideInfoTop {
-            padding-top: 10rem;
-
-            p {
-                @include bodyText;
-            }
-
-            a {
-                @include bodyText;
-                color: $colorDarkGreen;
-                @include fontWeight(600);
-                font-style: italic;
-                text-decoration: none;
-            }
-
-        }
+    a {
+        @include bodyText;
+        color: $colorDarkGreen;
+        @include fontWeight(600);
+        font-style: italic;
+        background-color:transparent;
+        padding:0;
+        margin:0;
     }
+}
 
-    .blogAsideInfoBottom {
-        ul {
-            list-style: none;
-            padding-left: 15px;
+.blogAsideInfoBottom ul{
 
-            li {
-                @include bodyText;
+    padding-left: 15px;
 
+    li {
+        @include bodyText;
 
-                &:before {
-                    content: '';
-                    background-color: $colorLightGreen;
-                    border-radius: 50%;
-                    @include fontWeight(300);
-                    display: inline-block;
-                    width: 5px;
-                    height: 5px;
-                    margin-right: 15px;
-                    margin-bottom: 5px;
-                }
-            }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin: 0 15px 5px 0;
+            border-radius: 50%;
+            background-color: $colorLightGreen;
+            @include fontWeight(300);
         }
     }
 }

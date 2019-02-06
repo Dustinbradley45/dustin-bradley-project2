@@ -1,5 +1,5 @@
 .contactUsForm {
-    width: 60%;
+    width: 56%;
     @include displayFlex(column, flex-start, center);
     position: relative;
     bottom: 200px;
@@ -7,9 +7,7 @@
     margin: 0;
     padding: 20px;
     background-color: white;
-    -webkit-box-shadow: -11px 10px 0px 0px $colorYellow;
-    -moz-box-shadow: -11px 10px 0px 0px $colorYellow;
-    box-shadow: -11px 10px 0px 0px $colorYellow;
+    box-shadow: -10px 10px 0px 0px $colorYellow;
 
     .contactForm {
         width: 80%;
@@ -34,17 +32,21 @@
     input[type='name'] {
         margin-right: 2%;
     }
+}
+
+.contactForm {
 
     textarea {
-        @include textArea;
         height: 200px;
         padding: 25px 0 0 15px;
+        @include textArea;
         background-color: white;
     }
 
-    button {
+    .postComment {
         @include formButton;
         margin: 2rem 0 1rem 0;
+        
 
         &:hover {
             @include buttonHover;
@@ -54,4 +56,4 @@
             @include buttonActive;
         }
     }
- }
+}

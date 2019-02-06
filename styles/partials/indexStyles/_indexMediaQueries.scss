@@ -2,30 +2,31 @@
 
 //1000px
 @media #{$largeTablet} {
+
     .squareGallery {
         padding: 2rem;
+    }
 
-        .squareGalleryTop {
+    .squareGalleryTop {
 
-            .squareGalleryTopInfo {
+        .squareGalleryTopInfo {
 
-                margin-left: 5rem;
+            margin-left: 5rem;
 
-                p {
-                    margin-right: 1rem;
-                }
+            p {
+                margin-right: 1rem;
             }
         }
+    }
 
-        .squareGalleryBottom {
+    .squareGalleryBottom {
 
-            .squareGalleryBottomInfo {
+        .squareGalleryBottomInfo {
 
-                margin-right: -5rem;
+            margin-right: -5rem;
 
-                p {
-                    margin-left: 1rem;
-                }
+            p {
+                margin-left: 1rem;
             }
         }
     }
@@ -41,9 +42,7 @@
 //750px
 @media #{$smallTablet} {
     .headerNav {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        @include displayFlex(row, flex-start, flex-start);
 
         .navigation {
             display: block;
@@ -66,58 +65,59 @@
     .squareGallery {
         padding: 0;
         padding-bottom: 1.3rem;
+    }
 
-        .squareGalleryTop {
-            @include displayFlex(column, flex-start, center);
-            margin: 0;
+    .squareGalleryTop {
+        @include displayFlex(column, flex-start, center);
+        margin: 0;
 
-            .squareGalleryTopImage {
-                width: 100%;
-                margin: 0 0 2rem 0;
+        .squareGalleryTopImage {
+            width: 100%;
+            margin: 0 0 2rem 0;
 
-                img {
-                    bottom: 0;
-                    box-shadow: 0 0 0 0;
-                    border-bottom: 10px solid $colorYellow;
-                }
-            }
-
-            .squareGalleryTopInfo {
-                width: 100%;
-                margin: 0;
-                padding: 1rem;
+            img {
+                bottom: 0;
+                border-bottom: 10px solid $colorYellow;
+                box-shadow: 0 0 0 0;
             }
         }
 
-        .squareGalleryBottom {
-            @include displayFlex(column-reverse, flex-start, center);
+        .squareGalleryTopInfo {
+            width: 100%;
             margin: 0;
+            padding: 1rem;
+        }
+    }
 
-            .squareGalleryBottomImage {
-                width: 100%;
-                margin: 0 0 1.5rem 0;
+    .squareGalleryBottom {
+        @include displayFlex(column-reverse, flex-start, center);
+        margin: 0;
 
-                img {
-                    bottom: 0;
-                    box-shadow: 0 0 0 0;
-                    border-bottom: 10px solid $colorYellow;
+        .squareGalleryBottomImage {
+            width: 100%;
+            margin: 0 0 1.5rem 0;
 
-                }
+            img {
+                bottom: 0;
+                border-bottom: 10px solid $colorYellow;
+                box-shadow: 0 0 0 0;
+
             }
+        }
 
-            .squareGalleryBottomInfo {
-                width: 100%;
-                margin: 2rem 2rem;
-                padding: 1rem;
+        .squareGalleryBottomInfo {
+            width: 100%;
+            margin: 2rem 2rem;
+            padding: 1rem;
 
-                h4 {
-                    padding-top: 2rem;
-                }
+            h4 {
+                padding-top: 2rem;
             }
         }
     }
 
     .mainIcons {
+
         .iconLinks {
             @include displayFlex (column, flex-start, flex-start);
             width: 100%;
@@ -147,8 +147,8 @@
     .mainHeader {
 
         .mainTitle {
-            line-height: 4rem;
             padding-top: 10rem;
+            line-height: 4rem;
 
             h1 {
                 @include fontSize(5.5rem);
@@ -156,6 +156,7 @@
             }
 
             &::after {
+
                 width: 100%;
                 height: 40vh;
             }
@@ -163,10 +164,12 @@
     }
 
     .whatIsPlant {
+
         margin: 2rem 0;
         padding: 1rem 0 4rem 0;
 
         .whatIsPlantContent {
+
             width: 85%;
         }
     }
@@ -176,18 +179,22 @@
         @include displayFlex(column, flex-start, center);
 
         .founderImage {
+
             width: 80%;
         }
 
         .founderContent {
+
             width: 80%;
-            padding: 0;
             margin-top: 2rem;
+            padding: 0;
         }
     }
 
     .endGallery {
+
         .galleryContent {
+
             @include displayFlex (column, flex-start, center);
 
             img {
@@ -214,22 +221,20 @@
         }
     }
 
-    .mainIcons {
+    .iconLinks {
 
-        .iconLinks {
+        .greenHouses,
+        .community,
+        .blog,
+        .getInTouch {
 
-            .greenHouses,
-            .community,
-            .blog,
-            .getInTouch {
-
-                p {
-                    margin-left: 0;
-                }
+            p {
+                margin-left: 0;
             }
         }
     }
 }
+
 
 //400px
 @media #{$smallPhone} {
@@ -238,8 +243,8 @@
         height: 85vh;
 
         .mainTitle {
-            line-height: 2.5rem;
             padding-top: 7rem;
+            line-height: 2.5rem;
 
             h1 {
                 @include fontSize(3.5rem);
@@ -252,29 +257,26 @@
         }
     }
 
-    .mainIcons {
-        .iconLinks {
+    .iconLinks {
 
-            .greenHouses,
-            .community,
-            .blog,
-            .getInTouch {
+        .greenHouses,
+        .community,
+        .blog,
+        .getInTouch {
 
-                h5 {
-                    text-align: center;
+            h5 {
+                text-align: center;
 
-                    &:before {
-                        height: 34px;
-                        width: 34px;
-                        display: block;
-                        margin: 0 auto;
-                        margin-bottom: 2rem;
-                    }
+                &:before {
+                    height: 34px;
+                    width: 34px;
+                    display: block;
+                    margin-bottom: 2rem;
                 }
+            }
 
-                p {
-                    text-align: center;
-                }
+            p {
+                text-align: center;
             }
         }
     }

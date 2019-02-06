@@ -10,13 +10,13 @@
     .blogMission {
         width: 100%;
         @include displayFlex(column, flex-start, flex-start);
-        padding-left: 20px;
         position: relative;
+        padding-left: 20px;
 
 
         img {
-            position: relative;
             width: 99%;
+            position: relative;
             left: calc(100% - 99%);
             -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
             -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
@@ -26,42 +26,45 @@
         }
 
         .blogPost {
-            border-bottom: 2px solid $colorYellow;
-            border-left: 2px solid $colorYellow;
-            margin-right: 5rem;
-            padding: 8.5rem 0 2.5rem 3rem;
             position: relative;
             bottom: 300px;
+            margin-right: 5rem;
+            padding: 8.5rem 0 2.5rem 3rem;
+            border-bottom: 2px solid $colorYellow;
+            border-left: 2px solid $colorYellow;
+        }
+    }
+}
 
-            .blogTitle {
+.blogTitle {
 
-                h3 {
-                    @include subHeadingText;
-                }
+    h3 {
+        @include subHeadingText;
+    }
 
-                p {
-                    @include bodyText;
-                    font-style: italic;
-                    color:$colorDarkGreen;
-                }
-            }
+    p {
+        @include bodyText;
+        font-style: italic;
+        color: $colorDarkGreen;
+    }
+}
 
-            p {
-                @include bodyText;
-            }
+.blogPost {
+
+    p {
+        @include bodyText;
+    }
+
+    .toggleReadMore {
+        display: none;
+        @include mainButton;
+
+        &:hover {
+            @include buttonHover;
         }
 
-        .toggleReadMore {
-            @include mainButton;
-            display: none;
-
-            &:hover {
-                @include buttonHover;
-            }
-
-            &:active {
-                @include buttonActive;
-            }
+        &:active {
+            @include buttonActive;
         }
     }
 }

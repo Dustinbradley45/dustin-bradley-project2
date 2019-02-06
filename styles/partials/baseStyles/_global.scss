@@ -12,9 +12,18 @@ html {
     margin: 0 auto;
 }
 
+body {
+    background-color: $colorWhite;
+}
 
-//ACCESSIBILITY
+li {
+    list-style: none;
+}
+
+
+//GLOBAL STYLES FOR ACCESSIBILITY PARTIALLY
 a {
+    text-decoration:none;
 
     &:focus {
         border: 3px solid $colorBlack;

@@ -1,84 +1,79 @@
 .squareGallery {
     background-color: white;
     padding: 2rem 0;
+}
 
-    .squareGalleryTop {
-        @include displayFlex(row, flex-start, center);
+.squareGalleryTop {
+    @include displayFlex(row, flex-start, center);
 
-        .squareGalleryTopImage {
-            width: 43%;
+    .squareGalleryTopImage {
+        width: 43%;
 
-            img {
-                width: 100%;
-                position: relative;
-                bottom: 3.2rem;
-                -webkit-box-shadow: 10px 10px 0px 0px $colorYellow;
-                -moz-box-shadow: 10px 10px 0px 0px $colorYellow;
-                box-shadow: 10px 10px 0px 0px $colorYellow;
-            }
-        }
-
-        .squareGalleryTopInfo {
-            width: 43%;
-            margin: 0 0 1.9rem 14.5%;
-
-            h4 {
-                @include subHeadingText;
-            }
-
-            p {
-                @include bodyText;
-                padding-bottom: 1rem;
-                margin-right: 4rem;
-            }
+        img {
+            width: 100%;
+            position: relative;
+            bottom: 3.2rem;
+            box-shadow: 10px 10px 0px 0px $colorYellow;
         }
     }
 
+    .squareGalleryTopInfo {
+        width: 43%;
+        margin: 0 0 1.9rem 14.5%;
 
-    .squareGalleryBottom {
-        @include displayFlex(row, flex-start, center);
-
-        .squareGalleryBottomInfo {
-            width: 43%;
-            text-align: right;
-            margin-top: 1rem;
-
-            h4 {
-                @include subHeadingText;
-            }
-
-            p {
-                @include bodyText;
-                padding-bottom: 1rem;
-                margin-left: 4rem;
-            }
+        h4 {
+            @include subHeadingText;
         }
 
-        .squareGalleryBottomImage {
-            width: 43%;
-            margin-left: 10.5rem;
+        p {
+            margin-right: 4rem;
+            padding-bottom: 1rem;
+            @include bodyText;
+        }
+    }
+}
 
 
-            img {
-                width: 100%;
-                position: relative;
-                top: 3.2rem;
-                -webkit-box-shadow: -10px 10px 0px 0px $colorYellow;
-                -moz-box-shadow: -10px 10px 0px 0px $colorYellow;
-                box-shadow: -10px 10px 0px 0px $colorYellow;
-            }
+.squareGalleryBottom {
+    @include displayFlex(row, flex-start, center);
+
+    .squareGalleryBottomInfo {
+        width: 43%;
+        margin-top: 1rem;
+        text-align: right;
+
+        h4 {
+            @include subHeadingText;
+        }
+
+        p {
+            margin-left: 4rem;
+            padding-bottom: 1rem;
+            @include bodyText;
         }
     }
 
-    a {
-        @include mainButton;
+    .squareGalleryBottomImage {
+        width: 43%;
+        margin-left: 10.5rem;
 
-        &:hover {
-            @include buttonHover;
+        img {
+            width: 100%;
+            position: relative;
+            top: 3.2rem;
+            box-shadow: -10px 10px 0px 0px $colorYellow;
         }
+    }
+}
 
-        &:active {
-            @include buttonActive;
-        }
+a {
+    @include mainButton;
+
+    &:hover {
+        @include buttonHover;
+    }
+
+    &:active {
+        @include buttonActive;
     }
 }

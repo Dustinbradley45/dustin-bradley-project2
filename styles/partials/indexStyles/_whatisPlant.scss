@@ -5,35 +5,32 @@
     margin:3.5rem 0;
     padding:3rem 0 3rem 0;
     background-color:$colorWhite;
+}
     
-    .whatIsPlantContent{
-        width:70%;
+.whatIsPlantContent{
+    width:70%;
 
-        h3{
-            @include indexHeadingText;
-            margin:0;
-            padding:0;
+    h3{
+        margin:0;
+        padding:0;
+        @include indexHeadingText;
+    }
 
+    p{
+        padding-bottom:1rem;
+        @include bodyText;
+    }
+
+    a{
+        @include mainButton;
+
+        &:hover,
+        &:active {
+            @include buttonHover;
         }
 
-        p{
-            @include bodyText;
-            padding-bottom:1rem;
+        &:active {
+            @include insetButtonStyle
         }
-
-        a{
-            @include mainButton;
-
-            &:hover {
-                @include buttonHover;
-            }
-
-            &:active {
-                @include buttonHover;
-                -webkit-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
-                box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
-            }
-        }
-
     }
 }

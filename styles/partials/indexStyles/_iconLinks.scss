@@ -1,14 +1,14 @@
 .mainIcons {
 
     &:after {
-        content:'';
-        background-image: url('./../../plantedFinalAssets/bannerImage.jpg');
+
+        content: '';
         width: 100%;
         height: 60vh;
+        display: block;
         margin: 0;
-        background-size: cover;
-        background-position: center;
-        display:block;
+        background-image: url('./../../plantedFinalAssets/bannerImage.jpg');
+        @include backgroundProperties
     }
 
     .iconLinks {
@@ -21,89 +21,94 @@
         &>div {
             padding: .3rem;
         }
+    }
+}
 
-        //Cannot condense code due to :before elements have to be different
-        .greenHouses {
-            width: 50%;
-            transition: .4s all ease;
+//Cannot condense code due to :before elements have to be different
+.greenHouses {
 
-            h5 {
-                @include sectionTitle;
+    transition: .4s all ease;
 
-                &:before {
-                    content: '\f06c';
-                    font-family: 'Font Awesome 5 Free';
-                    @include linkIcon;
-                }
-            }
+    h5 {
+        @include sectionTitle;
 
-            p {
-                margin-left: 3.75rem;
-                @include bodyText;
-            }
+        &:before {
+            content: '\f06c';
+            font-family: 'Font Awesome 5 Free';
+            @include linkIcon;
         }
+    }
 
-        .community {
-            width: 50%;
+    p {
+        margin-left: 3.75rem;
+        @include bodyText;
+    }
+}
 
-            h5 {
+.community {
 
-                @include sectionTitle;
+    h5 {
 
-                &:before {
-                    content: '\f0c0';
-                    font-family: 'Font Awesome 5 Free';
-                    @include linkIcon;
-                    margin-right: 19px;
+        @include sectionTitle;
 
-                }
-            }
+        &:before {
+            content: '\f0c0';
+            font-family: 'Font Awesome 5 Free';
+            margin-right: 1rem;
+            @include linkIcon;
 
-            p {
-                margin-left: 3.9rem;
-                padding-top: 5px;
-                @include bodyText;
-            }
         }
+    }
 
-        .blog {
-            width: 50%;
+    p {
+        margin-left: 3.9rem;
+        padding-top: 5px;
+        @include bodyText;
+    }
+}
 
-            h5 {
-                @include sectionTitle;
+.blog {
+
+    h5 {
+        @include sectionTitle;
 
 
-                &:before {
-                    content: '\f15b';
-                    font-family: 'Font Awesome 5 Free';
-                    @include linkIcon;
-                }
-            }
-
-            p {
-                margin-left: 3.2rem;
-                @include bodyText;
-            }
+        &:before {
+            content: '\f15b';
+            font-family: 'Font Awesome 5 Free';
+            @include linkIcon;
         }
+    }
 
-        .getInTouch {
-            width: 50%;
-            padding-left: .5rem;
+    p {
+        margin-left: 3.2rem;
+        @include bodyText;
+    }
+}
 
-            h5 {
-                @include sectionTitle;
+.getInTouch {
+    padding-left: .5rem;
 
-                &:before {
-                    content: '\f095';
-                    font-family: 'Font Awesome 5 Free';
-                    @include linkIcon;
-                }
-            }
+    h5 {
+        @include sectionTitle;
 
-            p {
-                margin-left: 3.5rem;
-                @include bodyText;
-            }
+        &:before {
+            content: '\f095';
+            font-family: 'Font Awesome 5 Free';
+            @include linkIcon;
         }
+    }
+}
+
+.greenHouses,
+.community,
+.blog,
+.getInTouch {
+    width: 50%;
+
+    p {
+        margin-left: 3.5rem;
+        @include bodyText;
+
     }
 }

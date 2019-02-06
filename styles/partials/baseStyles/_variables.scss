@@ -40,6 +40,17 @@ sans-serif;
     box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
 }
 
+@mixin insetButtonStyle {
+    -webkit-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.71);
+    box-shadow: inset 0px 0px 10px 7px rgba(0, 0, 0, 0.71);
+}
+
+@mixin backgroundProperties {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 //h1 BLOG, CONTACT  STYLES
 @mixin headerTitleStyle {
     color: $colorYellow;

@@ -8,93 +8,91 @@
         margin-left: 7rem;
 
         h2 {
-            font-weight: 400;
-            font-size: 1.6rem;
+            font-family: $primaryFont;
+            @include fontWeight(300)
+            @include fontSize(1.6rem);
             letter-spacing: 1.1px;
         }
-
-        .mainNav{
-
-            ul {
-                @include displayFlex(row, flex-start, center);
-
-                li {
-                    list-style: none;
-                    padding: 10px 1rem;
-
-                    &:hover a::before, &:hover  a::after {
-                        width:50%;
-                    }
-                    &:hover a::before{
-                        margin-bottom:6px;
-                        opacity:1;
-                        left:0;
-
-                    }
-
-                    &:hover a::after {
-                        margin-top:6px;
-                        opacity:1;
-                        left:50%;
-                    }
+    }
+}
 
 
-                    a {
-                        color: $colorWhite;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-family: $primaryFont;
-                        transition: .5s all ease;
-                        position:relative;
-                    
-                        &::before {
-                            content:'';
-                            display:inline-block;
-                            width: 50%;
-                            position:absolute;
-                            background-color: $colorYellow;
-                            height: 2px;
-                            bottom:25px;
-                            left:50%;
-                            margin:0;
-                            opacity:0;
-                            transition:.2s linear all;
-                            
-                        }
 
-                        &:after {
-                            content:'';
-                            width: 50%;
-                            display:inline-block;
-                            background-color: $colorYellow;
-                            height: 2px;
-                            transition: .2s linear all;
-                            position:absolute;
-                            top:20px;
-                            left:-50%;
-                            margin:0;
-                            opacity:0;
-                        }
+.mainNav ul {
+    @include displayFlex(row, flex-start, center);
 
-                        &.active {
-                            color: $colorYellow;
+    li {
+        padding: 10px 1rem;
 
-                        }
+        &:hover a::before, &:hover  a::after {
+            width:50%;
+        }
+        &:hover a::before{
+            margin-bottom:6px;
+            opacity:1;
+            left:0;
 
-                        &:focus {
-                            font-size: 1.3rem;
-                            border: $colorWhite 2px solid;
-                        }
-                    }
-                }
+        }
+
+        &:hover a::after {
+            opacity:1;
+            margin-top:6px;
+            left:50%;
+        }
+
+        a {
+            position:relative;
+            color: $colorWhite;
+            @include fontWeight(400);
+            text-transform: uppercase;
+            font-family: $primaryFont;
+            transition: .5s all ease;
+            background-color:transparent;
+        
+            &::before {
+                content:'';
+                display:inline-block;
+                position:absolute;
+                bottom:35px;
+                left:50%;
+                width: 50%;
+                height: 2px;
+                margin:0;
+                opacity:0;
+                background-color: $colorYellow;
+                transition:.2s linear all;
+                
             }
-        }  
+
+            &:after {
+                content:'';
+                display:inline-block;
+                width: 50%;
+                position:absolute;
+                top:30px;
+                left:-3%;
+                margin:0;
+                height: 2px;
+                opacity:0;
+                background-color: $colorYellow;
+                transition: .2s linear all;
+            }
+
+            &.active {
+                color: $colorYellow;
+
+            }
+
+            &:focus {
+                font-size: 1.3rem;
+                border: $colorWhite 2px solid;
+            }
+        }
     }
 }
 
 .blogNav,
-.contactNav,
-    {
+.contactNav {
     background-color: $colorBlack;
 }
 
@@ -112,163 +110,164 @@
                 border: $colorDarkGreen 4px solid;
             }
         }
+    }
+}
 
-        .navButton {
-            position: fixed;
-            background-color: $colorYellow;
-            color: white;
-            height: 6rem;
-            width: 6rem;
-            border-radius: 0 0 0 50%;
-            top: -35px;
-            right: 0;
-            z-index: 2000;
-            box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
-            text-align: center;
-            cursor: pointer;
+.navButton {
+    position: fixed;
+    top: -35px;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 0 0 0 50%;
+    z-index: 2000;
+    background-color: $colorYellow;
+    box-shadow: 0 .5rem 1rem rgba(79, 79, 79, 0.6);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
 
-        }
+.mobileNavContent {
+    background: none;
+    height: 90vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+}
 
-        .mobileNavContent {
-            height: 90vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 1500;
-            opacity: 0;
-            width: 0;
-            background: none;
-        }
+.navList {
+    width: 100%;
+    position: absolute;
+    top: 11%;
+    text-align: center;
 
-        .navList {
-            position: absolute;
-            list-style: none;
-            text-align: center;
-            width: 100%;
-            top: 11%;
-        }
+    .navItem {
+        margin: .5rem;
 
-        .navItem {
-            margin: .5rem;
-        }
+        a{
+            background-color:transparent;
 
-        // text styles
-        .navLink {
-
-            &:link,
-            &:visited {
-                display: inline-block;
-                @include fontSize(1rem);
-                @include fontWeight(300);
-                padding: 1rem 1rem;
-                color: $colorWhite;
-                font-family: $primaryFont;
-                text-decoration: none;
-                text-transform: uppercase;
-                background-size: 220%;
-                transition: all .3s;
-            }
-
-                &:hover,
-                &:active {
-                background-position: 100%;
-                color: $colorGrey;
-                transform: translateY(1rem);
-                background: rgba($colorWhite, .5);
-                @include fontSize(1.5rem);
-            }
-        }
-
-        //FUNCTIONALITY
-        //Content displays within the mobile nav
-
-        .navCheckbox:checked~.mobileNavContent {
-            opacity: 1;
-            width: 100%;
-            display: block;
-            animation: moveLeft ease 1s;
-            background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
-            border-bottom-left-radius: 100%;
-        }
-
-        // .navCheckbox~.mobileNavContent {
-        //     animation:moveRight linear 1s;
-        // }
-
-
-        //ICON
-        .navIcon {
-            position: relative;
-            margin-top: 3.75rem;
-
-            &,
-            &::before,
-            &::after {
-                width: 2rem;
-                height: 2px;
-                background-color: $colorDarkGreen;
-                display: inline-block;
-            }
-
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                transition: all .2s;
-            }
-
-            &::before {
-                content: '';
-                top: -.8rem;
-                transform: rotate(180deg);
-                transform: rotate(-180deg);
-            }
-
-            &::after {
-                top: .8rem;
-                transform: rotate(-180deg)
-            }
-        }
-
-        //INITIAL HOVER TRANSITION
-        .navButton:hover .navIcon::before {
-            left: -.5rem;
-
-        }
-
-        //INITIAL HOVER TRANSITION
-        .navButton:hover .navIcon::after {
-            left: .5rem;
-        }
-
-
-        .navCheckbox:checked+.navButton .navIcon {
-            background-color: transparent;
-        }
-
-        //On click transition
-        .navCheckbox:checked+.navButton .navIcon::before {
-            top: 0;
-            transform: rotate(495deg);
-            display: inline-block;
-
-        }
-
-        //On click transition
-        .navCheckbox:checked+.navButton .navIcon::after {
-            top: 0;
-            transform: rotate(-495deg);
-            display: inline-block;
         }
     }
 }
+
+        // text styles
+.navLink {
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-family: $primaryFont;
+        padding: 1rem 1rem;
+        @include fontSize(1rem);
+        @include fontWeight(300);
+        color: $colorWhite;
+        text-transform: uppercase;
+        transition: all .3s;
+    }
+
+        &:hover,
+        &:active {
+        background-position: 100%;
+        color: $colorDarkGreen;
+        transform: translateY(1rem);
+        background: rgba($colorYellow, .5);
+        @include fontSize(1.5rem);
+    }
+}
+
+//FUNCTIONALITY
+//Content displays within the mobile nav
+
+.navCheckbox:checked~.mobileNavContent {
+    opacity: 1;
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(to right top, rgba(7, 65, 21, 0.8), rgba(8, 79, 26, 0.8), rgba(9, 93, 30, 0.8), rgba(10, 108, 35, 0.8), rgba(11, 123, 39, 0.8), rgba(41, 138, 40, 0.8), rgba(63, 153, 39, 0.8), rgba(85, 168, 38, 0.8), rgba(125, 185, 31, 0.8), rgba(165, 201, 25, 0.8), rgba(205, 217, 22, 0.8), rgba(248, 231, 28, 0.8));
+    border-bottom-left-radius: 100%;
+    animation: moveLeft ease 1s;
+}
+
+// .navCheckbox~.mobileNavContent {
+//     animation:moveRight linear 1s;
+// }
+
+
+//ICON
+.navIcon {
+    position: relative;
+    margin-top: 3.75rem;
+
+    &,
+    &::before,
+    &::after {
+        width: 2rem;
+        height: 2px;
+        background-color: $colorDarkGreen;
+        display: inline-block;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    &::before {
+        content: '';
+        top: -.8rem;
+        transform: rotate(180deg);
+        transform: rotate(-180deg);
+    }
+
+    &::after {
+        top: .8rem;
+        transform: rotate(-180deg)
+    }
+}
+
+//INITIAL HOVER TRANSITION
+.navButton:hover .navIcon::before {
+    left: -.5rem;
+
+}
+
+//INITIAL HOVER TRANSITION
+.navButton:hover .navIcon::after {
+    left: .5rem;
+}
+
+
+.navCheckbox:checked+.navButton .navIcon {
+    background-color: transparent;
+}
+
+//On click transition
+.navCheckbox:checked+.navButton .navIcon::before {
+    top: 0;
+    transform: rotate(495deg);
+    display: inline-block;
+
+}
+
+//On click transition
+.navCheckbox:checked+.navButton .navIcon::after {
+    top: 0;
+    transform: rotate(-495deg);
+    display: inline-block;
+}
+
 
 //Used for yellow header on page user is on
 .active {
     color: $colorYellow;
 }
-
 
 @keyframes moveLeft {
     0% {

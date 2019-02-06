@@ -1,9 +1,8 @@
 .contactHeader {
-    background-image: url('./../../plantedFinalAssets/contactHeader1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 65vh;
     min-height: 500px;
+    background-image: url('./../../plantedFinalAssets/contactHeader1.jpg');
+    @include backgroundProperties;
 
 
     .contactHeaderTitle {
