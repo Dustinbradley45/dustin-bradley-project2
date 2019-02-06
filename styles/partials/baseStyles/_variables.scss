@@ -32,7 +32,7 @@ sans-serif;
 
 @mixin buttonHover {
     color: $colorWhite;
-    background-color: $colorGrey;
+    background-color: $colorDarkGreen;
 }
 
 @mixin buttonActive {
@@ -70,7 +70,7 @@ sans-serif;
     letter-spacing: 1px;
 }
 
-//h3 STYLES 
+
 @mixin indexHeadingText {
     font-family: $primaryFont;
     @include fontWeight(600);
@@ -78,7 +78,7 @@ sans-serif;
     letter-spacing: 1.3px;
 }
 
-
+//MOST H4
 @mixin subHeadingText {
     font-family: $primaryFont;
     @include fontWeight(600);
@@ -185,31 +185,3 @@ $medPhone: 'only screen and (max-width:500px)';
 
 $smallPhone: "only screen and (max-width:400px)";
 
-//QUERIES
-
-//1600px
-// @media #{$largeDesktop} {}
-
-// //1440px
-// @media #{$medDesktop} {}
-
-// //1250px
-// @media #{$smallDesktop} {}
-
-// //1000px
-// @media #{$largeTablet} {}
-
-// //850px
-// @media #{$medTablet} {}
-
-// //750px
-// @media #{$smallTablet} {}
-
-// //650px
-// @media #{$largePhone} {}
-
-// //500px
-// @media #{$medPhone} {}
-
-// //400px
-// @media #{$smallPhone} {}

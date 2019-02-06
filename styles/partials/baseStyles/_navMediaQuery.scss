@@ -1,5 +1,36 @@
  //QUERIES
 
+ //1000px
+
+ @media #{$largeTablet} {
+
+     .headerNav,
+     .blogNav,
+     .contactNav {
+
+         .navContent {
+             margin-left: 4rem;
+
+         }
+     }
+ }
+
+ //850px 
+ @media #{$medTablet} {
+
+     .headerNav,
+     .blogNav,
+     .contactNav {
+
+         .navContent {
+             margin-left: 1.5rem;
+
+         }
+
+     }
+ }
+
+
  //750px
  @media #{$smallTablet} {
 
@@ -9,34 +40,40 @@
 
          .navContent {
              margin-left: 2rem;
+         }
+     }
 
-             .navigation {
-                 display: block;
+     .headerNav .navigation,
+     .contactNav .navigation,
+     .blogNav .navigation {
+         display: block;
 
-                 .mobileNavContent {
-                     height: 100vh;
+         .mobileNavContent {
+             height: 100vh;
 
-                     ul {
-                         @include displayFlex (column, flex-start, center);
-
-                         li {
-                             font-size: .7rem;
-
-                             &:hover,
-                             &:active {
-                                 font-size: 1rem;
-                             }
-                         }
-                     }
-                 }
-             }
-
-             .mainNav {
-                 display: none;
+             ul {
+                 @include displayFlex (column, flex-start, center);
              }
          }
      }
+
+     .mobileNavContent li {
+         li {
+             font-size: .7rem;
+
+             &:hover,
+             &:active {
+                 font-size: 1rem;
+             }
+         }
+     }
+
+
+     .mainNav {
+         display: none;
+     }
  }
+
 
  //650px
  @media #{$largePhone} {

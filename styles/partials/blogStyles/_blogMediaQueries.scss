@@ -79,6 +79,11 @@
 
         .blogMission {
 
+            img {
+                width:97.25%;
+                left:calc(100% - 97.25%);
+            }
+
             .blogPost {
                 padding-top: 7rem;
                 margin-right: 3rem;
@@ -270,10 +275,14 @@
     .blogMain {
         .blogMainRight {
             .commentsSection {
-                .comment1 {
+
+                .comment1,
+                .comment2 {
 
                     img {
+
                         width: 80%;
+                        margin: 0 auto;
                     }
 
                 }

@@ -16,14 +16,14 @@
         color: $colorLightGreen;
         transform: translateY(0);
         @include fontSize(1.2rem);
-        transition: .3s all linear;
+        transition: .2s all linear;
         background-color:transparent;
         
         
         &:hover {
             transform: translateY(-50px);
-            @include fontSize(1.5rem);
-            color: $colorGrey;
+            @include fontSize(1.7rem);
+            color: $colorDarkGreen;
             
         }
     }
