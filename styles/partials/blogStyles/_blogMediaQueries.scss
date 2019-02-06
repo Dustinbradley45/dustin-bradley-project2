@@ -80,8 +80,8 @@
         .blogMission {
 
             img {
-                width:97.25%;
-                left:calc(100% - 97.25%);
+                width: 97.25%;
+                left: calc(100% - 97.25%);
             }
 
             .blogPost {
@@ -179,6 +179,12 @@
                     .toggleReadMore {
                         @include mainButton;
                         display: block;
+
+                        &:active,
+                        &:hover {
+                            @include buttonHover;
+                            @include buttonActive;
+                        }
                     }
 
                 }
@@ -201,7 +207,6 @@
 
             img {
                 margin: 0 auto;
-                margin-top: 2rem;
                 margin-right: 2rem;
             }
         }
@@ -214,8 +219,8 @@
         .blogFormInput {
             @include displayFlex(column, center, center);
 
-            input[type='name'],
-            input[type='email'] {
+            input[type="name"],
+            input[type="email"] {
                 width: 100%;
                 margin: 1rem 0;
                 padding: 1rem 0;

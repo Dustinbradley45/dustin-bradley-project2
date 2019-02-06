@@ -12,7 +12,7 @@
             @include fontWeight(300);
             @include fontSize(2.5rem);
             letter-spacing: 1.1px;
-            margin:1rem 0 1rem 0;
+            margin: 1rem 0 1rem 0;
 
         }
     }
@@ -54,7 +54,7 @@
             background-color: transparent;
 
             &::before {
-                content: '';
+                content: "";
                 display: inline-block;
                 position: absolute;
                 bottom: 35px;
@@ -69,7 +69,7 @@
             }
 
             &:after {
-                content: '';
+                content: "";
                 display: inline-block;
                 width: 50%;
                 position: absolute;
@@ -111,7 +111,7 @@
             opacity: 0;
 
             &:focus+.navButton {
-                border: $colorDarkGreen 4px solid;
+                border: $colorLightGreen 4px solid;
             }
         }
     }
@@ -197,7 +197,7 @@
 }
 
 .navCheckbox~.mobileNavContent {
-    animation:moveRight linear 1s;
+    animation: moveRight linear 1s;
 }
 
 
@@ -224,10 +224,9 @@
     }
 
     &::before {
-        content: '';
+        content: "";
         top: -.8rem;
         transform: rotate(180deg);
-        transform: rotate(-180deg);
     }
 
     &::after {
@@ -272,4 +271,3 @@
 .active {
     color: $colorYellow;
 }
-

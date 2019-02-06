@@ -38,13 +38,13 @@
         color: $colorDarkGreen;
         @include fontWeight(600);
         font-style: italic;
-        background-color:transparent;
-        padding:0;
-        margin:0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
     }
 }
 
-.blogAsideInfoBottom ul{
+.blogAsideInfoBottom ul {
 
     padding-left: 15px;
 
@@ -52,7 +52,7 @@
         @include bodyText;
 
         &:before {
-            content: '';
+            content: "";
             display: inline-block;
             width: 5px;
             height: 5px;

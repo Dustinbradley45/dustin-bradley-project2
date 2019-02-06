@@ -7,9 +7,9 @@ $colorLightGreen:rgba(14, 144, 45, 1); //#0E902D
 $colorDarkGreen: rgba(7, 65, 21, 1); //#074115
 
 //FONT VARIABLES:
-$primaryFont: 'Josefin Sans',
+$primaryFont: "Josefin Sans",
 sans-serif;
-$secondaryFont: 'Roboto',
+$secondaryFont: "Roboto",
 sans-serif;
 
 //MIXIN
@@ -165,23 +165,22 @@ sans-serif;
 
 //MEDIA QUERIES
 
-$xlLargeDesktop: 'only screen and (min-width: 1800px)';
+$xlLargeDesktop: "only screen and (min-width: 1800px)";
 
-$largeDesktop: 'only screen and (max-width: 1650px)';
+$largeDesktop: "only screen and (max-width: 1650px)";
 
-$medDesktop: 'only screen and (max-width:1440px)';
+$medDesktop: "only screen and (max-width:1440px)";
 
-$smallDesktop: 'only screen and (max-width:1250px)';
+$smallDesktop: "only screen and (max-width:1250px)";
 
-$largeTablet: 'only screen and (max-width: 1000px)';
+$largeTablet: "only screen and (max-width: 1000px)";
 
-$medTablet: 'only screen and (max-width: 850px)';
+$medTablet: "only screen and (max-width: 850px)";
 
-$smallTablet: 'only screen and (max-width:750px)';
+$smallTablet: "only screen and (max-width:750px)";
 
-$largePhone: 'only screen and (max-width:650px)';
+$largePhone: "only screen and (max-width:650px)";
 
-$medPhone: 'only screen and (max-width:500px)';
+$medPhone: "only screen and (max-width:500px)";
 
 $smallPhone: "only screen and (max-width:400px)";
-

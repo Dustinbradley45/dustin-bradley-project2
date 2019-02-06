@@ -186,7 +186,7 @@ input::-moz-focus-inner {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
@@ -227,7 +227,7 @@ a:focus {
 }
 
 button:focus {
-  border: 3px solid #2c2c2c !important;
+  border: 3px solid #2c2c2c;
 }
 
 .skipLink {
@@ -356,7 +356,7 @@ img {
 }
 
 .mainNav ul li a::before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   bottom: 35px;
@@ -371,7 +371,7 @@ img {
 }
 
 .mainNav ul li a:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 50%;
   position: absolute;
@@ -414,7 +414,7 @@ img {
 .mainHeader .navigation .navCheckbox:focus + .navButton,
 .blogHeader .navigation .navCheckbox:focus + .navButton,
 .contactHeader .navigation .navCheckbox:focus + .navButton {
-  border: #074115 4px solid;
+  border: #0e902d 4px solid;
 }
 
 .navButton {
@@ -517,12 +517,10 @@ img {
 }
 
 .navIcon::before {
-  content: '';
+  content: "";
   top: -.8rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
 }
 
 .navIcon::after {
@@ -675,7 +673,7 @@ footer {
 }
 
 .mainHeader .mainTitle::after {
-  content: '';
+  content: "";
   height: 80vh;
   width: 45.5%;
   position: absolute;
@@ -890,7 +888,7 @@ a:active {
 }
 
 .mainIcons:after {
-  content: '';
+  content: "";
   width: 100%;
   height: 60vh;
   display: block;
@@ -940,8 +938,8 @@ a:active {
 }
 
 .greenHouses h5:before {
-  content: '\f06c';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f06c";
+  font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
   padding: .5rem;
   border-radius: 100px;
@@ -969,8 +967,8 @@ a:active {
 }
 
 .community h5:before {
-  content: '\f0c0';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f0c0";
+  font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
   margin-right: 1rem;
   padding: .5rem;
@@ -1000,8 +998,8 @@ a:active {
 }
 
 .blog h5:before {
-  content: '\f15b';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f15b";
+  font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
   padding: .5rem;
   border-radius: 100px;
@@ -1033,8 +1031,8 @@ a:active {
 }
 
 .getInTouch h5:before {
-  content: '\f095';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
   padding: .5rem;
   border-radius: 100px;
@@ -1383,7 +1381,7 @@ a:active {
 }
 
 .blogAsideInfoBottom ul li:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -1536,7 +1534,7 @@ a:active {
           box-shadow: 0px 0px 10px 3px rgba(7, 65, 21, 0.75);
 }
 
-.blogForm .blogFormInput input[type='email'] {
+.blogForm .blogFormInput input[type="email"] {
   margin: 0 0 1rem 2%;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -1547,7 +1545,7 @@ a:active {
   background-color: #f0efed;
 }
 
-.blogForm .blogFormInput input[type='name'] {
+.blogForm .blogFormInput input[type="name"] {
   margin: 0 2% 1rem 0;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -1730,8 +1728,8 @@ a:active {
   width: 100%;
 }
 
-.contactForm .contactFormInput input[type='email'],
-.contactForm .contactFormInput input[type='name'] {
+.contactForm .contactFormInput input[type="email"],
+.contactForm .contactFormInput input[type="name"] {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -1743,17 +1741,17 @@ a:active {
   padding-bottom: 0.5rem;
 }
 
-.contactForm .contactFormInput input[type='email']:focus,
-.contactForm .contactFormInput input[type='name']:focus {
+.contactForm .contactFormInput input[type="email"]:focus,
+.contactForm .contactFormInput input[type="name"]:focus {
   -webkit-box-shadow: 0px 0px 10px 3px rgba(7, 65, 21, 0.75);
           box-shadow: 0px 0px 10px 3px rgba(7, 65, 21, 0.75);
 }
 
-.contactForm .contactFormInput input[type='email'] {
+.contactForm .contactFormInput input[type="email"] {
   margin-left: 2%;
 }
 
-.contactForm .contactFormInput input[type='name'] {
+.contactForm .contactFormInput input[type="name"] {
   margin-right: 2%;
 }
 
@@ -1811,7 +1809,10 @@ a:active {
   .headerNav .navContent,
   .blogNav .navContent,
   .contactNav .navContent {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+  }
+  .mainNav ul li {
+    padding: 10px 0rem;
   }
 }
 
@@ -2313,6 +2314,12 @@ a:active {
     padding: .6rem 1rem;
     display: block;
   }
+  .blogMain .blogMainRight .blogMission .blogPost .toggleReadMore:active, .blogMain .blogMainRight .blogMission .blogPost .toggleReadMore:hover {
+    color: #f0efed;
+    background-color: #074115;
+    -webkit-box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+    box-shadow: inset 0px 0px 7px 5px rgba(0, 0, 0, 0.71);
+  }
   .commentsSection {
     position: static;
     margin: 2rem;
@@ -2326,7 +2333,6 @@ a:active {
   }
   .commentsSection .comment2 img {
     margin: 0 auto;
-    margin-top: 2rem;
     margin-right: 2rem;
   }
   .blogForm {
@@ -2348,8 +2354,8 @@ a:active {
         -ms-flex-align: center;
             align-items: center;
   }
-  .blogForm .blogFormInput input[type='name'],
-  .blogForm .blogFormInput input[type='email'] {
+  .blogForm .blogFormInput input[type="name"],
+  .blogForm .blogFormInput input[type="email"] {
     width: 100%;
     margin: 1rem 0;
     padding: 1rem 0;
@@ -2494,7 +2500,7 @@ a:active {
     width: 100%;
     margin-left: 0;
   }
-  .contactMain .contactUsForm input[type='name'] {
+  .contactMain .contactUsForm input[type="name"] {
     margin-bottom: 1.5rem;
   }
   .contactMain .contactUsForm textarea {
@@ -2535,8 +2541,8 @@ a:active {
         -ms-flex-align: center;
             align-items: center;
   }
-  .contactForm .contactFormInput input[type='name'],
-  .contactForm .contactFormInput input[type='email'] {
+  .contactForm .contactFormInput input[type="name"],
+  .contactForm .contactFormInput input[type="email"] {
     width: 100%;
   }
 }

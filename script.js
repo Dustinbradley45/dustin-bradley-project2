@@ -1,49 +1,22 @@
-
-
-
-
-
-
 //BLOG JS
 $(function () {
 
-    // let readMore = () => {
-    //     if ($('.hideTheWords').is(':visible')) {
-    //         $('.toggleReadMore').text('Read Less');
-    //     } else {
-    //         $(this).text('Read More');
-    //     } 
-    // }
+    // HIDE WORDS AT WIDTH
+    if ($(window).width() >= 750) {
 
-    // HAVE EVENT HERE
-    // $('.hideTheWords').slideToggle('slow', function () {
-    //     readMore();
-
-    let CheckName = function () {
-        if ($('.hiddenWords').hasClass('hideTheWords')) {
-            // 
-            console.log('cat')
-        } else {
-            $('.toggleReadMore').text('Read Less');
-        }
+        $("hiddenWords").addClass("hideTheWords");
     }
 
+    // HAVE EVENT HERE
+    $(".toggleReadMore").on("click", function () {
 
+        $(".hiddenWords").slideToggle("slow", function () {
 
-    //TOGGLE TEXT ON CLICK .BLOGPOST TEXT
-    $('.toggleReadMore').on('click', function () {
-        $('.hiddenWords').toggleClass('hideTheWords').slideToggle('slow', function () { 
-            CheckName();
-
+            if ($(".hiddenWords").is(":visible")) {
+                $(".toggleReadMore").html("Read Less");
+            } else {
+                $(".toggleReadMore").html("Read More");
+            }
         });
-        
-    
-        
-        
-    
-  
-      });
-
-    })
-
-;
+    });
+});

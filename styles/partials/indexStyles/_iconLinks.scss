@@ -2,12 +2,12 @@
 
     &:after {
 
-        content: '';
+        content: "";
         width: 100%;
         height: 60vh;
         display: block;
         margin: 0;
-        background-image: url('./../../plantedFinalAssets/bannerImage.jpg');
+        background-image: url("./../../plantedFinalAssets/bannerImage.jpg");
         @include backgroundProperties
     }
 
@@ -33,8 +33,8 @@
         @include sectionTitle;
 
         &:before {
-            content: '\f06c';
-            font-family: 'Font Awesome 5 Free';
+            content: "\f06c";
+            font-family: "Font Awesome 5 Free";
             @include linkIcon;
         }
     }
@@ -52,8 +52,8 @@
         @include sectionTitle;
 
         &:before {
-            content: '\f0c0';
-            font-family: 'Font Awesome 5 Free';
+            content: "\f0c0";
+            font-family: "Font Awesome 5 Free";
             margin-right: 1rem;
             @include linkIcon;
 
@@ -74,8 +74,8 @@
 
 
         &:before {
-            content: '\f15b';
-            font-family: 'Font Awesome 5 Free';
+            content: "\f15b";
+            font-family: "Font Awesome 5 Free";
             @include linkIcon;
         }
     }
@@ -93,8 +93,8 @@
         @include sectionTitle;
 
         &:before {
-            content: '\f095';
-            font-family: 'Font Awesome 5 Free';
+            content: "\f095";
+            font-family: "Font Awesome 5 Free";
             @include linkIcon;
         }
     }

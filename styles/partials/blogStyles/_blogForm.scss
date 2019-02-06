@@ -18,13 +18,13 @@
             }
         }
 
-        input[type='email'] {
+        input[type="email"] {
             margin: 0 0 1rem 2%;
             @include inputFont;
             background-color: $colorWhite;
         }
 
-        input[type='name'] {
+        input[type="name"] {
             margin: 0 2% 1rem 0;
             @include inputFont;
             background-color: $colorWhite;
@@ -39,7 +39,7 @@
         background-color: $colorWhite;
 
         &:focus {
-            background-color:white;
+            background-color: white;
             box-shadow: inset 0px 0px 20px 2px rgba($colorDarkGreen, 0.75);
         }
     }

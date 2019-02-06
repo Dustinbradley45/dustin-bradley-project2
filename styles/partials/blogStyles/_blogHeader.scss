@@ -1,11 +1,11 @@
 .blogHeader {
     height: 65vh;
     min-height: 500px;
-    background-image: url('./../../plantedFinalAssets/blogHeader1.jpg');
+    background-image: url("./../../plantedFinalAssets/blogHeader1.jpg");
     @include backgroundProperties;
 
     .blogHeaderTitle {
-        margin:14rem 0 0 7rem;
+        margin: 14rem 0 0 7rem;
 
         h1 {
             @include headerTitleStyle;

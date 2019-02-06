@@ -11,20 +11,20 @@
 
 .contactMain ul {
 
-    
+
     li a {
         color: $colorLightGreen;
         transform: translateY(0);
         @include fontSize(1.2rem);
         transition: .2s all linear;
-        background-color:transparent;
-        
-        
+        background-color: transparent;
+
+
         &:hover {
             transform: translateY(-50px);
             @include fontSize(1.7rem);
             color: $colorDarkGreen;
-            
+
         }
     }
 

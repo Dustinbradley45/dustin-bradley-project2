@@ -1,27 +1,27 @@
-.whatIsPlant{
-    text-align:center;
+.whatIsPlant {
+    text-align: center;
     @include displayFlex(column, flex-start, center);
-    color:$colorBlack;
-    margin:3.5rem 0;
-    padding:3rem 0 3rem 0;
-    background-color:$colorWhite;
+    color: $colorBlack;
+    margin: 3.5rem 0;
+    padding: 3rem 0 3rem 0;
+    background-color: $colorWhite;
 }
-    
-.whatIsPlantContent{
-    width:70%;
 
-    h3{
-        margin:0;
-        padding:0;
+.whatIsPlantContent {
+    width: 70%;
+
+    h3 {
+        margin: 0;
+        padding: 0;
         @include indexHeadingText;
     }
 
-    p{
-        padding-bottom:1rem;
+    p {
+        padding-bottom: 1rem;
         @include bodyText;
     }
 
-    a{
+    a {
         @include mainButton;
 
         &:hover,

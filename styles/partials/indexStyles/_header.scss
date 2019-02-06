@@ -1,7 +1,7 @@
 .mainHeader {
     height: 100vh;
     min-height: 500px;
-    background-image: url('../../plantedFinalAssets/homeImage1.jpg');
+    background-image: url("../../plantedFinalAssets/homeImage1.jpg");
     @include backgroundProperties;
 
     .mainTitle {
@@ -26,13 +26,13 @@
         }
 
         &::after {
-            content: '';
+            content: "";
             height: 80vh;
             width: 45.5%;
             position: absolute;
             top: 235px;
             right: 0;
-            background-image: url('./../../plantedFinalAssets/headerBox.jpg');
+            background-image: url("./../../plantedFinalAssets/headerBox.jpg");
             @include backgroundProperties;
             animation: headerSlideInTop 2s linear;
         }

@@ -23,7 +23,7 @@ li {
 
 //GLOBAL STYLES FOR ACCESSIBILITY PARTIALLY
 a {
-    text-decoration:none;
+    text-decoration: none;
 
     &:focus {
         border: 3px solid $colorBlack;
@@ -34,7 +34,7 @@ a {
 button {
 
     &:focus {
-        border: 3px solid $colorBlack !important;
+        border: 3px solid $colorBlack;
     }
 }
 
