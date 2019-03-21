@@ -2035,7 +2035,7 @@ a:active {
 
 @media only screen and (max-width: 650px) {
   .mainHeader .mainTitle {
-    padding-top: 10rem;
+    padding-top: 5rem;
     line-height: 4rem;
   }
   .mainHeader .mainTitle h1 {
