@@ -1,0 +1,1 @@
+$(function(){750<=$(window).width()&&$("hiddenWords").addClass("hideTheWords"),$(".toggleReadMore").on("click",function(){$(".hiddenWords").slideToggle("slow",function(){$(".hiddenWords").is(":visible")?$(".toggleReadMore").html("Read Less"):$(".toggleReadMore").html("Read More")})})});

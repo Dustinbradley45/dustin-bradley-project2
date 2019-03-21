@@ -15,8 +15,8 @@ $(function () {
             if ($(".hiddenWords").is(":visible")) {
                 $(".toggleReadMore").html("Read Less");
             } else {
-                $(".toggleReadMore").html("Read More");
-            }
+                    $(".toggleReadMore").html("Read More");
+                }
         });
     });
 });
