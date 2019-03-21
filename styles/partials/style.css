@@ -2117,7 +2117,7 @@ a:active {
     height: 85vh;
   }
   .mainHeader .mainTitle {
-    padding-top: 7rem;
+    padding-top: 5rem;
     line-height: 2.5rem;
   }
   .mainHeader .mainTitle h1 {
@@ -2147,12 +2147,6 @@ a:active {
   .iconLinks .blog p,
   .iconLinks .getInTouch p {
     text-align: center;
-  }
-}
-
-@media (max-width: 650px) and (max-height: 500px) {
-  .mainHeader .mainTitle {
-    padding-top: 8 rem;
   }
 }
 
